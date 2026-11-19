@@ -57,9 +57,13 @@ exit 2).
 
 ## Next
 
-1. The first boss (`script_boss.csv` text has not been seen in game). Nobody knows the route yet; use
-   `tools/poke.py` to keep HP up. Session `work/play/en2` (build `babc0728`) is at step 44: level 2, Long Sword,
-   986 Ryo, on the overworld below Tsukuba Village.
+1. First boss-style fight, done: Kinta the Tanuki in the Namazu Shrine (session `en2`, steps 158-168). Clean:
+   the sandal scene, the betrayal speech ("You'll never defeat Lord Masakado!"), fight messages with the long
+   name ("Kinta the Tanuki took 3 damage!"), and the surrender speech about the giant tweezers. To trigger it:
+   bring Kinta in, walk up the corridor left of the chest loop (sandal scene), go on to the tanuki guard, then
+   walk back to Kinta. Session `en2` (build `babc0728`) is at step 169: level 6, in the shrine after the fight.
+   Still unseen: the bosses of `script_boss.csv` (the first is the Nue, well past Tsuchiura and Mito), the floor
+   below the shrine (casket, tweezers, Namazu), and everything after it.
 2. Money, done as ruled (`docs/decisions.md`): `restyle.py` `money()` turns upstream's "両20" into "20 Ryo" in
    every English line (176 lines, five script files); windows keep "18両". Seen in game: "2 Ryo, please.",
    "15 Ryo, please.", "It's 4 Ryo for the night.", "Ziria obtained 2 Ryo." Not seen: the bank lines with

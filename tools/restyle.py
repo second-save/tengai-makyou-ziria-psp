@@ -25,7 +25,7 @@ NAME_RE = re.compile(r'\b(%s)\b' % '|'.join(sorted(NAMES, key=len, reverse=True)
 SAMA_RE = re.compile(r"(?:\b(\w+) )?\b((?:[A-Z]-)*)([A-Z][\w']*)-sama\b")
 DROP_RE = re.compile(r"(?<=\w)-(?:san|chan|kun|dono)\b")
 RYO_RE = re.compile(r'\bryo\b')
-MONEY_RE = re.compile(r'両(\*\*|\[number\]|\d[\d,]*)')   # ** and [number] are the game's amount placeholders
+MONEY_RE = re.compile(r'両(\*\*|\[number\]|\d+(?:,\d{3})*)')   # ** and [number] are the game's amount placeholders
 GLOSS_RE = re.compile(r' \(\d+ ryou\)')   # upstream explains the sign once: "両20 (20 ryou)"
 
 
@@ -51,7 +51,8 @@ def money(t):
 
 def selftest():
     for a, b in [("It's 両** for the night.", "It's ** Ryo for the night."), ('両[number], please.', '[number] Ryo, please.'),
-                 ('Obtained 両20 (20 ryou).', 'Obtained 20 Ryo.'), ('両1,000 at a time', '1,000 Ryo at a time')]:
+                 ('Obtained 両20 (20 ryou).', 'Obtained 20 Ryo.'), ('両1,000 at a time', '1,000 Ryo at a time'),
+                 ("It's usually 両100, but", "It's usually 100 Ryo, but")]:   # a comma after the amount is not part of it
         assert money(a) == b, (a, money(a), b)
     for a, b in [('O Masakado-sama, hear us!', 'O Lord Masakado, hear us!'),
                  ('Z-Ziria-sama!', 'L-Lord Ziria!'),

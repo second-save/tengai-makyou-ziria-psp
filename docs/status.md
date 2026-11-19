@@ -358,8 +358,32 @@ exit 2).
    outta here!"). The curly quotes render. How-to: in the houses and the inn, step onto the raised floor and
    stand below the occupant; Mito's store keeper stands one tile right of Hamlet 2's. Townspeople block the
    road down from the upper road; use the north-south road left of the general store. Not found yet: the
-   armory (`map-0x15B3`, which holds the fixed "100 Ryo, but" line). Next: the armory, the church
-   (`map-0x1623`), the remaining townspeople, the castle path.
+   armory (`map-0x15B3`, which holds the fixed "100 Ryo, but" line). 
+
+   Mito's church (`map-0x1623`), story scene done (steps 633-644, session now on the Odanuki's last page
+   after the fight, 1139 Ryo). Route: from the inn's door go right and north, through the gap in the fence
+   (three tiles left of where the road meets it), north through the grove; the church is the tall
+   blue-roofed building. One more townsperson in the grove: "Those who won't join the Cult of Daimon are
+   being “convinced” by Lord Gomon in Mito Castle's dungeons.", clean. In the church: the head priest
+   stands behind the lectern (go round it on the right); full-width portrait, "I am the head priest of the
+   Daimon church. Are you a faithful believer?" with Yes / No; Yes gives "Hah! Fooled you again! / You're so
+   gullible, Ziria! / Ponpokorin!", then "The head priest reveals his true form!" and the Odanuki fight;
+   after it "The Daimonists are manipulating youkai and monsters all over the country into doing their
+   bidding!", "I'll have the way to the castle opened for you. Please, go to the dungeons and defeat Gomon
+   once and for all!", "We'll return to the mountains and cheer for you in secret. Ponpokorin!". All clean.
+   Not seen: the No answer (`0x242`).
+
+   Battle menu and Steal, seen in this fight on a first pass that was rewound: the menu reads Attack /
+   Jutsu / Item / Steal / Defend / Flee, the battle item list shows six items in the narrow font, Steal
+   opens a target list ("Odanuki"), then "Ziria used a thievery technique.", "Ziria stole from Odanuki. /
+   Got 54 Ryo." All clean. Not seen: "failed to steal".
+
+   Poke note: something between step 501 and the church put Attack back to 14 while HP stayed 999 (an inn
+   stay is the likely cause, not checked). A battle copies the stats when it starts, so poking Attack during
+   the fight does nothing: the state of step 640 was poked again (Attack 200) and the scene replayed.
+
+   Next: the church's other people, the armory (`map-0x15B3`), the changed townspeople lines, the castle
+   path.
 2. Money, done as ruled (`docs/decisions.md`): `restyle.py` `money()` turns upstream's "両20" into "20 Ryo" in
    every English line (176 lines, five script files); windows keep "18両". Seen in game: "2 Ryo, please.",
    "15 Ryo, please.", "It's 4 Ryo for the night.", "Ziria obtained 2 Ryo." The bank lines with "65,000 Ryo" were

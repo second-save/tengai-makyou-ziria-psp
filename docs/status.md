@@ -318,7 +318,14 @@ exit 2).
    line (`str-0xE1D`). Also in the school: the casket room behind the back door has four instructors and
    the casket in the top row behind racks; one try at it walked back out by the stairs (Check there gives
    "There's nothing out of the ordinary."). Not done: that casket game, the Steal command in a battle.
-   Next: Mito (red stone with the 大 mark: the script keeps the kanji in "There is a large
+
+   Hamlet 2 to Mito, done (steps 595-601, session now just inside Mito Town's east edge with the field menu
+   open, level 7, 1139 Ryo, stats still poked). One more Hamlet 2 villager, grey-haired, south-east of the
+   houses, has `map-0x14EF-0x3E7` ("Chief Kumogiri has been expecting you, Lord Ziria. / He looks forward
+   to teaching you one of the techniques he designed!"), clean; he still says it after the technique is
+   learned. Route: leave the hamlet by the east side (between the two stone markers), on the overworld four
+   tiles up, five left, north over the second bridge, then north-west to the blue-roofed town. The location
+   window reads "Mito Town". Next: Mito's townspeople (`map-0x157B`), the church, the castle path (red stone with the 大 mark: the script keeps the kanji in "There is a large
    red stone marked with a yellow 大 symbol." - check how it renders). Then Mito ("just north from here,
    beyond the lake").
 2. Money, done as ruled (`docs/decisions.md`): `restyle.py` `money()` turns upstream's "両20" into "20 Ryo" in

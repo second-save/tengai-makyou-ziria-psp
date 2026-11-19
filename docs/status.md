@@ -134,7 +134,21 @@ exit 2).
    already running writes its own HP back. Hero block, further offsets: Attack `+1A`, Defense `+1C`, Speed
    `+1E` (2 bytes each). Route: leave Tsuchiura by its east edge (the road below the castle bridge), cross
    the bridge, the hut is the red house north-west of the far bridgehead; inside, step up onto the raised
-   floor through a cushion and stand below Bokuden. Next: Mito.
+   floor through a cushion and stand below Bokuden.
+
+   Kumogiri Hamlet 1, part done (steps 298-326, session now inside the hamlet's inn, level 7, 973 Ryo). Clean:
+   the level-up after the duel ("Gained 1 Speed", "HP and TP fully restored! / You're one step closer to
+   bringing down the Cult of Daimon."), the location windows "Bokuden's House", "Kumogiri Hamlet 1" and "Inn",
+   two villagers ("We've been waiting for you, Lord Ziria! / This is Kumogiri Hamlet, your ally against the
+   Daimonists.", "Wow! You must be Ziria! / The Chief told us about you!", "We're all your allies here! / You
+   can take it easy!"), the inn stay, seen at last ("Welcome to the inn!", "It's 5 Ryo for the night. / Will
+   you stay?", "Please rest well.", "Take care of yourself, Lord Ziria."), the record keeper's No branch
+   ("Come back anytime!"), and two inn guests ("A famous fencer called Bokuden lives in a small house west of
+   here.", "He's looking for a worthy successor to a special technique of his own design.", "From what I've
+   heard, Chief Kumogiri, the founder of our hamlet, was a pupil of the Toad Hermit, just like you."). The
+   hamlet is due east of Bokuden's house through the forest (about 27 tiles); in its inn the blue figure is the
+   innkeeper, the one left of the hearth the record keeper. Next: the hamlet's general store (bag sign, right
+   of the inn), its other houses and villagers, then Mito ("just north from here, beyond the lake").
 2. Money, done as ruled (`docs/decisions.md`): `restyle.py` `money()` turns upstream's "両20" into "20 Ryo" in
    every English line (176 lines, five script files); windows keep "18両". Seen in game: "2 Ryo, please.",
    "15 Ryo, please.", "It's 4 Ryo for the night.", "Ziria obtained 2 Ryo." The bank lines with "65,000 Ryo" were

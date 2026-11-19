@@ -400,6 +400,10 @@ exit 2).
    the armory!", the Gomon Sword offer, the price, the Gomon doll); the old text wraps cleanly, the new text
    is unseen. The two builds' data tracks differ in 5,556 bytes, not three lines: the text is
    dictionary-coded and the change re-ranked the dictionary, so a byte diff proves nothing either way.
+   Check that does work: the `en` route plus `en2`'s presses to step 293, run in one go from boot on each
+   build (189,344 frames, 8 minutes each), end on a byte-identical `final.png`. Neither run matches `en2`'s
+   own step 293 (a continuous run drifts from a session played state by state), so this compares builds
+   with each other, not with the session.
 
    Next: the remaining tanuki lines, the other buildings after the church, the castle path.
 2. Money, done as ruled (`docs/decisions.md`): `restyle.py` `money()` turns upstream's "両20" into "20 Ryo" in

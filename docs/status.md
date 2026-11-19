@@ -57,12 +57,27 @@ exit 2).
 
 ## Next
 
-1. Play further from `work/play/en` step 47 (inside the General Store): a level-up, the inn, the first boss.
-   The hero deals 1 damage a hit at level 1, so a level-up needs many battles.
+1. The first boss (`script_boss.csv` text has not been seen in game). Nobody knows the route yet; use
+   `tools/poke.py` to keep HP up. Session `work/play/en2` (build `babc0728`) is at step 44: level 2, Long Sword,
+   986 Ryo, on the overworld below Tsukuba Village.
 2. Money, done as ruled (`docs/decisions.md`): `restyle.py` `money()` turns upstream's "両20" into "20 Ryo" in
-   every English line (176 lines, five script files); windows keep "18両". Seen in game: "2 Ryo, please." in the
-   General Store. Not seen: the longer lines in a tight box (the inn's "It's ** Ryo for the night.", the bank
-   lines with "65,000 Ryo"); the build re-wraps them, but nobody looked.
+   every English line (176 lines, five script files); windows keep "18両". Seen in game: "2 Ryo, please.",
+   "15 Ryo, please.", "It's 4 Ryo for the night.", "Ziria obtained 2 Ryo." Not seen: the bank lines with
+   "65,000 Ryo"; the build re-wraps them, but nobody looked.
+
+Seen clean on build `babc0728` (session `en2`): the inn (price, Yes/No, "Please come again."), the field menu
+entries Items (Use/Give/Drop, "Ziria used the Map of Tsukuba!"), Equip ("In hands", "On body"), Jutsu, Kogama,
+Check, Mode (Descriptions, Walk Type, Text Speed, Text Skip), Status, the Armory (Buy Wares / Sell Belongings,
+Long Sword, Cloth Katabira, Leather Helmet), and a full level-up ("Ziria rose to level 2!", "Gained 1 Attack!",
+"HP and TP fully restored!").
+
+Left Japanese, found this session: the Map of Tsukuba screen has a red seal with the kanji 筑波 drawn in the
+picture. Upstream left it. Not ruled on.
+
+Debug tool: `tools/poke.py dump STATE OUT.bin` and `poke.py set STATE_IN STATE_OUT ADDR=HEXBYTES..` work on
+`play.sh` savestates (PSP memory, little-endian). Hero block at `0x096667E0`: HP `+4` (2 bytes), TP `+6`,
+max HP `+8`, max TP `+A`, level `+C`, Virtue `+D`. Money at `0x09666838`. Level 2 needs 8 Virtue. To use it in a
+session, replace the newest `NNNN.ppst` with the poked state.
 3. Restyle read, done by pattern, not line by line: 1,063 changed lines, no honorific suffix left anywhere, no
    doubled title ("Lord Lord", "Master Lord"). Most of the 152 "Lord Ziria" lines are the innkeepers' "Take care
    of yourself, Lord Ziria."; the rest are respectful address. Left as is.

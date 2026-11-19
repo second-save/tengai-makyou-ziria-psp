@@ -1,0 +1,13 @@
+rom/
+build/
+work/
+dist/
+release/
+tools/*/
+!tools/fixtures/
+!tools/routes/
+!tools/debug/
+!tools/hooks/
+__pycache__/
+*.ppst
+.DS_Store

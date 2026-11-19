@@ -157,8 +157,17 @@ exit 2).
    decided to come with you!", "I can reach any Kumogiri Hamlet I've visited at least once in a single leap!",
    "I'm incredibly useful - you'll see! / Now let's go kick Masakado's butt!", "Kogama, your helper, has joined
    your quest.", "Acquired 13 Virtue!"), and the Kogama command inside the hamlet ("You can't use that here.").
-   Not done here: the two southern houses, three villagers, the Kogama command on the overworld. Next: Mito
-   ("just north from here, beyond the lake").
+   More of the hamlet (steps 347-360, session now inside the Thieving School, the left-hand southern house):
+   the priest's son with portrait ("I-I need your help! / I'm the son of the priest of the Kashima Village
+   shrine, to the east.", "The Daimonists turned the sacred White Deer, protector of our village, into
+   stone!"), the villager between the southern houses ("Kogama, one of the frogs from the Toad Hermit's place,
+   came to our hamlet looking for you.", "He's a brave little frog. Can you believe he came all the way here on
+   his own?"), and the Thieving School's instructor ("If you can steal the money successfully, you get to keep
+   it for yourself!", "Think of it as a game and have fun! / But don't forget your quest to defeat Masakado!")
+   with the location window "Thieving School". The right-hand southern house has a closed wooden door that
+   does not open. Not done here: the Thieving School's counter and its stealing game, the Kogama command on
+   the overworld. Next: those, then Mito ("just north from here, beyond the lake") and Kashima Village to the
+   east.
 2. Money, done as ruled (`docs/decisions.md`): `restyle.py` `money()` turns upstream's "両20" into "20 Ryo" in
    every English line (176 lines, five script files); windows keep "18両". Seen in game: "2 Ryo, please.",
    "15 Ryo, please.", "It's 4 Ryo for the night.", "Ziria obtained 2 Ryo." The bank lines with "65,000 Ryo" were

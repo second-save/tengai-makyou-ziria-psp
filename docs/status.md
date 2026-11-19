@@ -335,8 +335,15 @@ exit 2).
    to Lord Gomon's protection. / We are eternally grateful.", and "Anyone can become a Daimonist. You simply
    need to go to the church and get baptized. You should go right now!". Layout: the east entrance leads to
    a lower road with an exchange-sign building, a general store and an inn; a road north between them
-   reaches an upper road with two more houses and a fenced path going north-east. Next: the rest of Mito's
-   townspeople, its buildings, the church, the castle path.
+   reaches an upper road with two more houses and a fenced path going north-east.
+
+   Bug found from the script listing and fixed in `tools/restyle.py`: the amount pattern let a number end
+   on a comma, so "両100, but" became "100, Ryo but". Three lines were wrong (Mito's armory
+   `map-0x15B3-0x109_4`, "10, Ryo okay?" in `map-0x1BCB`, "1,000, Ryo all right!" at dialogue line 11817);
+   they now read "100 Ryo, but", "10 Ryo, okay?", "1,000 Ryo, all right!". No other line changed. The fix
+   needs a rebuild (`tools/build_en.sh`) and a new `tools/release.sh` run; session `en2` still runs the
+   build from before the fix. Next: the rest of Mito's townspeople, its buildings, the church, the castle
+   path.
 2. Money, done as ruled (`docs/decisions.md`): `restyle.py` `money()` turns upstream's "両20" into "20 Ryo" in
    every English line (176 lines, five script files); windows keep "18両". Seen in game: "2 Ryo, please.",
    "15 Ryo, please.", "It's 4 Ryo for the night.", "Ziria obtained 2 Ryo." The bank lines with "65,000 Ryo" were

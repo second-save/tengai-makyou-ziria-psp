@@ -263,8 +263,24 @@ exit 2).
    "Ziria used the Toad Oil!", "Ziria recovered 30 HP!". The cave is a maze of tanuki statues; after each
    impostor falls the hero is moved further in. The session is poked again: the Odanuki beats a level-7 hero
    (HP 48 to 12 in two rounds), so HP and max HP were set to 999 and Attack to 200 in the state of step 501.
-   Not done in the cave: its caskets (Toad Oil, 50 Ryo, an empty one). Next: up the ladder behind the
-   Odanuki, Hamlet 2, Mito (red stone with the 大 mark: the script keeps the kanji in "There is a large
+   Not done in the cave: its caskets (Toad Oil, 50 Ryo, an empty one).
+
+   Kumogiri Hamlet 2 (`map-0x14EF`, inn `map-0x150B`), part done (steps 511-534, session now in the inn
+   beside the hearth, stats still poked). Route: the ladder behind the Odanuki comes out north of the
+   mountains; straight north, over the bridge, the hut is the hamlet. Clean: two villagers outside ("Ziria,
+   this is Kumogiri Hamlet 2. / Chief Kumogiri is waiting for you inside the inn.", and the three scrolling
+   pages starting "Chief Kumogiri founded Kumogiri Hamlets all over the country as beacons of justice,"), and
+   everything in the inn: the record keeper at the counter (the prompt, the No answer, "Come back anytime!"),
+   the innkeeper, who is the man in blue at the hearth ("Welcome to the inn!", "It's 5 Ryo for the night. /
+   Will you stay?", "Please rest well.", "Take care of yourself, Lord Ziria."), the man on the left (three
+   pages, "You were probably too young to remember, but..."), the man on the right ("Chief Kumogiri ordered me
+   to infiltrate Castle Mito. I just got back. / Apparently, there's a secret path to the lands of Banmo under
+   the castle."), and Chief Kumogiri, the old man at the head of the hearth: full-width portrait, six pages
+   from "Here you are, Ziria! / It's me, Kumogiri! / You've really grown!" to "Allow me to teach you a
+   technique of my own design. / You can use it in battle!", then "Ziria has learned how to steal!". His text
+   prints slowly: allow 400 frames a page. Not saved here (the stats are poked). Not done: the shop next to
+   the inn, the other villager lines (Mito, Gomon, immortality), the Steal command in a battle. Next: those,
+   then Mito (red stone with the 大 mark: the script keeps the kanji in "There is a large
    red stone marked with a yellow 大 symbol." - check how it renders). Then Mito ("just north from here,
    beyond the lake").
 2. Money, done as ruled (`docs/decisions.md`): `restyle.py` `money()` turns upstream's "両20" into "20 Ryo" in

@@ -72,9 +72,12 @@ Long Sword, Cloth Katabira, Leather Helmet), and a full level-up ("Ziria rose to
 "HP and TP fully restored!").
 
 Later in `en2` (steps 45-123): eleven Tsukuba Village villagers, two with portrait panels, a house villager,
-a chained level-up to level 6 and a two-enemy cave battle (Sword Bug), all clean. Kinta was not found in the
-village: his line (`map-0x11A7-0x5F8`) is the one not seen. Step 123 = just inside the cave whose entrance is the
-dark hole south-west of the village (from the village exit: left 3 tiles, down 8). Dialogue tip: Circle on the
+a chained level-up to level 6 and a two-enemy cave battle (Sword Bug), all clean. The cave whose entrance is the
+dark hole south-west of the village (from the village exit: left 3 tiles, down 8) is the Namazu Shrine; a tanuki
+guards its chest ("You're not going anywhere, pon!"). Kinta is a small red villager who wanders the village's
+north-west path; his cutscene (full-width portrait, five pages, "Kinta has joined you!") is clean. Step 141 =
+Kinta just joined, hero at the north end of the west path. Next story beat: back to the shrine, where Kinta
+turns on the hero (`map-0x124F-0x38E`). Dialogue tip: Circle on the
 last page closes the box, one press more opens the field menu, so count pages or alternate circle and cross.
 
 Left Japanese, found this session: the Map of Tsukuba screen has a red seal with the kanji 筑波 drawn in the

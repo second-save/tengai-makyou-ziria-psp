@@ -278,9 +278,26 @@ exit 2).
    the castle."), and Chief Kumogiri, the old man at the head of the hearth: full-width portrait, six pages
    from "Here you are, Ziria! / It's me, Kumogiri! / You've really grown!" to "Allow me to teach you a
    technique of my own design. / You can use it in battle!", then "Ziria has learned how to steal!". His text
-   prints slowly: allow 400 frames a page. Not saved here (the stats are poked). Not done: the shop next to
-   the inn, the other villager lines (Mito, Gomon, immortality), the Steal command in a battle. Next: those,
-   then Mito (red stone with the 大 mark: the script keeps the kanji in "There is a large
+   prints slowly: allow 400 frames a page. Not saved here (the stats are poked).
+
+   Hamlet 2, rest of the outdoors, the store and the Thieving School, done (steps 535-562, session now in
+   the school beside the instructor, 1119 Ryo). Clean: the general store (`map-0x1543`: "Welcome, welcome! /
+   This is my general store. / Tell me what you need!", Buy Wares / Sell Belongings, the list Toad Oil 18,
+   White Toad Oil 52, White Snake Stone 250, White Crane Plume 60, "Have a nice day."), three more villagers
+   ("It seems the Cult of Daimon is gathering believers by telling them that if they join, they can become
+   immortal.", "The Daimonists are using Mito Town as their base. It's just north from here, beyond the
+   lake. / Everyone there has been acting weird ever since!", and, with a small portrait window, "Lord Komon
+   was kicked out of Mito Castle by Gomon, one of the heads of the Cult of Daimon! / He's a violent man who
+   loves torturing people!"), and the Thieving School (`map-0x155F`, the left of the two southern houses):
+   the doorman ("If you can steal the money successfully, you get to keep it for yourself! / Think of it as
+   a game and have fun! / But don't forget your quest to defeat Masakado!") and the instructor ("This is a
+   Thieving School, where you can improve your thievery in order to help defeat the Cult of Daimon! / Head
+   inside, avoid the instructors, and steal the money from the casket!"). How-to: the store keeper is talked
+   to from the counter row one tile left of the steps; the school's instructor cannot be reached across his
+   table, stand on the raised floor beside him. Villagers wander and block the gap between the southern
+   houses; go round. Not seen (other story states): `map-0x14EF-0x2C7` ("Mito Town is finally back to
+   normal.") and `0x3E7`. Not done: the right-hand southern house (probably the Gambling Den, `map-0x1527`),
+   the school's casket game, the Steal command in a battle. Next: those, then Mito (red stone with the 大 mark: the script keeps the kanji in "There is a large
    red stone marked with a yellow 大 symbol." - check how it renders). Then Mito ("just north from here,
    beyond the lake").
 2. Money, done as ruled (`docs/decisions.md`): `restyle.py` `money()` turns upstream's "両20" into "20 Ryo" in

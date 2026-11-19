@@ -75,10 +75,14 @@ exit 2).
    key from Items facing the locked casket; use the tweezers standing on the left spit directly above Namazu,
    facing down.
 
-   Open question: both "Obtained X." lines print twice (the box clears and types the same line again before the
-   Virtue line; only one item is given). Not compared with the original: replaying the `en` + `en2` presses on
-   the Japanese build had drifted by frame 66,000 (hero still on Mount Tsukuba), so that method does not work
-   over a long route. The shop's "Obtained Map of Tsukuba." printed once.
+   Both "Obtained X." lines print twice (the box clears and types the same line again; one item is given).
+   Explained later, not a port bug: the game prints a per-map line (23 of them in `script_dialogue.csv`,
+   Japanese "Xを 手に入れた") and then the engine's generic line (`script_generic_text.csv` `str-0x134`,
+   "[string]を手に入れます"). The Japanese wording differs slightly; upstream translates both "Obtained X.".
+   Shops print only the generic one. At the White Deer the two differ ("Obtained Wakakusa." then "Obtained
+   Scroll of Wakakusa."). Rewording one of the two is a style choice, not ruled on. The replay of the `en` +
+   `en2` presses on the Japanese build drifted by frame 66,000, so that comparison method does not work over
+   a long route.
 
    Shrine exit to Tsuchiura, done (session `en2`, steps 202-226, now inside the Tsuchiura inn, HP 15/30,
    saved to TENGAI1 on the session memstick). Clean: overworld battles with new enemies (Earth Snake, Daimon
@@ -203,8 +207,19 @@ exit 2).
    it... / Be very careful."), and the priest with portrait ("I once read in an old book that the voice of
    the Fire Clan has the power to release all evil seals.", "I'm utterly convinced there must be some sort of
    hint in those words!", "I don't know exactly what it means, but I'm sure that you will be able to solve
-   this riddle, Lord Ziria!"). Not done: the inn, the tanuki
-   lines, the White Deer's stone (red stone with the 大 mark: the script keeps the kanji in "There is a large
+   this riddle, Lord Ziria!"). The White Deer, done (steps 419-431, session now in front
+   of the red stone, level 7, HP 46/53): the tanuki ambush has no dialogue (a battle with two Oni-danuki
+   starts halfway up the avenue of tanuki statues), the stone's Check line renders with its kanji glyph
+   ("There is a large red stone marked with a yellow 大 symbol."), and Talk on the stone frees the deer:
+   "I'm free! This voice...", "...messenger of the divine! / Thank you for breaking the evil seal of the
+   Daimonists!", "The Daimonists are strong...incredibly strong! Masakado is stronger yet! / But I know you
+   will defeat them!", "I bestow upon you the scroll of Wakakusa, which contains my divine power!", "The
+   Wakakusa jutsu is a technique that can heal minor injuries in a few moments!", "Take down the Cult of
+   Daimon! / Prevent Masakado's revival! / Go forth, young Ziria!", "Acquired 10 Virtue!", "Obtained
+   Wakakusa.", "Obtained Scroll of Wakakusa." Route: from the shrine hall go right, north into the tree maze,
+   left along the first row, up, back right, then down the next column and left to the statue avenue; walk up
+   it. Not done: the inn, the tanuki villager line, the Jutsu menu with Wakakusa, the
+   White Deer's stone after the scene (red stone with the 大 mark: the script keeps the kanji in "There is a large
    red stone marked with a yellow 大 symbol." - check how it renders). Then Mito ("just north from here,
    beyond the lake").
 2. Money, done as ruled (`docs/decisions.md`): `restyle.py` `money()` turns upstream's "両20" into "20 Ryo" in

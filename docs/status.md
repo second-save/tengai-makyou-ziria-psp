@@ -152,9 +152,13 @@ exit 2).
    Good luck, Ziria."), and the general store's selling side, first time seen ("What will you be selling?",
    the belongings list, "That will be 12 Ryo. / How does that sound?", Yes/No, "Will you be selling anything
    else?", and the key-item refusal "Giant Tweezers? How much would that be worth? I'm afraid I can't really
-   tell."), plus its buy list (Toad Oil, White Toad Oil, White Crane Plume, Map of Tsukuba). Next: the two
-   houses south of the statues and the remaining villagers, then Mito ("just north from here, beyond the
-   lake").
+   tell."), plus its buy list (Toad Oil, White Toad Oil, White Crane Plume, Map of Tsukuba). Kogama, done (steps 342-346): the green frog between two stones on the hamlet's
+   east side, level with the southern houses ("Hey, Ziria! You look well! / Traveling alone is dangerous, so I
+   decided to come with you!", "I can reach any Kumogiri Hamlet I've visited at least once in a single leap!",
+   "I'm incredibly useful - you'll see! / Now let's go kick Masakado's butt!", "Kogama, your helper, has joined
+   your quest.", "Acquired 13 Virtue!"), and the Kogama command inside the hamlet ("You can't use that here.").
+   Not done here: the two southern houses, three villagers, the Kogama command on the overworld. Next: Mito
+   ("just north from here, beyond the lake").
 2. Money, done as ruled (`docs/decisions.md`): `restyle.py` `money()` turns upstream's "両20" into "20 Ryo" in
    every English line (176 lines, five script files); windows keep "18両". Seen in game: "2 Ryo, please.",
    "15 Ryo, please.", "It's 4 Ryo for the night.", "Ziria obtained 2 Ryo." The bank lines with "65,000 Ryo" were

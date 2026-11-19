@@ -100,8 +100,20 @@ exit 2).
    service is nationwide! ..."); the armory (sword sign: "Welcome to my armory! / How can I help you?", Long
    Sword, Cloth Katabira, Shinobi Katabira in the narrow font, Leather Helmet, "60 Ryo, please."). In shops
    "Obtained X." prints once. Shop doors are entered from the tile below; trees beside the doors block, so come
-   up the gap between them. In a shop, stand on the cushion in the keeper's column. Next: the inn stay, Lord
-   Komon (the moated building on the east side), then Mito.
+   up the gap between them. In a shop, stand on the cushion in the keeper's column. 
+
+   Lord Komon, done (steps 255-271, session now in his room on the castle's top floor, level 6, HP 15/30,
+   953 Ryo, Aoi Sword and Shinobi Katabira held). Clean: the Equip screens ("In hands", "On body", "On head",
+   "Nothing available."), the old villager with portrait ("You're a Fire Hero, right? / Please, you hafta save
+   Lord Komon!", "He's in the castle! I beg ya, help the poor fellow!"), and Komon's whole scene over the
+   full-width picture: "Hoh hoh hoh! My name is Komon! / You must be Ziria, the Fire Hero!", "the foreign Cult
+   of Daimon is invading Jipang, their aim the resurrection of Masakado!", the Yes/No question, "So you're
+   willing to fight against the Daimonists!", "I will have the eastern bridge lowered at once.", "I bestow
+   upon you the Aoi Sword, handed down in my family for 200 years!", "You have accepted Komon's request.",
+   "Acquired 15 Virtue!", "Obtained Aoi Sword." (printed once). The castle is over the bridge on the town's
+   east side: straight up through two rooms, Komon is the middle figure on the dais. Not done in Tsuchiura:
+   the inn stay (the innkeeper was not found; the room right of the inn door holds the record keeper), the
+   "No" answer to Komon. Next: equip the Aoi Sword, cross the eastern bridge, Mito.
 2. Money, done as ruled (`docs/decisions.md`): `restyle.py` `money()` turns upstream's "両20" into "20 Ryo" in
    every English line (176 lines, five script files); windows keep "18両". Seen in game: "2 Ryo, please.",
    "15 Ryo, please.", "It's 4 Ryo for the night.", "Ziria obtained 2 Ryo." The bank lines with "65,000 Ryo" were

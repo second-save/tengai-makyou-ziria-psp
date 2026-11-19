@@ -325,7 +325,18 @@ exit 2).
    to teaching you one of the techniques he designed!"), clean; he still says it after the technique is
    learned. Route: leave the hamlet by the east side (between the two stone markers), on the overworld four
    tiles up, five left, north over the second bridge, then north-west to the blue-roofed town. The location
-   window reads "Mito Town". Next: Mito's townspeople (`map-0x157B`), the church, the castle path.
+   window reads "Mito Town". 
+
+   Mito Town (`map-0x157B`), part done (steps 602-608, session now on the upper road beside the guard,
+   stats still poked). Clean, five townspeople: "I'm glad Komon and his stooges are gone! / I was so sick of
+   Kaku's dreadful wordplays!", "The Cult of Daimon is fantastic. It heals all sicknesses, restores your
+   youth, and frees you from all the world's ills!", the guard, who wanders the upper road ("No, no, no! Stop
+   right there! / Only Daimonists may pass through here! Turn back at once!"), "Our town is peaceful thanks
+   to Lord Gomon's protection. / We are eternally grateful.", and "Anyone can become a Daimonist. You simply
+   need to go to the church and get baptized. You should go right now!". Layout: the east entrance leads to
+   a lower road with an exchange-sign building, a general store and an inn; a road north between them
+   reaches an upper road with two more houses and a fenced path going north-east. Next: the rest of Mito's
+   townspeople, its buildings, the church, the castle path.
 2. Money, done as ruled (`docs/decisions.md`): `restyle.py` `money()` turns upstream's "両20" into "20 Ryo" in
    every English line (176 lines, five script files); windows keep "18両". Seen in game: "2 Ryo, please.",
    "15 Ryo, please.", "It's 4 Ryo for the night.", "Ziria obtained 2 Ryo." The bank lines with "65,000 Ryo" were

@@ -1,6 +1,6 @@
 # Status (2026-11-19)
 
-An English build exists: `build/NPJJ30029/CONTENT.DAT`, sha1 `babc0728a58107cc90e361e0c81c1e62826dca3f`.
+An English build exists: `build/NPJJ30029/CONTENT.DAT`, sha1 `a9cc6890310d7a7b090c0323e3d4f339acbfc7ec`.
 Patch for testing: `dist/ziria-psn-en.xdelta` and `dist/ziria-psn-en.zip` (`tools/release.sh`: xdelta3 against
 the original `CONTENT.DAT`, re-applied and compared). Everything is committed. Nothing is published.
 
@@ -340,9 +340,10 @@ exit 2).
    Bug found from the script listing and fixed in `tools/restyle.py`: the amount pattern let a number end
    on a comma, so "両100, but" became "100, Ryo but". Three lines were wrong (Mito's armory
    `map-0x15B3-0x109_4`, "10, Ryo okay?" in `map-0x1BCB`, "1,000, Ryo all right!" at dialogue line 11817);
-   they now read "100 Ryo, but", "10 Ryo, okay?", "1,000 Ryo, all right!". No other line changed. The fix
-   needs a rebuild (`tools/build_en.sh`) and a new `tools/release.sh` run; session `en2` still runs the
-   build from before the fix. Next: the rest of Mito's townspeople, its buildings, the church, the castle
+   they now read "100 Ryo, but", "10 Ryo, okay?", "1,000 Ryo, all right!". No other line changed. Rebuilt
+   (sha1 `a9cc6890`), `dist/` regenerated with `tools/release.sh`, identity test and the 47-step replay check
+   pass on the new build. The three fixed lines have not been seen in game: session `en2` still runs build
+   `babc0728`, whose only difference is those three lines. Next: the rest of Mito's townspeople, its buildings, the church, the castle
    path.
 2. Money, done as ruled (`docs/decisions.md`): `restyle.py` `money()` turns upstream's "両20" into "20 Ryo" in
    every English line (176 lines, five script files); windows keep "18両". Seen in game: "2 Ryo, please.",

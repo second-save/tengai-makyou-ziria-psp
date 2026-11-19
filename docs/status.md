@@ -113,7 +113,28 @@ exit 2).
    "Acquired 15 Virtue!", "Obtained Aoi Sword." (printed once). The castle is over the bridge on the town's
    east side: straight up through two rooms, Komon is the middle figure on the dais. Not done in Tsuchiura:
    the inn stay (the innkeeper was not found; the room right of the inn door holds the record keeper), the
-   "No" answer to Komon. Next: equip the Aoi Sword, cross the eastern bridge, Mito.
+   "No" answer to Komon. 
+
+   Eastern bridge and Bokuden, done (steps 272-297, session now in Bokuden's hut after the duel). Clean: the
+   three-column item list, the Status screen (Equipment, Virtue 331/381, Attack, Defense, Speed), "Ziria used
+   the Toad Oil!", "Ziria recovered 30 HP!", "Tsuchiura Castle" in the location window, "Daimon Acolyte sprang
+   forward!", and Bokuden: "I am Bokuden, master of the blade! / If you can defeat me, I will teach you a
+   special technique! Up for a fight?", Yes/No, the duel ("Bokuden took 3 damage!", "BOKUDEN SLASH!! / The
+   sword's sharpness increased!"), the loss ("Ziria received deep wounds and became unable to fight." in red,
+   "Tch! You weakling! / Come back after you train some more!", "In preparation for a new battle, Ziria used
+   half his money to fully heal all wounds!", respawn at the record keeper), and the win ("By emptying your
+   mind of needless thoughts, you can increase the sharpness of your blade! That is the Bokuden Slash!",
+   "The way of the sword is long and steep!", "You have learned the special technique Bokuden Slash."). Not
+   captured: the messages at the moment Bokuden falls. Left Japanese: a small wall plaque with brush strokes
+   in Bokuden's hut (background art, not ruled on).
+
+   **The `en2` session is poked from step 294 on**: HP and max HP 999, Attack 200 (`poke.py set ...
+   0x096667E4=E703 0x096667E8=E703 0x096667FA=C800`), because level 6 cannot beat Bokuden (he deals 6-12 a
+   turn and takes 3). Fine for reading text, not for judging balance. Poke before a battle starts: a battle
+   already running writes its own HP back. Hero block, further offsets: Attack `+1A`, Defense `+1C`, Speed
+   `+1E` (2 bytes each). Route: leave Tsuchiura by its east edge (the road below the castle bridge), cross
+   the bridge, the hut is the red house north-west of the far bridgehead; inside, step up onto the raised
+   floor through a cushion and stand below Bokuden. Next: Mito.
 2. Money, done as ruled (`docs/decisions.md`): `restyle.py` `money()` turns upstream's "両20" into "20 Ryo" in
    every English line (176 lines, five script files); windows keep "18両". Seen in game: "2 Ryo, please.",
    "15 Ryo, please.", "It's 4 Ryo for the night.", "Ziria obtained 2 Ryo." The bank lines with "65,000 Ryo" were

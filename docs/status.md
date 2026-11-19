@@ -296,8 +296,29 @@ exit 2).
    to from the counter row one tile left of the steps; the school's instructor cannot be reached across his
    table, stand on the raised floor beside him. Villagers wander and block the gap between the southern
    houses; go round. Not seen (other story states): `map-0x14EF-0x2C7` ("Mito Town is finally back to
-   normal.") and `0x3E7`. Not done: the right-hand southern house (probably the Gambling Den, `map-0x1527`),
-   the school's casket game, the Steal command in a battle. Next: those, then Mito (red stone with the 大 mark: the script keeps the kanji in "There is a large
+   normal.") and `0x3E7`. 
+
+   Hamlet 2's Gambling Den (`map-0x1527`, the right-hand southern house; dice text in `script_shop.csv`),
+   done (steps 563-594, session now in the den below the gambler in red, 1139 Ryo). Clean: the three
+   gamblers ("It's a simple game! / Just bet whether the sum of the two dice will be even or odd!", "The
+   dice lady is a real babe! / When I play, I'm not exactly looking at the dice, if you catch my drift!",
+   "My, if it isn't Ziria! / Should you really be here? / Eh, I guess it's fine every once in a while!") and
+   the whole dice game, three rounds: the panel "Funds 1119両 / Bet 0両" beside the dice lady's portrait (both
+   figures are blank until the first Yes), "A single bet is 10 Ryo! / You can bet up to 100 Ryo! Are you
+   in?", "Let's start with a 10 Ryo bet!", "Real men risk it all! / How about betting more?" (Yes raises
+   the bet by 10), "The dice have been rolled! / So, what will be under the cup? / Will it be even? Or will
+   it be odd?", the Even / Odd choice, "The bet is in! / Game on!", the pick shown as "Even" or "Odd" above
+   the bet, the result line "6 - 6 : Even", the win ("Luck is on your side, Fire Hero! / How about one more
+   game?"), the loss ("If winter comes, can spring be far behind? Let's play one more game!") and the No at
+   the first prompt ("No time for games, huh? That's fine! / Come back whenever you feel like it!"). A win
+   pays double the bet. After a loss the Bet figure keeps showing 10両 (0両 after a win); a number display,
+   not text, not compared with the Japanese build. No at the 10 Ryo prompt just fades out, no line. How-to:
+   the dice lady is the woman on the left of the mat, talk from her left; the cushions are solid, so the
+   right-hand gamblers are reached along the top row or down the right wall. Not seen: the empty-wallet
+   line (`str-0xE1D`). Also in the school: the casket room behind the back door has four instructors and
+   the casket in the top row behind racks; one try at it walked back out by the stairs (Check there gives
+   "There's nothing out of the ordinary."). Not done: that casket game, the Steal command in a battle.
+   Next: Mito (red stone with the 大 mark: the script keeps the kanji in "There is a large
    red stone marked with a yellow 大 symbol." - check how it renders). Then Mito ("just north from here,
    beyond the lake").
 2. Money, done as ruled (`docs/decisions.md`): `restyle.py` `money()` turns upstream's "両20" into "20 Ryo" in

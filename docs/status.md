@@ -223,9 +223,14 @@ exit 2).
    terrace beside the armory, HP 49/53, 987 Ryo): the stone's Check gives "You find nothing."; the avenue
    ambush fires again on the way back (two more Oni-danuki); and the villager by the armory: "The rock the
    White Deer was sealed inside is red, with a 大 (dai) symbol written on it in yellow!", "It's so glaring, as
-   if the Daimonists are proud of their evil! I hope someone defeats them soon!" Not done: the inn, the
+   if the Daimonists are proud of their evil! I hope someone defeats them soon!" Not done: the
    woman's tanuki-soup line (`map-0x140F-0x37A`, speaker not found), any changed villager lines after the
-   scene (red stone with the 大 mark: the script keeps the kanji in "There is a large
+   scene, and the inn (`map-0x1447`), which matters: it holds the impostor accusation ("You're that guy I met
+   in the cave to the north!"), the thanks after the rescue, and the Kumogiri messenger who gives the route
+   ("You'll find Kumogiri Hamlet 2 just beyond the cave north of this village!"). The "north beyond the lake"
+   hint for Mito is spoken in Hamlet 2 (`map-0x14EF`), not Hamlet 1: north of Hamlet 1 the land ends at the
+   lake on every side (checked, steps 446-450). So the order is Kashima inn, the cave north of Kashima,
+   Hamlet 2, Mito (red stone with the 大 mark: the script keeps the kanji in "There is a large
    red stone marked with a yellow 大 symbol." - check how it renders). Then Mito ("just north from here,
    beyond the lake").
 2. Money, done as ruled (`docs/decisions.md`): `restyle.py` `money()` turns upstream's "両20" into "20 Ryo" in

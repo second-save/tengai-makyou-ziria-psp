@@ -165,9 +165,14 @@ exit 2).
    his own?"), and the Thieving School's instructor ("If you can steal the money successfully, you get to keep
    it for yourself!", "Think of it as a game and have fun! / But don't forget your quest to defeat Masakado!")
    with the location window "Thieving School". The right-hand southern house has a closed wooden door that
-   does not open. Not done here: the Thieving School's counter and its stealing game, the Kogama command on
-   the overworld. Next: those, then Mito ("just north from here, beyond the lake") and Kashima Village to the
-   east.
+   does not open. The school's master, on the raised floor (steps 361-367): "This is a Thieving School, where you
+   can improve your thievery in order to help defeat the Cult of Daimon!", "Head inside, avoid the instructors,
+   and steal the money from the casket!" - all four of the school's lines are now seen. The game room is
+   through the door behind the master: three patrolling instructors; touching one puts the hero back in the
+   front room with no message (the script has none). The casket sits behind the crate row; the way in looks
+   like the top row, then the left column down to the row under the counter. Not done: reaching that casket
+   (its reward line), the Kogama command on the overworld. Next: Kashima Village to the east (next map in the
+   script, the White Deer), then Mito ("just north from here, beyond the lake").
 2. Money, done as ruled (`docs/decisions.md`): `restyle.py` `money()` turns upstream's "両20" into "20 Ryo" in
    every English line (176 lines, five script files); windows keep "18両". Seen in game: "2 Ryo, please.",
    "15 Ryo, please.", "It's 4 Ryo for the night.", "Ziria obtained 2 Ryo." The bank lines with "65,000 Ryo" were

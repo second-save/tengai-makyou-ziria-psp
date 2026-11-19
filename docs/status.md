@@ -71,6 +71,12 @@ Check, Mode (Descriptions, Walk Type, Text Speed, Text Skip), Status, the Armory
 Long Sword, Cloth Katabira, Leather Helmet), and a full level-up ("Ziria rose to level 2!", "Gained 1 Attack!",
 "HP and TP fully restored!").
 
+Later in `en2` (steps 45-123): eleven Tsukuba Village villagers, two with portrait panels, a house villager,
+a chained level-up to level 6 and a two-enemy cave battle (Sword Bug), all clean. Kinta was not found in the
+village: his line (`map-0x11A7-0x5F8`) is the one not seen. Step 123 = just inside the cave whose entrance is the
+dark hole south-west of the village (from the village exit: left 3 tiles, down 8). Dialogue tip: Circle on the
+last page closes the box, one press more opens the field menu, so count pages or alternate circle and cross.
+
 Left Japanese, found this session: the Map of Tsukuba screen has a red seal with the kanji 筑波 drawn in the
 picture. Upstream left it. Not ruled on.
 

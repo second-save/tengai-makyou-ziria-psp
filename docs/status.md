@@ -180,8 +180,8 @@ exit 2).
    Hamlet to Kashima Shrine, done (steps 368-382, session now just inside Kashima Shrine's entrance, level 7,
    HP 23/53, 1018 Ryo). Clean: new enemies Yato, a pair of tanuki and Daimon Priest ("Yato took 5 damage!",
    "Daimon Priest's attack!", "Ziria dodged."), the location window "Kashima Shrine", and the Kogama command
-   on the overworld: it shows a map of Jipang with the current province lit, then returns (one hamlet known,
-   nothing to choose). The map's corner caption is decorative cursive, not readable text; not compared with
+   on the overworld: it shows a map of Jipang with the current province lit, then, on Circle, warps to the
+   hamlet (confirmed from Kashima's gate at step 445: the hero lands on the hamlet's overworld tile; no text). The map's corner caption is decorative cursive, not readable text; not compared with
    the original. The level-up at step 298 reset the poked stats (HP 53, normal Attack), so play is unpoked
    again from there. Route: leave the hamlet by its east exit (between the two stones, one row above the
    southern houses' doors), follow the beach south-east down the sandbar, cross the bridge east at its top;

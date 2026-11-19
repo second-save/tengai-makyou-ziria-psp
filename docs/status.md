@@ -181,8 +181,23 @@ exit 2).
    the original. The level-up at step 298 reset the poked stats (HP 53, normal Attack), so play is unpoked
    again from there. Route: leave the hamlet by its east exit (between the two stones, one row above the
    southern houses' doors), follow the beach south-east down the sandbar, cross the bridge east at its top;
-   the shrine is the red torii just past the bridge. Next: Kashima Shrine's villagers and the White Deer,
-   then Mito ("just north from here, beyond the lake").
+   the shrine is the red torii just past the bridge. 
+
+   Kashima Shrine, part done (steps 383-399, session now at the armory counter with the buy list open,
+   1013 Ryo). Clean: four villagers ("The White Deer, the guardian deity of Kashima Village, was turned into
+   stone by the Daimonists!", "We won't survive long without his divine protection! What should we do?!";
+   "I once fell from a tree and got hurt, but then the sacred White Deer healed me with his divine
+   powers...", "Please, you have to save him!"; "The Daimonists feared the divine powers of the White Deer, so
+   they turned him to stone.", "I can hear his sorrowful voice coming from within the rock..."; "The White
+   Deer's divine powers can heal minor illnesses and light injuries in a few moments.", "He was trying to
+   entrust the Fire Hero with a scroll containing that divine power, but now..."), and the armory (Samurai
+   Sword, Shinobi Katabira, Leather Helmet, Shuriken; "Shuriken, is it?", "Obtained Shuriken.", "5 Ryo,
+   please. / Would you like anything else?"). Layout: inn on the lower terrace left of the steps, armory and
+   general store on the middle terrace, more above. The armory door is entered from the row below it, coming
+   from the path side. Not done: the general store, the inn, two villagers on the top terrace, the tanuki
+   lines, the White Deer's stone (red stone with the 大 mark: the script keeps the kanji in "There is a large
+   red stone marked with a yellow 大 symbol." - check how it renders). Then Mito ("just north from here,
+   beyond the lake").
 2. Money, done as ruled (`docs/decisions.md`): `restyle.py` `money()` turns upstream's "両20" into "20 Ryo" in
    every English line (176 lines, five script files); windows keep "18両". Seen in game: "2 Ryo, please.",
    "15 Ryo, please.", "It's 4 Ryo for the night.", "Ziria obtained 2 Ryo." The bank lines with "65,000 Ryo" were

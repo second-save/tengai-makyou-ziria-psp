@@ -2,8 +2,7 @@
 
 An English build exists: `build/NPJJ30029/CONTENT.DAT`, sha1 `babc0728a58107cc90e361e0c81c1e62826dca3f`.
 Patch for testing: `dist/ziria-psn-en.xdelta` and `dist/ziria-psn-en.zip` (`tools/release.sh`: xdelta3 against
-the original `CONTENT.DAT`, re-applied and compared). One commit exists (`a28eb6c`); the work after it
-(`tools/play.sh`, `tools/release.sh`, `README.md`, the money rule) is uncommitted. Nothing is published.
+the original `CONTENT.DAT`, re-applied and compared). Everything is committed. Nothing is published.
 
 ## Checked in PPSSPP (stock 1.20.4, macOS)
 
@@ -62,8 +61,24 @@ exit 2).
    name ("Kinta the Tanuki took 3 damage!"), and the surrender speech about the giant tweezers. To trigger it:
    bring Kinta in, walk up the corridor left of the chest loop (sandal scene), go on to the tanuki guard, then
    walk back to Kinta. Session `en2` (build `babc0728`) is at step 169: level 6, in the shrine after the fight.
-   Still unseen: the bosses of `script_boss.csv` (the first is the Nue, well past Tsuchiura and Mito), the floor
-   below the shrine (casket, tweezers, Namazu), and everything after it.
+   Still unseen: the bosses of `script_boss.csv` (the first is the Nue, well past Tsuchiura and Mito) and
+   everything after the shrine.
+
+   The floor below the shrine, done (session `en2`, steps 170-201, now upstairs beside the crumbled boulder).
+   Clean: "There is a large casket here. / It's locked tight.", the upstairs casket ("You look inside the
+   casket.", "You found the Tanuki Key!", "Obtained Tanuki Key.", "Acquired 6 Virtue!"), the item list with the
+   narrow font for long names (Map of Tsukuba, Giant Tweezers), "You lift the lid of the casket. / There is a
+   pair of giant tweezers inside.", "Obtained Giant Tweezers.", "Acquired 8 Virtue!", "Ziria used the Giant
+   Tweezers!", "But nothing happened!" (wrong tile), and Namazu's picture scene ("Ouch! Owww!", "Namazu thrashes
+   about, causing an earthquake!" on two lines). Battles on the way: Oni-danuki and Sword Bug, up to three
+   enemies, clean. How to: the Tanuki Key is in the upstairs casket (menu Check, facing it); downstairs use the
+   key from Items facing the locked casket; use the tweezers standing on the left spit directly above Namazu,
+   facing down.
+
+   Open question: both "Obtained X." lines print twice (the box clears and types the same line again before the
+   Virtue line; only one item is given). Not compared with the original: replaying the `en` + `en2` presses on
+   the Japanese build had drifted by frame 66,000 (hero still on Mount Tsukuba), so that method does not work
+   over a long route. The shop's "Obtained Map of Tsukuba." printed once.
 2. Money, done as ruled (`docs/decisions.md`): `restyle.py` `money()` turns upstream's "両20" into "20 Ryo" in
    every English line (176 lines, five script files); windows keep "18両". Seen in game: "2 Ryo, please.",
    "15 Ryo, please.", "It's 4 Ryo for the night.", "Ziria obtained 2 Ryo." Not seen: the bank lines with
@@ -85,7 +100,7 @@ turns on the hero (`map-0x124F-0x38E`). Dialogue tip: Circle on the
 last page closes the box, one press more opens the field menu, so count pages or alternate circle and cross.
 
 Left Japanese, found this session: the Map of Tsukuba screen has a red seal with the kanji 筑波 drawn in the
-picture. Upstream left it. Not ruled on.
+picture. Upstream left it. Ruled: leave it (`docs/decisions.md`).
 
 Debug tool: `tools/poke.py dump STATE OUT.bin` and `poke.py set STATE_IN STATE_OUT ADDR=HEXBYTES..` work on
 `play.sh` savestates (PSP memory, little-endian). Hero block at `0x096667E0`: HP `+4` (2 bytes), TP `+6`,

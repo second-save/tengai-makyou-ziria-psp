@@ -219,8 +219,13 @@ exit 2).
    Wakakusa.", "Obtained Scroll of Wakakusa." Route: from the shrine hall go right, north into the tree maze,
    left along the first row, up, back right, then down the next column and left to the statue avenue; walk up
    it. Wakakusa in the Jutsu menu (step 434): Use/Give, "Ziria recovered
-   7 HP!", 2 TP. Not done: the inn, the tanuki villager line, the
-   White Deer's stone after the scene (red stone with the 大 mark: the script keeps the kanji in "There is a large
+   7 HP!", 2 TP. After the scene (steps 435-442, session now on the middle
+   terrace beside the armory, HP 49/53, 987 Ryo): the stone's Check gives "You find nothing."; the avenue
+   ambush fires again on the way back (two more Oni-danuki); and the villager by the armory: "The rock the
+   White Deer was sealed inside is red, with a 大 (dai) symbol written on it in yellow!", "It's so glaring, as
+   if the Daimonists are proud of their evil! I hope someone defeats them soon!" Not done: the inn, the
+   woman's tanuki-soup line (`map-0x140F-0x37A`, speaker not found), any changed villager lines after the
+   scene (red stone with the 大 mark: the script keeps the kanji in "There is a large
    red stone marked with a yellow 大 symbol." - check how it renders). Then Mito ("just north from here,
    beyond the lake").
 2. Money, done as ruled (`docs/decisions.md`): `restyle.py` `money()` turns upstream's "両20" into "20 Ryo" in

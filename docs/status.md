@@ -325,9 +325,7 @@ exit 2).
    to teaching you one of the techniques he designed!"), clean; he still says it after the technique is
    learned. Route: leave the hamlet by the east side (between the two stone markers), on the overworld four
    tiles up, five left, north over the second bridge, then north-west to the blue-roofed town. The location
-   window reads "Mito Town". Next: Mito's townspeople (`map-0x157B`), the church, the castle path (red stone with the 大 mark: the script keeps the kanji in "There is a large
-   red stone marked with a yellow 大 symbol." - check how it renders). Then Mito ("just north from here,
-   beyond the lake").
+   window reads "Mito Town". Next: Mito's townspeople (`map-0x157B`), the church, the castle path.
 2. Money, done as ruled (`docs/decisions.md`): `restyle.py` `money()` turns upstream's "両20" into "20 Ryo" in
    every English line (176 lines, five script files); windows keep "18両". Seen in game: "2 Ryo, please.",
    "15 Ryo, please.", "It's 4 Ryo for the night.", "Ziria obtained 2 Ryo." The bank lines with "65,000 Ryo" were

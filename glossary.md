@@ -9,7 +9,7 @@ Base script: LIPEMCO! Translations (TheMajinZenki), `vendor/tenmatools/tenma/scr
 |---|---|---|
 | ジパング | Jipang | the world; never Japan/Zipang for the setting |
 | 徳 | Virtue | experience points |
-| 両 | Ryo | money, capitalised |
+| 両 | Ryo | money, capitalised; in dialogue the amount comes first ("20 Ryo"), never the kanji as a sign. Windows keep `18両` |
 | 自来也 | Ziria | the hero, as in the title |
 
 ## Names

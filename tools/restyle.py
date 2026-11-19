@@ -4,7 +4,8 @@ no honorifics, shorter names (long vowels dropped), money written "Ryo".
     restyle.py SRC_SCRIPT_DIR DST_SCRIPT_DIR     writes every script_*.csv; only the English column changes
 
 Only the translation column (6th) of `string` rows is edited. script_credits.csv is copied as is (real people's
-names). Every rule is length-neutral or shorter, so LIPEMCO's line fitting still holds."""
+names). Every rule is length-neutral or shorter, except money(): upstream writes the kanji as a currency sign
+("両20"), we spell it out ("20 Ryo", +3 characters). The build re-wraps lines (tenma_scriptwrap)."""
 import csv, os, re, shutil, sys
 
 LADIES = {'Yashahime', 'Tsukihime', 'Tsunade'}
@@ -24,6 +25,8 @@ NAME_RE = re.compile(r'\b(%s)\b' % '|'.join(sorted(NAMES, key=len, reverse=True)
 SAMA_RE = re.compile(r"(?:\b(\w+) )?\b((?:[A-Z]-)*)([A-Z][\w']*)-sama\b")
 DROP_RE = re.compile(r"(?<=\w)-(?:san|chan|kun|dono)\b")
 RYO_RE = re.compile(r'\bryo\b')
+MONEY_RE = re.compile(r'両(\*\*|\[number\]|\d[\d,]*)')   # ** and [number] are the game's amount placeholders
+GLOSS_RE = re.compile(r' \(\d+ ryou\)')   # upstream explains the sign once: "両20 (20 ryou)"
 
 
 def sama(m):
@@ -42,7 +45,14 @@ def restyle(t):
     return RYO_RE.sub('Ryo', t)
 
 
+def money(t):
+    return MONEY_RE.sub(r'\1 Ryo', GLOSS_RE.sub('', t))
+
+
 def selftest():
+    for a, b in [("It's 両** for the night.", "It's ** Ryo for the night."), ('両[number], please.', '[number] Ryo, please.'),
+                 ('Obtained 両20 (20 ryou).', 'Obtained 20 Ryo.'), ('両1,000 at a time', '1,000 Ryo at a time')]:
+        assert money(a) == b, (a, money(a), b)
     for a, b in [('O Masakado-sama, hear us!', 'O Lord Masakado, hear us!'),
                  ('Z-Ziria-sama!', 'L-Lord Ziria!'),
                  ('Priest Ozuno-sama and Yashahime-sama', 'Priest Ozuno and Lady Yashahime'),
@@ -67,6 +77,8 @@ def main():
             if len(r) > 5 and r[0] == 'string':
                 new = restyle(r[5])
                 assert len(new) <= len(r[5]), (f, r[1])
+                new = money(new)
+                assert '両' not in new, (f, r[1], new)
                 assert not re.search(r'-(sama|san|chan|kun|dono)\b', new), (f, r[1], new)
                 n += new != r[5]
                 r[5] = new

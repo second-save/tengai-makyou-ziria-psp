@@ -9,8 +9,9 @@ Read `docs/status.md` (state, next step) and `docs/decisions.md` (the user's rul
 - Identity test: `python tools/build.py --identity` (must print `identity OK`)
 - Build: `python tools/build.py` -> `build/NPJJ30029/CONTENT.DAT`
 - Boot the build: `python tools/pp.py start` (`start orig` for the original), `pp.py fb OUT.png`, `pp.py keys cross 8`,
-  `pp.py stop`. Cross confirms, circle cancels. Stock PPSSPP 1.20.4 in `tools/ppsspp/` (`fetch_emu.py ppsspp`, then
+  `pp.py stop`. Frame-exact play: `tools/play.sh` (see `docs/status.md`); there Circle confirms. Stock PPSSPP 1.20.4 in `tools/ppsspp/` (`fetch_emu.py ppsspp`, then
   `chmod +x` the binary); it runs with `HOME=work/pphome`, never the user's own PPSSPP folder.
+- Full English build: `PY=tools/venv/bin/python bash tools/build_en.sh` (12 minutes). Patch + zip: `tools/release.sh`
 - Skill path: `python tools/skill.py`
 
 ## Layout

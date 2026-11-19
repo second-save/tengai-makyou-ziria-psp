@@ -245,8 +245,26 @@ exit 2).
    the corridor to the right. Not seen in the inn: `map-0x1447-0x165` (the apology after the impostor is
    exposed) and `0x1BD` (the Cult of Daimon line), which need other story states. One emulator launch failed
    here ("debugger port never opened", session unchanged); the retry worked, and the hung process had to be
-   killed by hand. Next: the cave north of Kashima (leave by the gate, go north on the overworld), the
-   impostor tanuki, Hamlet 2, Mito (red stone with the 大 mark: the script keeps the kanji in "There is a large
+   killed by hand.
+
+   Tanuki Cave (`map-0x14D3`), story lines done (steps 471-510, session now in front of the forgiven Odanuki
+   by the ladder at the cave's north end, 1124 Ryo). Route: out of Kashima by the south path, on the overworld
+   one tile up, five left, then north along the west shore; the cave mouth sits between four trees under the
+   mountains. Clean: the location window "Tanuki Cave", the four impostors, each opening with "Ponpokorin!"
+   and a full-width portrait ("I am Bokuden, master of the blade! / Think you can beat me, kid? / Have at
+   you!", "I'm Ziria, the Fire Hero! / Wahaha! You scared? / C'mon, show me what you got!", "Hoh hoh hoh! I am
+   Komon! / Ziria, how dare you oppose the Cult of Daimon? Prepare to be punished!", "Ziria, you naughty boy!
+   / It is I, the Toad Hermit!! / You cannot defeat your master!"), the fights ("Defeated Tanuki Bokuden!",
+   "Ziria obtained 8 Ryo.", "Acquired 8 Virtue!"), the boss ("You're not going anywhere! / Lord Gomon of Mito
+   will give me the lands of Tsukuba once I beat you!", "Odanuki took 63 damage!", "Defeated Odanuki!"), and
+   the scene after it: the apology, the Yes/No prompt, the No answer ("You're supposed to be a hero, brave and
+   kind! You must forgive me! Sob sob!", then the prompt again), the Yes answer ("Bleeeh! Fooled ya! / See
+   you, moron! Ponpokorin!") and "You forgave the Odanuki." Also seen: the item submenu (Use / Give / Drop),
+   "Ziria used the Toad Oil!", "Ziria recovered 30 HP!". The cave is a maze of tanuki statues; after each
+   impostor falls the hero is moved further in. The session is poked again: the Odanuki beats a level-7 hero
+   (HP 48 to 12 in two rounds), so HP and max HP were set to 999 and Attack to 200 in the state of step 501.
+   Not done in the cave: its caskets (Toad Oil, 50 Ryo, an empty one). Next: up the ladder behind the
+   Odanuki, Hamlet 2, Mito (red stone with the 大 mark: the script keeps the kanji in "There is a large
    red stone marked with a yellow 大 symbol." - check how it renders). Then Mito ("just north from here,
    beyond the lake").
 2. Money, done as ruled (`docs/decisions.md`): `restyle.py` `money()` turns upstream's "両20" into "20 Ryo" in

@@ -89,13 +89,23 @@ exit 2).
    TENGAI1.", "Write complete." Route: past the rubble take the ladder at the end of the south-east corridor,
    follow the path south then east; the town is the blue castle by the bridge. The record keeper stands right
    of the inn's entrance corridor. Also clean (steps 227-230): the Kumogiri villager beside the item shop, with portrait
-   ("Ziria, right? / I'm from Kumogiri Hamlet.", "Just remember this: we're all on your side!"). Session is at
-   step 231, just inside the item shop door (the building with the bag sign, below the inn). Next: this shop,
-   the inn stay, the other shops, Lord Komon, then Mito.
+   ("Ziria, right? / I'm from Kumogiri Hamlet.", "Just remember this: we're all on your side!"). Tsuchiura's three shops, done (steps 231-254, session now inside the armory with its buy list open,
+   953 Ryo). Clean: the general store (bag sign: "Welcome, welcome! / This is my general store. / Tell me what
+   you need!", Toad Oil / Rope Sandals / Map of Tsukuba, "Toad Oil, is it?", "Obtained Toad Oil.", "18 Ryo,
+   please. / Would you like anything else?", "Thank you, thank you! / See you soon"); the warehouse (two-arrows
+   sign: "Hey, welcome to the warehouse! / How can I help ya?", Store/Withdraw Money, Items, Jutsu, the Savings
+   and Money windows, "You can store 1,000 Ryo at a time, up to a total of 65,000 Ryo. How about it?", "That's
+   1,000 Ryo! / Will you leave more?", "Looks like you don't have 1,000 Ryo on you, friend!", "You can
+   withdraw 1,000 Ryo at a time.", "Here's your 1,000 Ryo.", "Whoops! There's nothing to withdraw!", "Our
+   service is nationwide! ..."); the armory (sword sign: "Welcome to my armory! / How can I help you?", Long
+   Sword, Cloth Katabira, Shinobi Katabira in the narrow font, Leather Helmet, "60 Ryo, please."). In shops
+   "Obtained X." prints once. Shop doors are entered from the tile below; trees beside the doors block, so come
+   up the gap between them. In a shop, stand on the cushion in the keeper's column. Next: the inn stay, Lord
+   Komon (the moated building on the east side), then Mito.
 2. Money, done as ruled (`docs/decisions.md`): `restyle.py` `money()` turns upstream's "両20" into "20 Ryo" in
    every English line (176 lines, five script files); windows keep "18両". Seen in game: "2 Ryo, please.",
-   "15 Ryo, please.", "It's 4 Ryo for the night.", "Ziria obtained 2 Ryo." Not seen: the bank lines with
-   "65,000 Ryo"; the build re-wraps them, but nobody looked.
+   "15 Ryo, please.", "It's 4 Ryo for the night.", "Ziria obtained 2 Ryo." The bank lines with "65,000 Ryo" were
+   seen later in Tsuchiura's warehouse, clean.
 
 Seen clean on build `babc0728` (session `en2`): the inn (price, Yes/No, "Please come again."), the field menu
 entries Items (Use/Give/Drop, "Ziria used the Map of Tsukuba!"), Equip ("In hands", "On body"), Jutsu, Kogama,

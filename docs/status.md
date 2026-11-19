@@ -171,8 +171,18 @@ exit 2).
    through the door behind the master: three patrolling instructors; touching one puts the hero back in the
    front room with no message (the script has none). The casket sits behind the crate row; the way in looks
    like the top row, then the left column down to the row under the counter. Not done: reaching that casket
-   (its reward line), the Kogama command on the overworld. Next: Kashima Village to the east (next map in the
-   script, the White Deer), then Mito ("just north from here, beyond the lake").
+   (its reward line).
+
+   Hamlet to Kashima Shrine, done (steps 368-382, session now just inside Kashima Shrine's entrance, level 7,
+   HP 23/53, 1018 Ryo). Clean: new enemies Yato, a pair of tanuki and Daimon Priest ("Yato took 5 damage!",
+   "Daimon Priest's attack!", "Ziria dodged."), the location window "Kashima Shrine", and the Kogama command
+   on the overworld: it shows a map of Jipang with the current province lit, then returns (one hamlet known,
+   nothing to choose). The map's corner caption is decorative cursive, not readable text; not compared with
+   the original. The level-up at step 298 reset the poked stats (HP 53, normal Attack), so play is unpoked
+   again from there. Route: leave the hamlet by its east exit (between the two stones, one row above the
+   southern houses' doors), follow the beach south-east down the sandbar, cross the bridge east at its top;
+   the shrine is the red torii just past the bridge. Next: Kashima Shrine's villagers and the White Deer,
+   then Mito ("just north from here, beyond the lake").
 2. Money, done as ruled (`docs/decisions.md`): `restyle.py` `money()` turns upstream's "両20" into "20 Ryo" in
    every English line (176 lines, five script files); windows keep "18両". Seen in game: "2 Ryo, please.",
    "15 Ryo, please.", "It's 4 Ryo for the night.", "Ziria obtained 2 Ryo." The bank lines with "65,000 Ryo" were

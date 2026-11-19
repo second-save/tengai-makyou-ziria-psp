@@ -343,8 +343,23 @@ exit 2).
    they now read "100 Ryo, but", "10 Ryo, okay?", "1,000 Ryo, all right!". No other line changed. Rebuilt
    (sha1 `a9cc6890`), `dist/` regenerated with `tools/release.sh`, identity test and the 47-step replay check
    pass on the new build. The three fixed lines have not been seen in game: session `en2` still runs build
-   `babc0728`, whose only difference is those three lines. Next: the rest of Mito's townspeople, its buildings, the church, the castle
-   path.
+   `babc0728`, whose only difference is those three lines. 
+
+   Mito's buildings, part done (steps 609-632, session now at the inn's counter). Clean: the two houses on
+   the upper road (`map-0x15EB`: "Can you believe that the self-proclaimed “Fire Hero” actually thinks he can
+   defeat the Cult of Daimon?", then after the box pause "Lord Gomon will surely put an end to him in no
+   time!"; `map-0x1607`: "What? You're not a Daimonist? / Leave at once! You're stinking up the place!
+   Hmph!"), the warehouse (`map-0x1597`, the exchange-sign building: three pages from "Welcome to the
+   warehouse! / Our motto is “Courtesy, kindness, and professionalism”!" to "Get outta here, moron! I hope
+   you lose all your stuff!"), the general store (`map-0x163F`: "Welcome to my general store!", "I'll pay
+   premium prices if you've got human souls for me!", "See, Lord Gomon pays good money for the souls of
+   those with a grudge against the world.") and the inn (`map-0x15CF`: "Huh? You wanna stay? / Sure, I have a
+   room, just for you!", "It's 50,000,000 Ryo for the night... / What? You ain't got that much? / Then get
+   outta here!"). The curly quotes render. How-to: in the houses and the inn, step onto the raised floor and
+   stand below the occupant; Mito's store keeper stands one tile right of Hamlet 2's. Townspeople block the
+   road down from the upper road; use the north-south road left of the general store. Not found yet: the
+   armory (`map-0x15B3`, which holds the fixed "100 Ryo, but" line). Next: the armory, the church
+   (`map-0x1623`), the remaining townspeople, the castle path.
 2. Money, done as ruled (`docs/decisions.md`): `restyle.py` `money()` turns upstream's "両20" into "20 Ryo" in
    every English line (176 lines, five script files); windows keep "18両". Seen in game: "2 Ryo, please.",
    "15 Ryo, please.", "It's 4 Ryo for the night.", "Ziria obtained 2 Ryo." The bank lines with "65,000 Ryo" were

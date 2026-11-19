@@ -218,7 +218,8 @@ exit 2).
    Daimon! / Prevent Masakado's revival! / Go forth, young Ziria!", "Acquired 10 Virtue!", "Obtained
    Wakakusa.", "Obtained Scroll of Wakakusa." Route: from the shrine hall go right, north into the tree maze,
    left along the first row, up, back right, then down the next column and left to the statue avenue; walk up
-   it. Not done: the inn, the tanuki villager line, the Jutsu menu with Wakakusa, the
+   it. Wakakusa in the Jutsu menu (step 434): Use/Give, "Ziria recovered
+   7 HP!", 2 TP. Not done: the inn, the tanuki villager line, the
    White Deer's stone after the scene (red stone with the 大 mark: the script keeps the kanji in "There is a large
    red stone marked with a yellow 大 symbol." - check how it renders). Then Mito ("just north from here,
    beyond the lake").

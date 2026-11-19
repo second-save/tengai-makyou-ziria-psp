@@ -382,8 +382,26 @@ exit 2).
    stay is the likely cause, not checked). A battle copies the stats when it starts, so poking Attack during
    the fight does nothing: the state of step 640 was poked again (Attack 200) and the scene replayed.
 
-   Next: the church's other people, the armory (`map-0x15B3`), the changed townspeople lines, the castle
-   path.
+   Mito after the church, part done (steps 645-666, session now in the armory beside its keeper). Every
+   townsperson is a tanuki sprite after the fight and they wander fast (step beside one, then talk). Clean:
+   the altar tanuki (repeats the two castle pages), the two in the pews ("Ponpokorin! / I'm sorry! I'm
+   sorry! / I'll stop tricking people!", "Gomon is holding the townspeople captive in the castle's dungeons.
+   / Please, save them!"), three outside ("The Daimonists are stealing the souls of the townspeople and
+   using them to revive Masakado!", "I heard Innards Grotto is swarming with the souls of those who can't be
+   reborn into this world.", "Gomon has thrown all of the town's residents in the dungeons of Mito
+   Castle."), and the armory's keeper ("Go west from Mito Town and head south, and you'll find the mountain
+   where our guardian deity, the White Tanuki, lives."). The armory (`map-0x15B3`) is the leftmost building
+   on the upper road, sword sign; its keeper walks about behind the table, go round the table on the right.
+
+   A savestate carries the disc data: side session `en3` (a copy of `en2` at step 632 with the new build on
+   its memstick) still showed the old "It's usually 100, Ryo but we have a special price of 5,000,000,000
+   Ryo for non-members of the Cult of Daimon!" in the armory. So a new build cannot be checked from an old
+   session; it needs a boot. That page is the armory keeper's before the church scene (pages: "Welcome to
+   the armory!", the Gomon Sword offer, the price, the Gomon doll); the old text wraps cleanly, the new text
+   is unseen. The two builds' data tracks differ in 5,556 bytes, not three lines: the text is
+   dictionary-coded and the change re-ranked the dictionary, so a byte diff proves nothing either way.
+
+   Next: the remaining tanuki lines, the other buildings after the church, the castle path.
 2. Money, done as ruled (`docs/decisions.md`): `restyle.py` `money()` turns upstream's "両20" into "20 Ryo" in
    every English line (176 lines, five script files); windows keep "18両". Seen in game: "2 Ryo, please.",
    "15 Ryo, please.", "It's 4 Ryo for the night.", "Ziria obtained 2 Ryo." The bank lines with "65,000 Ryo" were

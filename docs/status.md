@@ -88,7 +88,10 @@ exit 2).
    "Backup RAM Data" screen (TENGAI1-4, "New Game", "Choose where to write the file."), "Now writing to
    TENGAI1.", "Write complete." Route: past the rubble take the ladder at the end of the south-east corridor,
    follow the path south then east; the town is the blue castle by the bridge. The record keeper stands right
-   of the inn's entrance corridor. Next: the rest of Tsuchiura (inn stay, shops, Lord Komon), then Mito.
+   of the inn's entrance corridor. Also clean (steps 227-230): the Kumogiri villager beside the item shop, with portrait
+   ("Ziria, right? / I'm from Kumogiri Hamlet.", "Just remember this: we're all on your side!"). Session is at
+   step 231, just inside the item shop door (the building with the bag sign, below the inn). Next: this shop,
+   the inn stay, the other shops, Lord Komon, then Mito.
 2. Money, done as ruled (`docs/decisions.md`): `restyle.py` `money()` turns upstream's "両20" into "20 Ryo" in
    every English line (176 lines, five script files); windows keep "18両". Seen in game: "2 Ryo, please.",
    "15 Ryo, please.", "It's 4 Ryo for the night.", "Ziria obtained 2 Ryo." Not seen: the bank lines with

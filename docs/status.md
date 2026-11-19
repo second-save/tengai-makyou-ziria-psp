@@ -405,7 +405,14 @@ exit 2).
    own step 293 (a continuous run drifts from a session played state by state), so this compares builds
    with each other, not with the session.
 
-   Next: the remaining tanuki lines, the other buildings after the church, the castle path.
+   Side session `en3`, Mito before the church (steps 633-650, old text, left on the lower road). Clean: the
+   armory keeper's four pages ("Welcome to the armory!", the Gomon Sword offer, the price page above, "Buy
+   now, and I'll throw in a Gomon doll for free! It's a limited edition!") and the town greeter, who roams
+   the upper road ("This is Mito Town. / Thanks to the Cult of Daimon, we can all live happy lives."). Nine
+   more talks there only repeated lines already seen. Not found in that state: `map-0x157B-0x6C1`, `0x755`,
+   `0x7FF`, `0xA28`.
+
+   Next (in `en2`): the remaining tanuki lines, the other buildings after the church, the castle path.
 2. Money, done as ruled (`docs/decisions.md`): `restyle.py` `money()` turns upstream's "両20" into "20 Ryo" in
    every English line (176 lines, five script files); windows keep "18両". Seen in game: "2 Ryo, please.",
    "15 Ryo, please.", "It's 4 Ryo for the night.", "Ziria obtained 2 Ryo." The bank lines with "65,000 Ryo" were

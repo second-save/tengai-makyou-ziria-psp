@@ -147,8 +147,14 @@ exit 2).
    here.", "He's looking for a worthy successor to a special technique of his own design.", "From what I've
    heard, Chief Kumogiri, the founder of our hamlet, was a pupil of the Toad Hermit, just like you."). The
    hamlet is due east of Bokuden's house through the forest (about 27 tiles); in its inn the blue figure is the
-   innkeeper, the one left of the hearth the record keeper. Next: the hamlet's general store (bag sign, right
-   of the inn), its other houses and villagers, then Mito ("just north from here, beyond the lake").
+   innkeeper, the one left of the hearth the record keeper. Also clean (steps 327-341, session now outside the hamlet's general store, 985 Ryo): the statue villager
+   ("The statues in the middle of our hamlet represent the Fire Clan.", "Everyone here respects the Fire Clan. /
+   Good luck, Ziria."), and the general store's selling side, first time seen ("What will you be selling?",
+   the belongings list, "That will be 12 Ryo. / How does that sound?", Yes/No, "Will you be selling anything
+   else?", and the key-item refusal "Giant Tweezers? How much would that be worth? I'm afraid I can't really
+   tell."), plus its buy list (Toad Oil, White Toad Oil, White Crane Plume, Map of Tsukuba). Next: the two
+   houses south of the statues and the remaining villagers, then Mito ("just north from here, beyond the
+   lake").
 2. Money, done as ruled (`docs/decisions.md`): `restyle.py` `money()` turns upstream's "両20" into "20 Ryo" in
    every English line (176 lines, five script files); windows keep "18両". Seen in game: "2 Ryo, please.",
    "15 Ryo, please.", "It's 4 Ryo for the night.", "Ziria obtained 2 Ryo." The bank lines with "65,000 Ryo" were

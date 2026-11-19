@@ -194,7 +194,16 @@ exit 2).
    Sword, Shinobi Katabira, Leather Helmet, Shuriken; "Shuriken, is it?", "Obtained Shuriken.", "5 Ryo,
    please. / Would you like anything else?"). Layout: inn on the lower terrace left of the steps, armory and
    general store on the middle terrace, more above. The armory door is entered from the row below it, coming
-   from the path side. Not done: the general store, the inn, two villagers on the top terrace, the tanuki
+   from the path side. Also clean (steps 400-418, session now inside the shrine hall on the top terrace,
+   977 Ryo): the general store's list (Toad Oil, White Toad Oil, White Snake Stone, Map of Tsukuba), the
+   three-column item list with Shuriken, the Kumogiri informant with portrait ("Ziria, right? / I'm from
+   Kumogiri Hamlet. / I have new intel on the Daimonists.", "Daimonist tanuki are waiting in ambush for you in
+   the northern part of the village.", "I'm sure you'll be fine, but be careful, Ziria!"), the woman in red
+   ("Our sacred White Deer is sealed within a rock at the back of the village.", "The Daimonists are guarding
+   it... / Be very careful."), and the priest with portrait ("I once read in an old book that the voice of
+   the Fire Clan has the power to release all evil seals.", "I'm utterly convinced there must be some sort of
+   hint in those words!", "I don't know exactly what it means, but I'm sure that you will be able to solve
+   this riddle, Lord Ziria!"). Not done: the inn, the tanuki
    lines, the White Deer's stone (red stone with the 大 mark: the script keeps the kanji in "There is a large
    red stone marked with a yellow 大 symbol." - check how it renders). Then Mito ("just north from here,
    beyond the lake").

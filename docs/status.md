@@ -230,7 +230,23 @@ exit 2).
    ("You'll find Kumogiri Hamlet 2 just beyond the cave north of this village!"). The "north beyond the lake"
    hint for Mito is spoken in Hamlet 2 (`map-0x14EF`), not Hamlet 1: north of Hamlet 1 the land ends at the
    lake on every side (checked, steps 446-450). So the order is Kashima inn, the cave north of Kashima,
-   Hamlet 2, Mito (red stone with the 大 mark: the script keeps the kanji in "There is a large
+   Hamlet 2, Mito.
+
+   Kashima's inn, done (steps 451-470, session now in the inn's bedroom, level 7, HP 53/53, 1012 Ryo, saved
+   to TENGAI1 at Kashima's record keeper). Clean: the record keeper and the save screen again (the slot list
+   showed the old save as "Tsukuba Lv 6"), the stay ("It's 10 Ryo for the night. / Will you stay?", "Please
+   rest well.", "Take care of yourself, Lord Ziria."), the guest's thanks ("Thank you for rescuing our sacred
+   White Deer."), the Kumogiri messenger ("Ziria! I'm from Kumogiri Hamlet! / Chief Kumogiri is waiting for
+   you in Kumogiri Hamlet 2.", "You'll find Kumogiri Hamlet 2 just beyond the cave north of this village!"),
+   and the accuser by the beds ("Ah! You're that guy I met in the cave to the north!", "Give me back my money!
+   / I have a wife and two kids to feed!", "Where do you think you're going?! / Give me my money! / You thief!
+   You criminal!"). Inn layout: the record keeper stands in the entrance room, the innkeeper is behind the
+   counter on the raised floor (talk across it), the guests are reached through the opening at the back and
+   the corridor to the right. Not seen in the inn: `map-0x1447-0x165` (the apology after the impostor is
+   exposed) and `0x1BD` (the Cult of Daimon line), which need other story states. One emulator launch failed
+   here ("debugger port never opened", session unchanged); the retry worked, and the hung process had to be
+   killed by hand. Next: the cave north of Kashima (leave by the gate, go north on the overworld), the
+   impostor tanuki, Hamlet 2, Mito (red stone with the 大 mark: the script keeps the kanji in "There is a large
    red stone marked with a yellow 大 symbol." - check how it renders). Then Mito ("just north from here,
    beyond the lake").
 2. Money, done as ruled (`docs/decisions.md`): `restyle.py` `money()` turns upstream's "両20" into "20 Ryo" in

@@ -769,8 +769,41 @@ exit 2).
    third floor walk the loop round to its south-west and take the ladder by the casket strip. Bogs (green)
    cannot be crossed. Not seen: Hamlet 4's inn.
 
-   Next (in `en2`): Inugami Village (west) for Tobei's Plans under a Komainu statue, then Shirakawa
-   Castle.
+   Way out of the Abukuma Caves (steps 2213-2268): the second floor's east-column ladder drops one way
+   into the third floor's loop, whose two ladders both lead to Tobei's corner. Leave the corner by its
+   north passage: it joins the west part, whose ladder at tile (11,20) climbs back to the second floor's
+   west edge; from there east and round the bog to the ladder at (17,13), which lands on the entrance
+   floor; the mouth is at (33,20). Battles on the way: Bog Creature, clean ("Defeated Bog Creature!",
+   "Acquired 58 Virtue!"). The poison seen in the cave cleared itself; Ziria lost 11 HP.
+
+   Inugami Village (`map-0x1DFB`) and Tobei's Plans, done (steps 2269-2377, session now in front of the
+   shrine, 2938 Ryo). The village is west of the cave mouth, entered between the two Komainu statues.
+   Clean: the location window "Inugami Village", the statues' Check line ("There's nothing out of the
+   ordinary."), the drag marks ("There are signs of a heavy object being dragged here."), four
+   villagers ("Th-Th-The Cult of Daimon turned the sacred White Dog to stone! / I-I-It's the end of
+   Inugami Village!", "We already have too many problems! / We can't deal with that naughty kid's
+   mischief too!", "Everyone's worrying about the sacred White Dog, but I'm more worried about Tobei's
+   disappearance!", "Something terrible happened to the woman of this house the moment she spoke ill of
+   Tamamohime."), the north-east house (the husband's "Oh no...My wife was possessed by a kitsune..." and
+   four pages of the wife's "Yip yiiip! / Heeheehee!" laid out across the box), the north-west house
+   (two pages: "There is an ancient Chinese tale of a youkai disguised as a princess who brought death to
+   hundreds of kings." / "Doesn't it sort of remind you of Tamamohime of Shirakawa?"), the general store
+   (greeting, Toad Oil / White Toad Oil / Antidote, and the sell side, first seen: "Whose possessions
+   are you selling?", the three-column bag, "That will be 14 Ryo. / How does that sound?", Yes/No,
+   "Will you be selling anything else?", "Have a nice day."), and the dig ("It seems something is
+   buried in here. / Let's dig it up...", "(shuk) (shuk) (shuk)" three lines, "(shuk) (shuk) (THUD!)",
+   "You find a wooden box. / Inside are the plans to Shirakawa Castle.", "Obtained Plans. / Who will
+   hold it?", "Obtained Tobei's Plans.", "Acquired 93 Virtue!"). The bag shows "Map of Banmo"
+   (upstream's name for 磐毛). The dig spot is the patch left of the shrine steps, tile (38,20) (also
+   (41,20)); the map script's check table at `0x1DFB*2048+0x9A` lists it.
+
+   Field Check reads the tile **in front of** the hero, as with caskets: face the spot from the next
+   tile. In menus give the box ~60 frames to open before the cursor presses, or they walk the hero
+   instead. Followers block: walking back into the tile a follower stands on fails, so step sideways
+   first. Not seen in Inugami: the troublemaker kid (`map-0x1E6B`, a house north-east past the shrine
+   path), the inn, the White Dog scene (`0xA52`, later).
+
+   Next (in `en2`): Shirakawa Castle with Tobei's Plans (the X on the plans marks a hidden stairway).
 2. Money, done as ruled (`docs/decisions.md`): `restyle.py` `money()` turns upstream's "両20" into "20 Ryo" in
    every English line (176 lines, five script files); windows keep "18両". Seen in game: "2 Ryo, please.",
    "15 Ryo, please.", "It's 4 Ryo for the night.", "Ziria obtained 2 Ryo." The bank lines with "65,000 Ryo" were

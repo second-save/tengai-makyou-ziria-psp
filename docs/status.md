@@ -721,7 +721,35 @@ exit 2).
    villager, `0x1E5`, `0x358`, `0x5C8`, `0x765`, and the castle's lines `0xD1`, `0x1B4`, `0x24B`, `0x29F`,
    `0x5B9` (some only after Shirakawa).
 
-   Next (in `en2`): Shirakawa Castle (Tamamohime) and Tobei.
+   Kumogiri Hamlet 4 (`map-0x1D37`) and the Abukuma Caves (`map-0x1DA7`), part done (steps 1968-2083,
+   session now in a Bog Creature battle on the cave's first floor, west of the entrance). Clean: leaving
+   Utsunomiya by the south exit starts a full-width Tsunade scene ("Hey, Ziria! / That guy had a weird
+   name, huh? / Sounded kinda made-up!", "What was it again? / Hotty-maru? Otter-maru?", "Oh yeah!
+   Hotel-maru! / What a funny name!"); Tsunade's level-up to 7 on the road (HP poked again at step 2009).
+   Route: from Utsunomiya Castle the overworld road loops round it to the north, along the lake's south and
+   east shores, then north; the hamlet is the hut south-east of a cave mouth, the cave is north-west of the
+   hamlet (leave the hamlet west, between the two stone markers, then north). Hamlet 4 clean: the location
+   window, the villager between the southern houses (two pages, "Those who went inside the Abukuma Caves to
+   rescue Tobei came back looking pale as ghosts!" / "...one-eyed monsters! / They're no place for poor
+   Tobei!"), the one east of the statues ("I saw the carpenter Tobei being dragged inside the Abukuma Caves
+   to the north!"), a guest in the general store (top right: "Lord Ziria! There are creatures nearby that
+   can spew poison from their mouths.", "You should stock up on antidotes before you venture forth!"), and
+   the Kumogiri informant west of the inn (three pages, "Ziria! I've been waiting for you! / I have new
+   intel on the Cult of Daimon!" to "Alas, Shirakawa Castle has been turned into a den of evil!"). Cave
+   clean: the location window "Abukuma Caves", Tsunade's line one step in, full-width ("Oh my, Ziria!
+   What's the big idea, bringing me out to this deserted place? / You gonna make a move on me?"), the new
+   enemy ("Bog Creature sprang forward!", "Bog Creature's attack!", "Multiple strikes!"), and the casket
+   south-west of the entrance ("You look inside the casket. / There is toad oil inside.", "Obtained Toad
+   Oil. / Who will hold it?", "Obtained Toad Oil."). The green patches are bogs: walking into one leaves
+   the hero frozen in a walking state (seen in a test run, not in the session). Not seen yet: Tobei
+   (`map-0x1DC3-0x3DD`, a lower floor), the Scroll of Raiko (`map-0x1DDF`), and the inn and the old-lord
+   lines of Hamlet 4.
+
+   Hero tile with three in the party: X/Y at `0x096660D1`/`0x096660D2`, mirrored at `0x096660E3`; the old
+   `0x096660A5` is then a follower's slot. `tools/poke.py` can now be imported (its `main()` is guarded).
+
+   Next (in `en2`): finish the battle, find the cave's way down to Tobei, then Inugami Village (west) for
+   Tobei's Plans and Shirakawa Castle.
 2. Money, done as ruled (`docs/decisions.md`): `restyle.py` `money()` turns upstream's "両20" into "20 Ryo" in
    every English line (176 lines, five script files); windows keep "18両". Seen in game: "2 Ryo, please.",
    "15 Ryo, please.", "It's 4 Ryo for the night.", "Ziria obtained 2 Ryo." The bank lines with "65,000 Ryo" were

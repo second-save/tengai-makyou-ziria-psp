@@ -552,7 +552,32 @@ exit 2).
    pass. Session `en2` still runs the old disc (a savestate carries it), so the fixed line shows only on a
    fresh boot.
 
-   Next (in `en2`): the rest of Ota (the priest, the sacred tree), then Ashikaga School and Tsunade.
+   Rest of Ota, done (steps 1299-1391, session now in the inn's bedroom, 1596 Ryo). Layout: the shrine
+   (porch, `map-0x2127`) and the sacred tree are on the river at the village's north-west; the armory and
+   the warehouse face each other in the middle; the inn (INN sign, `map-0x1A5F`) is on the west side by a
+   small bridge. Clean: the villager by the tree ("If we cut down the sacred tree, we could use it as a
+   bridge to reach the other side.", "But...It's a sacred tree. We can't just cut it down, right?"), the
+   tree's Check ("A rope with evil-warding talismans is wrapped around a large tree.", "This must be the
+   sacred tree of the village."), the priest (stand below his table: "I'm the priest of this shrine. / The
+   Gods, in all of their mercy, sent me three revelations this morning!", the three revelations about the
+   Byakko Axe and "the Fire Hero descendant of the Slug Clan", Yes / No, "Thank you so much. / You truly
+   are a Fire Hero!", "You have accepted the priest's request.", "Acquired 71 Virtue!"), the armory (New
+   Moon Sword, Shinobi Katabira, Shuriken, Kunai; "New Moon Sword, is it?", "Obtained New Moon Sword.", a
+   new message "Unable to hold any more items. / Drop something?" with the item list, "130 Ryo, please.",
+   "Thank you very much."), the house south of the armory (`map-0x1AEB`: "According to the old tales, the
+   Fire Clan is comprised of multiple clans. / The Toad clan, the Slug clan, and...", "And...and the other
+   one! It's the... / The uhm... / Uhhhhhhhhhhhhhh...", "Sorry, I forgot..."), and the whole inn: "Welcome
+   to the inn!", "It's 20 Ryo for the night. / Will you stay?", No, "Please come again.", the Kumogiri
+   messenger in the back room ("This town's bridge has been destroyed by the Daimonists!", "They've
+   finally acknowledged the threat posed by the Fire Heroes.", "The battle is going to be fiercer from now
+   on. Hang in there, Ziria!"), the "Yo, yo, yo!" guest (three pages about the hot spring's "blue-eyed
+   babe"), and the guest in bed, talked to from above ("Ashikaga School is west of our village. / Its
+   library is very well stocked!", "It has books on the Fire Clan and Masakado!"). Casing differs in
+   upstream: "Slug Clan" (priest, Ashikaga) and "Slug clan" / "Toad clan" (here, Hamlet 3); not changed.
+   Items lost to mashed presses at full-bag prompts: Map of Tsukuba (step 1241) and Giant Tweezers (step
+   1334), both already used. Not seen: the priest's No answer (`0x2D2`).
+
+   Next (in `en2`): Ashikaga School (`map-0x1B07`) and Tsunade, west of Ota.
 2. Money, done as ruled (`docs/decisions.md`): `restyle.py` `money()` turns upstream's "両20" into "20 Ryo" in
    every English line (176 lines, five script files); windows keep "18両". Seen in game: "2 Ryo, please.",
    "15 Ryo, please.", "It's 4 Ryo for the night.", "Ziria obtained 2 Ryo." The bank lines with "65,000 Ryo" were

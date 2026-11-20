@@ -506,9 +506,19 @@ exit 2).
    Banmo 14, "Map of Banmo, is it?" Yes/No, "Obtained Map of Banmo.", "14 Ryo, please. / Would you like
    anything else?", "Thank you, thank you! / See you soon!"), and "Ziria used the Map of Banmo!". The map
    screen has a red seal with the kanji 磐毛 drawn in the picture, like Tsukuba's 筑波; the map-seal ruling
-   covers it (leave it). Not done: the four villagers outside besides the greeter.
+   covers it (leave it).
 
-   Next (in `en2`): Hamlet 3's villagers, then the Slug Hermit's shrine to the north.
+   Hamlet 3 villagers (steps 1133-1186). Clean: "The Slug Hermit lives in a small shrine north from
+   here!", "According to rumor, the second hero of the Fire Clan is somewhere here in Banmo!", "The three
+   Fire Heroes must combine their powers to stand against Masakado!", "You must be Ziria! / Chief Kumogiri
+   told us to expect you!", "We're ready to give our lives for you, / Ziria!". The right of the two
+   southern houses is a Thieving School with the same doorman line as Hamlet 2's ("If you can steal the
+   money successfully, you get to keep it for yourself!"); the left one has a closed wooden door (Check:
+   "There's nothing out of the ordinary."); both doors face south. Not caught: `map-0x19D3-0x17C`
+   (Tsunade's sumo) and `0x254` (the kitsune).
+
+   Next (in `en2`): the Slug Hermit's shrine to the north (`map-0x1A27`, "Slug Shrine", a ten-page scene
+   that sends Ziria to Tsunade at the Ashikaga School).
 2. Money, done as ruled (`docs/decisions.md`): `restyle.py` `money()` turns upstream's "両20" into "20 Ryo" in
    every English line (176 lines, five script files); windows keep "18両". Seen in game: "2 Ryo, please.",
    "15 Ryo, please.", "It's 4 Ryo for the night.", "Ziria obtained 2 Ryo." The bank lines with "65,000 Ryo" were

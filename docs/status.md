@@ -637,7 +637,30 @@ exit 2).
    back wall to the rear corridor, and the guests' room is the right-hand one (enter from its top-right
    gap). Innkeeper's lines not taken (same 20 Ryo lines as Ota's).
 
-   Next (in `en2`): back to Ota's sacred tree (`map-0x1A43-0x1B4`).
+   Back to Ota and the sacred tree (`map-0x1A43-0x1B4`), done (steps 1626-1719, session now beside the
+   felled tree in Ota, Ziria level 10, Tsunade level 6, 1847 Ryo, pokes worn off). Route from Lumberjack
+   Village: out by its east side, east and north-east through the stump forest to the dirt road at Ashikaga
+   School (blue hut), follow the road north-east to the river, then east to Ota; in Ota go round the
+   warehouse/armory row by the east and take the road above it west to the tree. Clean on the way: the
+   first battles with Tsunade (her command menu reads Attack / Jutsu / Item / Cry / Defend; "Tsunade's
+   attack!", "Tsunade dodged.", "Daimon Acolyte took 1 damage!" before the axe was equipped), "What will you
+   do, Tsunade?", her knockout ("Daimon Bishop used the Eleca spell.", "Tsunade took 12 damage!", "Tsunade
+   received deep wounds and became unable to fight.", in red), "Ziria obtained White Snake Stone.", and what
+   follows a won battle with a fallen ally: "In preparation for a new battle, Ziria used half his money to
+   fully heal all wounds..." and a warp to the last record keeper (Hamlet 3's inn). That run was rewound and
+   Tsunade poked instead (HP and max HP 999). Equip for Tsunade: "In hands" (Byakko Axe), "On body", "On
+   feet", "Nothing available."; the Map of Banmo again. At the tree, Check repeats the two old lines and
+   Talk gives nothing; the scene needs Items, Tsunade, Byakko Axe, Use, standing on the tile below the
+   trunk facing up (from the tile right of it, facing left: "Tsunade used the Byakko Axe!" / "But nothing
+   happened!"). The scene, full-width picture: "It's my time to shine! I'm gonna chop this tree down in a
+   single swing!", "Here goes nothing! / Miso! Ra! MEN!", "The sacred tree falls with a loud “thud,”
+   extending to the other side of the river.", "You've formed a makeshift bridge with the sacred tree.",
+   "Acquired 164 Virtue!", then both level-ups ("Ziria rose to level 10!", "Gained 1 Defense!", "Gained 2
+   Speed!", "Tsunade rose to level 6!", "Gained 2 Attack!", "Gained 2 Defense!", "HP and TP fully
+   restored! ..."). One level-up line read "Gained 65347 Attack!": the poke's doing (Attack was 200, the
+   new value is lower, and the 16-bit gain wraps), not the port.
+
+   Next (in `en2`): cross the tree bridge (west of Ota) and go on.
 2. Money, done as ruled (`docs/decisions.md`): `restyle.py` `money()` turns upstream's "両20" into "20 Ryo" in
    every English line (176 lines, five script files); windows keep "18両". Seen in game: "2 Ryo, please.",
    "15 Ryo, please.", "It's 4 Ryo for the night.", "Ziria obtained 2 Ryo." The bank lines with "65,000 Ryo" were
@@ -665,7 +688,8 @@ Debug tool: `tools/poke.py dump STATE OUT.bin` and `poke.py set STATE_IN STATE_O
 `play.sh` savestates (PSP memory, little-endian). Hero block at `0x096667E0`: HP `+4` (2 bytes), TP `+6`,
 max HP `+8`, max TP `+A`, level `+C`, Virtue `+D` (3 bytes). Base Attack `+13`, base Defense `+15`, base
 Speed `+17` (one byte each); the shown Attack `+1A`, Defense `+1C`, Speed `+1E` are base plus equipment and
-get recomputed (on level-up and other events), so poke the base byte too or the boost wears off. Money at `0x09666838`. Level 2 needs 8 Virtue. To use it in a
+get recomputed (on level-up and other events), so poke the base byte too or the boost wears off. Tsunade's
+block, same layout, is the next one at `0x09666818` (HP `0x0966681C`, max HP `0x09666820`). Money at `0x09666838`. Level 2 needs 8 Virtue. To use it in a
 session, replace the newest `NNNN.ppst` with the poked state.
 3. Restyle read, done by pattern, not line by line: 1,063 changed lines, no honorific suffix left anywhere, no
    doubled title ("Lord Lord", "Master Lord"). Most of the 152 "Lord Ziria" lines are the innkeepers' "Take care

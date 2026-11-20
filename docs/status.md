@@ -870,7 +870,25 @@ exit 2).
    gate with a portrait ("The lands of Riku are just ahead! / Take care, Lord Ziria!"). The road north
    past the house leads into Riku.
 
-   Next (in `en2`): Riku; Kumogiri Hamlet 5 (`map-0x2450`) and King Akuro.
+   Riku to King Akuro, done (steps 2969-3047, session now on the throne dais of Taga Castle with Akuro in
+   the party, Ziria level 13, Tsunade 13, 5609 Ryo, pokes renewed at step 3039). Route: from the Nakoso
+   side the overworld (`0x2434`) path winds north-west through the mountains to a bridge; Taga Town
+   (`0x24C0`) is across it to the west; Taga Castle's door is the town tile (20,23) (town door table at
+   `0x24C0*2048+0x170`: `00/01 X Y 03 04 n 00 X' Y' 00 lo hi`), the king on the dais straight up the
+   carpet. Clean: "Taga Town", "Taga Castle", a townsman ("King Akuro is like a different person now! /
+   You'd best not tarry here in Taga!"), the fight ("I am the Oni general, King Akuro! / I have nothing
+   against you, but the Cult of Daimon has ordered your death!", "King Akuro's attack!", "Defeated King
+   Akuro!", "Well done, Ziria! / I ask only that you listen to my words before you do with me as you
+   will.", "Ziria's party obtained 532 Ryo.", "Acquired 567 Virtue!"), and his request over a full-width
+   picture ("The truth is, Danjo of the Cult of Daimon is holding my son hostage." / "That is the only
+   reason I've been following his orders!" / "Brave Ziria! / I beg of you to rescue my son!", Yes/No,
+   Yes: "You truly are a hero! / My life is yours. / Let us face Danjo together!", "You have accepted
+   King Akuro's request.", "King Akuro has joined your party.", "Acquired 651 Virtue!"). The No branch
+   was taken but its screenshots were overwritten by the rewind (`play.py --back` reuses the step
+   number); not read.
+
+   Next (in `en2`): the White Cat of Nekoma Village to seal Danjo's magic (`map-0x2610`), then Danjo on
+   the bridge to Hiraizumi.
 2. Money, done as ruled (`docs/decisions.md`): `restyle.py` `money()` turns upstream's "両20" into "20 Ryo" in
    every English line (176 lines, five script files); windows keep "18両". Seen in game: "2 Ryo, please.",
    "15 Ryo, please.", "It's 4 Ryo for the night.", "Ziria obtained 2 Ryo." The bank lines with "65,000 Ryo" were
@@ -911,6 +929,10 @@ session, replace the newest `NNNN.ppst` with the poked state.
    new `PSP/GAME/NPJJ30029` (100 s, ends on the shop's price line). It stayed in sync across the text change.
 
 ## Open
+
+- Not ruled: upstream names King Akuro "Akuro-Ou" in ten later lines (`script_dialogue.csv` rows 3586-3603
+  and 5990-6083, e.g. "I heard Akuro-Ou was defeated."); everywhere else, the boss window included, he is
+  "King Akuro". `restyle.py` could make them "King Akuro" (+2 characters each). Unchanged so far.
 
 - `tools/pp.py` input is wall-clock, not frame-exact: walking is imprecise and one run in six misbehaved.
 - The patch is 55 MB because the changed track is zlib-compressed and XORed; a patcher that works on the

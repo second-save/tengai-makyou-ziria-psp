@@ -514,8 +514,10 @@ exit 2).
    told us to expect you!", "We're ready to give our lives for you, / Ziria!". The right of the two
    southern houses is a Thieving School with the same doorman line as Hamlet 2's ("If you can steal the
    money successfully, you get to keep it for yourself!"); the left one has a closed wooden door (Check:
-   "There's nothing out of the ordinary."); both doors face south. Not caught: `map-0x19D3-0x17C`
-   (Tsunade's sumo) and `0x254` (the kitsune).
+   "There's nothing out of the ordinary."); both doors face south. The child by the store, with a
+   portrait window: "You won't find anyone stronger than Tsunade around these parts!", "We had a sumo
+   tournament recently, and she beat a hundred opponents in a row by ring out!", clean. Not caught:
+   `map-0x19D3-0x254` (the kitsune).
 
    Next (in `en2`): the Slug Hermit's shrine to the north (`map-0x1A27`, "Slug Shrine", a ten-page scene
    that sends Ziria to Tsunade at the Ashikaga School).

@@ -803,7 +803,46 @@ exit 2).
    first. Not seen in Inugami: the troublemaker kid (`map-0x1E6B`, a house north-east past the shrine
    path), the inn, the White Dog scene (`0xA52`, later).
 
-   Next (in `en2`): Shirakawa Castle with Tobei's Plans (the X on the plans marks a hidden stairway).
+   Shirakawa Town and Castle, story done (steps 2378-2683, session now in the lord's cell on the trick
+   floor after Kyubi, Ziria and Tsunade level 12, 4927 Ryo, pokes renewed at step 2683). Shirakawa is west
+   of Inugami: leave the village south, go west, cross the river by the bridge; the castle stands north of
+   it. Clean: the overworld location window "Banmo", new enemies (Kitsunetsuki, Spirit, Curse Kitsune,
+   Oni-gitsune; "Put Tsunade to sleep!"), the location windows "Shirakawa Town" and "Shirakawa Castle", two
+   townspeople ("Don't enter Shirakawa Castle! / I'm telling you this for your own good! / You only live
+   once!"; the Kumogiri informant, "One of the apprentices of Tobei the carpenter lives in this town." /
+   "You should talk to him. He has useful insight about the castle's secret!"), "Ziria used the Plans!",
+   the plans picture (upstream redrew it in English: "ENTRANCE", "Shirakawa Castle SECRET STAIRWAY",
+   "Down") with "This is Tobei's masterpiece!", the rope sandals casket ("You look inside the casket. /
+   There is a pair of rope sandals inside.", "Obtained Rope Sandals. / Who will hold it?", and the full
+   bag, first seen: "Unable to hold any more items. / Drop something?"), the hidden stairways ("The boards
+   are loose here.", "You remove the boards and find a hidden stairway."), the Scroll of Rakka casket
+   ("You find the scroll of Rakka.", "Obtained Rakka. / Who will hold it?", "Obtained Scroll of Rakka.",
+   "Acquired 192 Virtue!"), Tamamohime's second fight ("Curse you, Ziria! / I'll show no mercy this time! /
+   Tremble in fear before Tamamo!", "Tamamohime dodged.", "Multiple strikes!", "Defeated Tamamohime!",
+   "Acquired 481 Virtue!"), Kyubi ("I am the second of the Thirteen Daimon Cultists, Kyubi, killer of a
+   thousand kings! / Behold true terror!", "Tamamohime transformed into Kyubi!", "Kyubi summoned trickster
+   spirits!", "Sealed...", "Ziria regained the ability to us[e]...", the win "How...disgraceful... / A curse
+   upon your journey! / May it be full of pain and hardships!", "You have defeated Kyubi, the second of the
+   Thirteen Daimon Cultists! / There are eleven cultists left!", "Ziria's party obtained 540 Ryo.",
+   "Acquired 698 Virtue!"), and the old lord with portrait ("I am the lord of the castle! That woman played
+   me for a fool. I grant you permission to cross the checkpoint!"). A level-up while Attack is poked
+   prints "Gained 65353 Attack!" (the gain is computed from the poked value): a poke artifact, not a bug.
+
+   The castle, for the record. Map ids (RAM `0x0966710D`, 2 bytes): entrance floor `0x20EF`, upper floor
+   `0x1F4B`, its side wing `0x1F67`, the trick floor `0x1F83` and its twin `0x1F9F`. Stairs and hidden
+   stairways are in each map's warp table (`01 X Y 02 0C n 00 X' Y' 00 lo hi`, X/Y the tile, lo/hi the
+   target map), the Check spots in the table after `5F 5F 00 D0 0B`. Route: entrance stairs (18,16) up;
+   down the inner passage to the stairs at (10,19) into `0x1F67`; its stairs (13,19) lead to the
+   sandals room; back in `0x1F67` Check the boards at (10,16) from below and take them to `0x1F4B`'s west
+   rooms; their stairs (29,19) drop to the entrance floor's east part, where the boards at (35,16) open the
+   way to the trick floor. The Rakka casket is in the cell reached by the entrance floor's plain stairs at
+   (38,19). On the trick floor: top hall east to column 21, down to the open row 23, east to column 31,
+   down to row 29, west through the gap to column 26, down to the bottom cell; Check the boards at
+   (25,34) from below; on the twin floor walk west to (20,34), which lands in the lord's cell; step left
+   twice to start Tamamohime. Encounters come every few steps; RAM `0x096670F4` counts steps but zeroing
+   it does not stop them.
+
+   Next (in `en2`): leave the castle, the Shirakawa barrier north of it to Riku.
 2. Money, done as ruled (`docs/decisions.md`): `restyle.py` `money()` turns upstream's "両20" into "20 Ryo" in
    every English line (176 lines, five script files); windows keep "18両". Seen in game: "2 Ryo, please.",
    "15 Ryo, please.", "It's 4 Ryo for the night.", "Ziria obtained 2 Ryo." The bank lines with "65,000 Ryo" were

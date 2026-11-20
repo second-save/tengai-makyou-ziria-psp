@@ -923,7 +923,11 @@ exit 2).
    the Great Hammer!" / "But nothing happened!"): per the barrier and Nekoma scripts the boulder is the
    Sessho-seki, Hoteimaru must be there ("You give the Great Hammer to Hoteimaru."), and Nekoma's villagers
    send you to "our side of the Shirakawa barrier, southeast from here", so Nekoma comes first. Cursed
-   bridges seen so far: (67,53), (52,41), (38,46), (33,45), (48-49,66). Open: the way into the south-west
+   bridges seen so far: (67,53), (52,41), (38,46), (33,45), (48-49,66), (42,67), (33,66). Passable: (57,53),
+   (57,46), (54,63-65) (onto a dead-end island), (50-51,55) west from the middle region, (44,55-57) south
+   into the land around (36-44,58-66) where the session now stands (34,66). A follower standing on a
+   bridge looks like a block, but a frame-by-frame capture shows the hero stepping on and sliding back.
+   Open: the way into the south-west
    (Nekoma (17,76), the barrier's Riku side (48,87)). A Shou-sama GameFAQs walkthrough for the PSP
    collection exists but the mirror found did not serve it.
 

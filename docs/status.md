@@ -887,8 +887,22 @@ exit 2).
    was taken but its screenshots were overwritten by the rewind (`play.py --back` reuses the step
    number); not read.
 
-   Next (in `en2`): the White Cat of Nekoma Village to seal Danjo's magic (`map-0x2610`), then Danjo on
-   the bridge to Hiraizumi.
+   Route on from Taga (steps 3048-3434, session now on the Riku overworld at (67,54), just south of the
+   bridge at (67,53)). The land south of the Taga river (Hamlet 5, the Nakoso path) is closed in by rivers
+   and mountains; the way on is **through Taga Castle**: walk north past the throne, the castle's back exit
+   lands on the overworld at (67,60). Overworld destinations (`0x2434` warp table at `+0x525`): Hamlet 5
+   (73,68), Hamlet 6 (38,42), Nekoma Village (17,76), Hiraizumi (9,46), iron door `0x27EC` (10-11,37-38),
+   Hamlet 7 (34,21). Taga's general store sells no map (White Toad Oil, Mountain Sandals, White Snake
+   Stone, Antidote). Seen clean: Hamlet 5's greeting ("You must be Lord Ziria! / Welcome to Kumogiri
+   Hamlet 5 in Riku." / "I'm afraid we won't be able to help you much, but we'll be cheering you on!"),
+   the store's "Have a nice day.". Open: the party could not step onto the (67,53) bridge (pressing up
+   leaves the hero at (67,54) with a party member drawn on the bridge); likely followers in the way or one
+   of the bewitched "slip bridges" upstream mentions. Next: get across, then Hamlet 6, Nekoma's White Cat,
+   Danjo.
+
+   Helpers for this kind of play (not committed, easy to redo): stitching each overworld screenshot at
+   its tile (hero at screen tile 7,6 with 32-px tiles from (224,64) in `play.py` shots) builds a usable
+   world map; random-battle screens have the colour (66,0,0) at (236,110), (730,110) and (236,410).
 2. Money, done as ruled (`docs/decisions.md`): `restyle.py` `money()` turns upstream's "両20" into "20 Ryo" in
    every English line (176 lines, five script files); windows keep "18両". Seen in game: "2 Ryo, please.",
    "15 Ryo, please.", "It's 4 Ryo for the night.", "Ziria obtained 2 Ryo." The bank lines with "65,000 Ryo" were

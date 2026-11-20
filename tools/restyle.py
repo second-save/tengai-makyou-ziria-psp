@@ -44,6 +44,7 @@ def restyle(t):
     t = DROP_RE.sub('', t)
     t = NAME_RE.sub(lambda m: short(m.group()), t)
     t = SPACES_RE.sub(' ', t)
+    t = t.replace('King Akuro', 'Akuro-Ou')   # ruled: one name; upstream mixes both
     return RYO_RE.sub('Ryo', t)
 
 
@@ -62,6 +63,7 @@ def selftest():
                  ('Ziria-san, Osae-chan, Musashi-dono', 'Ziria, Osae, Musashi'),
                  ("Koumon-sama's 50 ryo", "Lord Komon's 50 Ryo"),
                  ("what's going to  happen!", "what's going to happen!"),
+                 ("the Oni general, King Akurou's request", "the Oni general, Akuro-Ou's request"),
                  ('Our Fuurinkazan Sword. You would know, Oodanuki.', 'Our Furinkazan Sword. You would know, Odanuki.')]:
         assert restyle(a) == b, (a, restyle(a), b)
         assert len(restyle(a)) <= len(a), a

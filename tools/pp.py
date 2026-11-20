@@ -1,7 +1,8 @@
 """Drive the stock PPSSPP SDL build on macOS (the skill's PPSSPPHeadless has no macOS build).
 Isolated HOME in work/pphome (never the user's ~/.config/ppsspp), sound off, WebSocket debugger on PORT.
 
-    pp.py start [orig]       boot build/NPJJ30029 (or rom/NPJJ30029 with "orig"), print PID
+    pp.py start [orig] [--save DIR]   boot build/NPJJ30029 (or rom/NPJJ30029 with "orig"), print PID;
+                             --save installs DIR's NPJJ30029* save folders first (e.g. work/saves/riku)
     pp.py fb OUT.png         screenshot from PSP video memory (works when "shot" does not), leaves the game running
     pp.py stop               kill by PID
     pp.py shot OUT.png       screenshot through the debugger
@@ -52,6 +53,10 @@ def main():
         src = os.path.join(ROOT, 'rom' if a and a[0] == 'orig' else 'build', 'NPJJ30029')
         dst = os.path.join(HOME, '.config', 'ppsspp', 'PSP', 'GAME', 'NPJJ30029')
         shutil.rmtree(dst, ignore_errors=True); shutil.copytree(src, dst)
+        if '--save' in a:   # replace the emulator's Ziria saves (NPJJ30029*) with those in DIR
+            sd = os.path.join(HOME, '.config', 'ppsspp', 'PSP', 'SAVEDATA')
+            for d in glob.glob(os.path.join(sd, 'NPJJ30029*')): shutil.rmtree(d)
+            shutil.copytree(a[a.index('--save') + 1], sd, dirs_exist_ok=True)
         set_ini()
         log = open(os.path.join(ROOT, 'work', 'pp.log'), 'w')
         p = subprocess.Popen([EXE, os.path.abspath(iso)], stdout=log, stderr=log, env=dict(os.environ, HOME=HOME),

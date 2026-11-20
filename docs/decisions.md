@@ -19,3 +19,9 @@
   it. Rejected: redrawing it in English.
 - **Scope: game only.** The patch replaces `CONTENT.DAT` alone. The Virtual PC Engine prompts (would need a
   patched, re-signed EBOOT) and the 18 manual pages stay Japanese.
+
+## Ruled by the user (2026-11-20)
+
+- **King Akuro is "Akuro-Ou"** everywhere (upstream mixed both). `restyle.py` turns every "King Akuro" into
+  "Akuro-Ou". The line wrapper no longer breaks at a hyphen followed by a capital, so the name stays on one
+  line (local fix in `vendor/tenmatools/libpce/src/tenma/TenmaLineWrapper.cpp`).

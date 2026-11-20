@@ -134,7 +134,9 @@ bool TenmaLineWrapper::isVisibleWordDivider(int key, int nextKey) {
         || (nextKey == code_rquotesing)) {
       return false;
     }
-    
+    // local fix: keep a hyphen before a capital (names such as "Akuro-Ou") on one line; A-Z are 0x13-0x2C
+    if ((key == code_hyphen) && (nextKey >= 0x13) && (nextKey <= 0x2C)) return false;
+
     return true;
   }
   

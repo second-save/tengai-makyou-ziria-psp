@@ -1,6 +1,20 @@
-# Status (2026-11-19)
+# Status (2026-11-20)
 
-An English build exists: `build/NPJJ30029/CONTENT.DAT`, sha1 `3b8a8289f8cde653cf91a232eb2477149059bc8f`.
+## Play from the Riku save (latest build, sha1 `0017549af385930628f73ee53ed2985a07a2388b`)
+
+`tools/venv/bin/python tools/pp.py start --save work/saves/riku` installs `build/NPJJ30029` and the save into
+the isolated emulator folder (`work/pphome`) and opens stock PPSSPP. At the emulator prompts: Cross on the
+notice, then **No** to "load this game's save data?", then Yes to "start as is?", pick a screen size, OK.
+At the title press Start, choose Start, then **TENGAI2 "Riku" Lv14** (TENGAI1 is an old Banmo save). You
+appear in Kumogiri Hamlet 5's inn in Riku: Ziria and Tsunade level 14-15, Akuro-Ou and Kogama along,
+4587 Ryo, Great Hammer and Map of Riku held. Kogama (field menu) warps between visited hamlets; Nekoma
+Village, the next goal, is in the south-west past Danjo's cursed bridges (see Next). The save's real
+HP/Attack are unpoked. The save is `work/saves/riku` (`SAVEDATA/NPJJ30029*`; the backup RAM is in
+`NPJJ30029/EXPORT.BIN`). Loading the GAME1 save at the prompt overwrites it with an empty one.
+
+
+An English build exists: `build/NPJJ30029/CONTENT.DAT`, sha1 `0017549af385930628f73ee53ed2985a07a2388b`
+(Akuro-Ou ruling applied; `dist/` still holds the patch of the previous build).
 Patch for testing: `dist/ziria-psn-en.xdelta` and `dist/ziria-psn-en.zip` (`tools/release.sh`: xdelta3 against
 the original `CONTENT.DAT`, re-applied and compared). Everything is committed. Nothing is published.
 
@@ -975,9 +989,6 @@ session, replace the newest `NNNN.ppst` with the poked state.
 
 ## Open
 
-- Not ruled: upstream names King Akuro "Akuro-Ou" in ten later lines (`script_dialogue.csv` rows 3586-3603
-  and 5990-6083, e.g. "I heard Akuro-Ou was defeated."); everywhere else, the boss window included, he is
-  "King Akuro". `restyle.py` could make them "King Akuro" (+2 characters each). Unchanged so far.
 
 - `tools/pp.py` input is wall-clock, not frame-exact: walking is imprecise and one run in six misbehaved.
 - The patch is 55 MB because the changed track is zlib-compressed and XORed; a patcher that works on the

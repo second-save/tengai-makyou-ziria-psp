@@ -27,6 +27,7 @@ DROP_RE = re.compile(r"(?<=\w)-(?:san|chan|kun|dono)\b")
 RYO_RE = re.compile(r'\bryo\b')
 MONEY_RE = re.compile(r'両(\*\*|\[number\]|\d+(?:,\d{3})*)')   # ** and [number] are the game's amount placeholders
 GLOSS_RE = re.compile(r' \(\d+ ryou\)')   # upstream explains the sign once: "両20 (20 ryou)"
+SPACES_RE = re.compile(r'(?<=\w)  +(?=\w)')   # upstream typo "going to  happen"; menu padding never sits between letters
 
 
 def sama(m):
@@ -42,6 +43,7 @@ def restyle(t):
     t = SAMA_RE.sub(sama, t)
     t = DROP_RE.sub('', t)
     t = NAME_RE.sub(lambda m: short(m.group()), t)
+    t = SPACES_RE.sub(' ', t)
     return RYO_RE.sub('Ryo', t)
 
 
@@ -59,6 +61,7 @@ def selftest():
                  ('Priest Ozuno-sama and Yashahime-sama', 'Priest Ozuno and Lady Yashahime'),
                  ('Ziria-san, Osae-chan, Musashi-dono', 'Ziria, Osae, Musashi'),
                  ("Koumon-sama's 50 ryo", "Lord Komon's 50 Ryo"),
+                 ("what's going to  happen!", "what's going to happen!"),
                  ('Our Fuurinkazan Sword. You would know, Oodanuki.', 'Our Furinkazan Sword. You would know, Odanuki.')]:
         assert restyle(a) == b, (a, restyle(a), b)
         assert len(restyle(a)) <= len(a), a

@@ -22,7 +22,7 @@ You need `NPJJ30029/CONTENT.DAT` in its decrypted form (the one PPSSPP reads):
 | File | SHA-1 |
 |---|---|
 | `CONTENT.DAT` (original) | `1a009332f54e283bfaedff5d073008a60b9b06c7` |
-| `CONTENT.DAT` (patched) | `a9cc6890310d7a7b090c0323e3d4f339acbfc7ec` |
+| `CONTENT.DAT` (patched) | `3b8a8289f8cde653cf91a232eb2477149059bc8f` |
 
     xdelta3 -d -s CONTENT.DAT ziria-psn-en.xdelta CONTENT.en.DAT
 

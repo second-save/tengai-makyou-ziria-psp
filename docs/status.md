@@ -1,6 +1,6 @@
 # Status (2026-11-19)
 
-An English build exists: `build/NPJJ30029/CONTENT.DAT`, sha1 `a9cc6890310d7a7b090c0323e3d4f339acbfc7ec`.
+An English build exists: `build/NPJJ30029/CONTENT.DAT`, sha1 `3b8a8289f8cde653cf91a232eb2477149059bc8f`.
 Patch for testing: `dist/ziria-psn-en.xdelta` and `dist/ziria-psn-en.zip` (`tools/release.sh`: xdelta3 against
 the original `CONTENT.DAT`, re-applied and compared). Everything is committed. Nothing is published.
 
@@ -528,7 +528,31 @@ exit 2).
    the brightest girl, she's definitely one of the strongest! / And she's as cute as a button!" and "You'll
    find her at Ashikaga School! / Go meet with her, and stand against the Cult of Daimon together!").
 
-   Next (in `en2`): Ashikaga School and Tsunade (`map-0x1A43` on).
+   Shrine to Ota Village (`map-0x1A43`), part done (steps 1222-1298, session now in a north house of Ota,
+   level 9, 1726 Ryo). Route: from the shrine's bridge go east to the beach (round the mountains), north
+   up the coast, then north-west; a road through a wood leads to the village beside the broken bridge.
+   The overworld west of Hamlet 3 is closed by mountains and the river. Clean: new enemies Daimon Bishop
+   ("Daimon Bishop used the Mago spell.", "...the Eleca spell.") and Daimonist Kitsune, Kogama joining
+   the fight ("Kogama's attack!"), item drops ("Ziria obtained Toad Oil." then "Obtained Toad Oil.",
+   "Obtained White Snake Stone."), the level-up to 9 (it reset the poke: HP 999 and Attack 200 poked
+   again at step 1249, base byte included). In Ota: "Ota Village used to be a lively, bustling place... /
+   But ever since they built that castle on the other side of the river, all of our young'uns have gone
+   off to live in town.", the forgetful old man ("Listen. This is a very important tale. / A long time
+   ago, Jipang almost fell into... something...", "Because of...Oh, I forget."), "Our priest is looking
+   for the Fire Hero! / He said he has something very important to discuss.", the woman with portrait
+   ("A powerful young lady called Tsunade chased the Daimonists away from our village.", "If only she
+   had come sooner, maybe they wouldn't have destroyed the bridge..."), and the north house (`map-0x1ACF`:
+   "All women naturally know a way to send men into panic: crying crocodile tears.", "When Tsunade cries
+   crocodile tears, you never know what's going to happen!", "Tsunade is the best wielder of axes in the
+   Far East. None can match her skill!", "If you ever find an axe, let Tsunade wield it!").
+
+   Fix: upstream's "going to  happen" had a double space (shown as a wide gap). `restyle.py` now collapses
+   runs of spaces between two letters; it touches that line only (menu padding never sits between
+   letters). Rebuilt (sha1 `3b8a8289`), `dist/` regenerated, identity test and the 47-step replay check
+   pass. Session `en2` still runs the old disc (a savestate carries it), so the fixed line shows only on a
+   fresh boot.
+
+   Next (in `en2`): the rest of Ota (the priest, the sacred tree), then Ashikaga School and Tsunade.
 2. Money, done as ruled (`docs/decisions.md`): `restyle.py` `money()` turns upstream's "両20" into "20 Ryo" in
    every English line (176 lines, five script files); windows keep "18両". Seen in game: "2 Ryo, please.",
    "15 Ryo, please.", "It's 4 Ryo for the night.", "Ziria obtained 2 Ryo." The bank lines with "65,000 Ryo" were

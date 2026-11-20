@@ -498,8 +498,17 @@ exit 2).
    Not seen: Komon back in Mito Castle (`map-0x165B-0x378`) and the freed townspeople; both are behind the
    grotto, south of the river.
 
-   Next (in `en2`): the rest of Hamlet 3 (the shop, four villagers, `map-0x19EF-0x130`), then the Slug
-   Hermit's shrine to the north.
+   More of Hamlet 3 (steps 1102-1132, session now in the general store with the Map of Banmo open, 1602
+   Ryo). Clean: the last inn guest, with a portrait window ("My old man told me that the Fire Clan was made
+   of three different tribes.", "That must mean there's two other clans besides your own Toad clan,
+   Ziria!"), the general store (`map-0x1A0B`, right of the inn: "Welcome, welcome! / This is my general
+   store. / Tell me what you need!", the list Toad Oil 18, White Toad Oil 52, White Crane Plume 60, Map of
+   Banmo 14, "Map of Banmo, is it?" Yes/No, "Obtained Map of Banmo.", "14 Ryo, please. / Would you like
+   anything else?", "Thank you, thank you! / See you soon!"), and "Ziria used the Map of Banmo!". The map
+   screen has a red seal with the kanji 磐毛 drawn in the picture, like Tsukuba's 筑波; the map-seal ruling
+   covers it (leave it). Not done: the four villagers outside besides the greeter.
+
+   Next (in `en2`): Hamlet 3's villagers, then the Slug Hermit's shrine to the north.
 2. Money, done as ruled (`docs/decisions.md`): `restyle.py` `money()` turns upstream's "両20" into "20 Ryo" in
    every English line (176 lines, five script files); windows keep "18両". Seen in game: "2 Ryo, please.",
    "15 Ryo, please.", "It's 4 Ryo for the night.", "Ziria obtained 2 Ryo." The bank lines with "65,000 Ryo" were

@@ -748,8 +748,29 @@ exit 2).
    Hero tile with three in the party: X/Y at `0x096660D1`/`0x096660D2`, mirrored at `0x096660E3`; the old
    `0x096660A5` is then a follower's slot. `tools/poke.py` can now be imported (its `main()` is guarded).
 
-   Next (in `en2`): finish the battle, find the cave's way down to Tobei, then Inugami Village (west) for
-   Tobei's Plans and Shirakawa Castle.
+   Abukuma Caves, done (steps 2084-2212, session now inside Tobei's cell after his talk, Ziria level 11,
+   Tsunade level 9, 2749 Ryo, pokes renewed at step 2205). Clean: the new enemy Slime ("Slime's attack!"),
+   poison ("Bog Creature breathed poison.", "Ziria was poisoned.", the PSN tag in the header), the
+   Antidote from the field menu ("Tsunade used the Antidote!", "Recover whom?" with the Ziria / Tsunade
+   list, "The poison was purged from Ziria's body!"), "Ziria's party obtained 35 Ryo", the second floor's
+   casket (toad oil again), the Scroll of Raiko casket ("You look inside the casket. / You find the
+   scroll of Raiko.", "Obtained Raiko. / Who will hold it?", "Obtained Scroll of Raiko."), Tamamohime's
+   first fight, which starts on the step beside Tobei's fence ("I am Tamamohime, rightful ruler of men!
+   / Death to those who defy me!", "Tamamohime's attack!", "Tamamohime took 92 damage!", and the win
+   "How dare you?! / You will rue this day!!"), the level-ups to 11 and 9, the fence ("There is a wooden
+   fence. / It's unlocked...or rather, it doesn't even have a lock in the first place.", "It opens
+   easily."), and Tobei with portrait (four pages, "I'm Tobei the carpenter. / Tamamo locked me in here
+   after I hid the plans to Shirakawa Castle." to "I'll be fine on my own. Please, rescue the lord of
+   Shirakawa Castle."). Route, from the entrance floor: west along the main passage, the ladder at its top
+   left; on the next floor west and down to the ladder at the west edge; on the third floor take the
+   ladder at the bottom left of the west strip. Tobei's floor has two separate parts: the west part
+   (ladders, no way to him) and Tobei's corner, reached from the third floor's east loop. To get there go
+   back up to the second floor, take its middle band east, then the east column's ladder down; on the
+   third floor walk the loop round to its south-west and take the ladder by the casket strip. Bogs (green)
+   cannot be crossed. Not seen: Hamlet 4's inn.
+
+   Next (in `en2`): Inugami Village (west) for Tobei's Plans under a Komainu statue, then Shirakawa
+   Castle.
 2. Money, done as ruled (`docs/decisions.md`): `restyle.py` `money()` turns upstream's "両20" into "20 Ryo" in
    every English line (176 lines, five script files); windows keep "18両". Seen in game: "2 Ryo, please.",
    "15 Ryo, please.", "It's 4 Ryo for the night.", "Ziria obtained 2 Ryo." The bank lines with "65,000 Ryo" were

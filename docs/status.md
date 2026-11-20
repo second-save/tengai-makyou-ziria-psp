@@ -441,7 +441,19 @@ exit 2).
    once, with a trailing line break in the script that prints nothing). Pokes: HP 999 and Attack 200 again
    at steps 737 and 741 (the level-up at 741 reset them).
 
-   Next (in `en2`): the iron door with the 大 mark, the dungeons, Gomon.
+   Iron door and dungeon, part done (steps 764-818, session now upstairs beside the opened door). The door
+   is a floor plate in the wooden room reached by the stairs on the stone floor's west side. Check on it:
+   "There is an iron door with a 大 symbol painted on it in red. / The door is locked." (the 大 renders as a
+   glyph, as at Kashima); Items, Iron Key, Use: "You open the iron door." and a staircase appears beside
+   the plate. Below is the dungeon cell crammed with townspeople (`map-0x1693` plus line 1762). Clean so
+   far: "Where are we? Who am I? / What are you doing here? / You still have your soul, don't you?", "I'm
+   scared! I'm scared! / Gomon snatches your soul the moment you scream during torture!", "What? You're
+   gonna fight Gomon? / Hey, it's your funeral!", "Gomon is treating us like cattle... / I'd like him to
+   feel our pain one of these days.", "Banmo is beyond Innards Grotto, but good luck getting there with
+   Gomon blocking the way!". The crowd moves; talking via the field menu (Circle, then Circle in a new
+   step) works reliably. A staircase at the cell's top leads on (to Innards Grotto, by the script).
+
+   Next (in `en2`): more of the cell's lines, then Innards Grotto and Gomon.
 2. Money, done as ruled (`docs/decisions.md`): `restyle.py` `money()` turns upstream's "両20" into "20 Ryo" in
    every English line (176 lines, five script files); windows keep "18両". Seen in game: "2 Ryo, please.",
    "15 Ryo, please.", "It's 4 Ryo for the night.", "Ziria obtained 2 Ryo." The bank lines with "65,000 Ryo" were

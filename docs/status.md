@@ -420,7 +420,16 @@ exit 2).
    ladies...", "Ponpokorin! / I almost lost my disguise when you were staring at me!"). The tanuki indoors
    move every step; a talk can miss even when adjacent, repeat it.
 
-   Next (in `en2`): the other west-district houses, the castle path.
+   More west-district houses (steps 683-721, session now in the north-east house). Clean: `map-0x171F`
+   ("Jipang is our home. / Please protect it, Ziria!", the house west of the bridge pair), `map-0x16CB`
+   ("Gomon must be waiting for you inside Innards Grotto! / Be careful, Ziria!", north-west house) and
+   `map-0x16E7` ("Lord Komon has been driven out of the castle by that Gomon fool. / I hope he's well...",
+   north-east house). North of these two a stairway leads up through the rocks. How-to for tanuki that
+   keep moving: once one is adjacent, turn to it in its own step, then Circle (opens the field menu) and
+   Circle again in a separate step (Talk); pressing Circle right after a move usually misses. Not found
+   yet: `map-0x1703-0x141` ("I'm sorry for my harsh words, Ziria.").
+
+   Next (in `en2`): the remaining west-district house, the stairway north, the castle path.
 2. Money, done as ruled (`docs/decisions.md`): `restyle.py` `money()` turns upstream's "両20" into "20 Ryo" in
    every English line (176 lines, five script files); windows keep "18両". Seen in game: "2 Ryo, please.",
    "15 Ryo, please.", "It's 4 Ryo for the night.", "Ziria obtained 2 Ryo." The bank lines with "65,000 Ryo" were

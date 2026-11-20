@@ -842,7 +842,26 @@ exit 2).
    twice to start Tamamohime. Encounters come every few steps; RAM `0x096670F4` counts steps but zeroing
    it does not stop them.
 
-   Next (in `en2`): leave the castle, the Shirakawa barrier north of it to Riku.
+   After Kyubi (steps 2684-2882, session now beside the old lord in `0x1F67`, 4975 Ryo). Clean: "You
+   can't use that now." (Rakka in the field), the Descriptions screen ("New Moon Sword / Increases Attack
+   by 8 when equipped."), the old lord back upstairs with his full-width portrait ("I've finally come to
+   my senses. / Well done, young hero!", then "Well done, well done!"), his two retainers ("Thank you,
+   Ziria. / The young lord sends his regards."; "Thank you, Ziria! You may now cross the Shirakawa
+   barrier north of this castle and reach the lands of Riku."; later "The lands of Banmo can finally
+   return to their former glory."), a town house ("There are two checkpoints to the lands of Riku." /
+   "The Shirakawa barrier is north of the castle, while the Nakoso barrier is north of Inugami
+   Village." / "However, you can't cross the checkpoints without the lord's permission!"), the
+   Shirakawa Barrier (`map-0x209B`, location window "Shirakawa Barrier", the full-width boulder scene "A
+   giant boulder falls from the sky." / "The boulder blocks the checkpoint.", the Check line "There is a
+   giant boulder here. / It's releasing some kind of gas.", the guards "This is a nightmare! A kitsune
+   came down from the sky, turned into stone, and blocked the checkpoint!" / "Ziria, you must inform our
+   lord at once!" and "Th-This is a curse! / Never again will we be able to go through the Shirakawa
+   barrier!" / "Ziria! Please inform our lord at once!"), and the lord's answer ("I see...So the
+   Shirakawa barrier is impassable." / "Very well, you may go through the Nakoso barrier! I'll send word
+   ahead!"). The barrier is the fenced gate north-west of the castle on the overworld; the town is left
+   by the road south along column 21.
+
+   Next (in `en2`): the Nakoso barrier north of Inugami Village, then Riku.
 2. Money, done as ruled (`docs/decisions.md`): `restyle.py` `money()` turns upstream's "両20" into "20 Ryo" in
    every English line (176 lines, five script files); windows keep "18両". Seen in game: "2 Ryo, please.",
    "15 Ryo, please.", "It's 4 Ryo for the night.", "Ziria obtained 2 Ryo." The bank lines with "65,000 Ryo" were

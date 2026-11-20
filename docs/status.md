@@ -592,8 +592,23 @@ exit 2).
    behind the lectern); not solved. Not seen: the library menu (`0x4EE` on), the hole's Check line, the
    "Penis" and pants students.
 
-   Next (in `en2`): Lumberjack Village (`map-0x1B23`, inn `0x1B3F`, elder `0x1B77`): Tsunade joins and
-   the elder gives the Byakko Axe; then back to Ota's sacred tree (`map-0x1A43-0x1B4`).
+   Lumberjack Village (`map-0x1B23`), Tsunade joined (steps 1469-1539). Route: from the school go south-west
+   along the stumps, then west on the road to the hut by the river (four battles on the way, one new line
+   "Daimon Acolyte appeared."). The village's entrance is its east side; Tsunade wanders a clearing in the
+   tree maze north of the houses, around tile (47,17). Clean: "Lumberjack Village here is always filled
+   with the sound of woodchopping." / "...See, what'd I tell you?", and her full-width scene ("I'm Tsunade,
+   certified femme fatale! / You're Ziria, right? / I'm a Fire Hero, just like you!", "Let's travel
+   together and kick some Daimonist butts! It's gonna be so much fun!", "Oh yeah! I should say goodbye to
+   the village elder first!", "Tsunade, the second Fire Hero, / has joined you!").
+
+   Maze tool: the hero's tile X/Y on a field map are at `0x096660A5`/`0x096660A6` (found by RAM diff;
+   copies every 0x2C bytes, Kogama's among them). A throwaway BFS (load a play.sh state in one PPSSPP
+   process, press each direction 16 frames, read the tile, save a state per new tile) mapped the village's
+   1,206 walkable tiles in a few minutes; a shortest path then became one play.sh call. Worth keeping as
+   a tool if more mazes come; it is not in the repo.
+
+   Next (in `en2`): the elder (`map-0x1B77`, Byakko Axe), the inn (`0x1B3F`), then back to Ota's sacred
+   tree (`map-0x1A43-0x1B4`).
 2. Money, done as ruled (`docs/decisions.md`): `restyle.py` `money()` turns upstream's "両20" into "20 Ryo" in
    every English line (176 lines, five script files); windows keep "18両". Seen in game: "2 Ryo, please.",
    "15 Ryo, please.", "It's 4 Ryo for the night.", "Ziria obtained 2 Ryo." The bank lines with "65,000 Ryo" were

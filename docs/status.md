@@ -412,7 +412,15 @@ exit 2).
    more talks there only repeated lines already seen. Not found in that state: `map-0x157B-0x6C1`, `0x755`,
    `0x7FF`, `0xA28`.
 
-   Next (in `en2`): the remaining tanuki lines, the other buildings after the church, the castle path.
+   Mito's west district, part done (`en2` steps 667-682, session now in the second house there, talking to
+   its tanuki). Route: from the armory go down to the lower road and west; a long wooden bridge crosses the
+   lake to a second group of at least five unsigned houses. Clean: one more tanuki by the armory
+   ("Ponpokorin! / Forgive us, Ziria!"), and the first two houses, the pair just north of where the bridge
+   lands ("Please save the villagers before you go through Innards Grotto. / Especially the young
+   ladies...", "Ponpokorin! / I almost lost my disguise when you were staring at me!"). The tanuki indoors
+   move every step; a talk can miss even when adjacent, repeat it.
+
+   Next (in `en2`): the other west-district houses, the castle path.
 2. Money, done as ruled (`docs/decisions.md`): `restyle.py` `money()` turns upstream's "両20" into "20 Ryo" in
    every English line (176 lines, five script files); windows keep "18両". Seen in game: "2 Ryo, please.",
    "15 Ryo, please.", "It's 4 Ryo for the night.", "Ziria obtained 2 Ryo." The bank lines with "65,000 Ryo" were

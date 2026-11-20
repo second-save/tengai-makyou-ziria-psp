@@ -660,7 +660,36 @@ exit 2).
    restored! ..."). One level-up line read "Gained 65347 Attack!": the poke's doing (Attack was 200, the
    new value is lower, and the 16-bit gain wraps), not the port.
 
-   Next (in `en2`): cross the tree bridge (west of Ota) and go on.
+   Hawai Village (`map-0x1BAF`, Hot Spring Inn `map-0x1BCB`, Tea House `map-0x1BE7`), done (steps
+   1720-1838), and on to Utsunomiya Town (steps 1839-1850, session now just inside the town's south
+   entrance, 1835 Ryo, both heroes poked again: HP 999, Ziria's Attack 200, at step 1722). Route: the tree
+   bridge is entered by walking north from the trunk tile; on the overworld go north over the next bridge
+   to Hawai (palm trees, two ponds). Leaving Hawai, its beach is closed to the west: cross the bridge south,
+   go north-west over the plain to a road through the mountain pass, follow it west to the castle. Clean:
+   Hawai's greeter with portrait ("These hot springs are fantastic! / Welcome to the hot springs of Hawai
+   Village!"), "I heard the lord of Utsunomiya Castle is very young and brave!" (portrait), "You'll feel
+   much better if you stay at the inn! Trust me!", "There are dancers at the inn. Their dance is really
+   something else! Are they even allowed to show that? Heh heh heh!"; in the inn the free stay ("This is a
+   hot spring inn! It's completely free! You should stay for a while! / How about it?", Yes, "Rest well.",
+   "See you soon."), three guests ("This hot spring is great! / Makes you forget that whole business about
+   Masakado returning!", "Follow the mountains west and you'll get to Utsunomiya Castle.", "The young lord
+   of Utsunomiya wants to meet some hero!"), and in the garden behind the back corridor the foreign
+   dancers, whose broken English is upstream's on purpose ("We come to Jipang with Hoteimaru!", "Hoteimaru
+   search Fire Fighter in Jipang!", "Mount Fuji! Geisha! Sukiyaki! / Shabu-shabu! Tempura! Sushi! / I love
+   Jipang!", "Our country full of demon! / Much very scary! / We run to Jipang!", the paid dance as a
+   full-width scene, "It's showtime! / Sexy beauty on stage! / Now let's dance!", "Hawaiii, Hawaaaiii! /
+   Ziria! / Help friend Hoteimaru!", and the No answer "I know story of man who not spend little money. He
+   die alone and sad."). The dance offer showed the old "10, Ryo okay?": this session runs the disc from
+   before the comma fix, so this is the known, fixed bug; the fixed line is still unseen in game. Tea
+   house: "Welcome to my tea house! / How may I help you?", the list Toad Oil 18, White Toad Oil 52, White
+   Snake Stone 250, Antidote 27, "Antidote, is it?", "Obtained Antidote. / Who will hold it?" with the
+   Ziria / Tsunade list, "27 Ryo, please.", "Thank you very much." On the road: new enemies Satori
+   ("Satori appeared.") and Higitsune ("Higitsune used the Mago spell."). Not seen: the pool's Check line
+   (`0xA7`, the pool is closed off by dancers, baskets and trees), the empty-wallet line (`0x5A6`), "There's
+   a funny foreigner in Utsunomiya." (`0x389`) and "I heard these hot springs are managed by a group of
+   foreigners." (`map-0x1BAF-0xEC`): every villager in the square was talked to, none said it.
+
+   Next (in `en2`): Utsunomiya Town (`map-0x1C3B`) and its castle (`map-0x1CC7`).
 2. Money, done as ruled (`docs/decisions.md`): `restyle.py` `money()` turns upstream's "両20" into "20 Ryo" in
    every English line (176 lines, five script files); windows keep "18両". Seen in game: "2 Ryo, please.",
    "15 Ryo, please.", "It's 4 Ryo for the night.", "Ziria obtained 2 Ryo." The bank lines with "65,000 Ryo" were

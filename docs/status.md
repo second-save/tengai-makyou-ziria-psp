@@ -429,7 +429,19 @@ exit 2).
    Circle again in a separate step (Talk); pressing Circle right after a move usually misses. Not found
    yet: `map-0x1703-0x141` ("I'm sorry for my harsh words, Ziria.").
 
-   Next (in `en2`): the remaining west-district house, the stairway north, the castle path.
+   Mito Castle (`map-0x165B`), entered (steps 722-763, session now beside the Iron Key casket, level 8).
+   Route: the stairway between the two northern west-district houses (two tanuki at its foot: "Damn those
+   Daimonists! / Stick a fork in me 'cause I'm so done with them!"), east across the plateau, up the
+   second stairway to the castle gate. Inside: the entrance stairs lead to a wooden hall; its upper-left
+   stairs reach a stone floor whose north-east stairs lead to a room with the casket. Clean: random-battle
+   text with new enemies (Shikigami, Yako: "Yako used the Mago spell.", "Defeated Yako!"), Flee ("Ziria
+   fled.", "Shikigami raced in pursuit."), the level-up run ("Ziria rose to level 8!", "Gained 1 Speed!",
+   "HP and TP fully restored! / You're one step closer to bringing down the Cult of Daimon."), and the
+   casket ("You look inside the casket. / There is an iron key inside.", "Obtained Iron Key." - shown
+   once, with a trailing line break in the script that prints nothing). Pokes: HP 999 and Attack 200 again
+   at steps 737 and 741 (the level-up at 741 reset them).
+
+   Next (in `en2`): the iron door with the 大 mark, the dungeons, Gomon.
 2. Money, done as ruled (`docs/decisions.md`): `restyle.py` `money()` turns upstream's "両20" into "20 Ryo" in
    every English line (176 lines, five script files); windows keep "18両". Seen in game: "2 Ryo, please.",
    "15 Ryo, please.", "It's 4 Ryo for the night.", "Ziria obtained 2 Ryo." The bank lines with "65,000 Ryo" were

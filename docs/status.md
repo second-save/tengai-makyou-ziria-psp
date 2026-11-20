@@ -774,7 +774,7 @@ exit 2).
    north passage: it joins the west part, whose ladder at tile (11,20) climbs back to the second floor's
    west edge; from there east and round the bog to the ladder at (17,13), which lands on the entrance
    floor; the mouth is at (33,20). Battles on the way: Bog Creature, clean ("Defeated Bog Creature!",
-   "Acquired 58 Virtue!"). The poison seen in the cave cleared itself; Ziria lost 11 HP.
+   "Acquired 58 Virtue!").
 
    Inugami Village (`map-0x1DFB`) and Tobei's Plans, done (steps 2269-2377, session now in front of the
    shrine, 2938 Ryo). The village is west of the cave mouth, entered between the two Komainu statues.

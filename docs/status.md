@@ -519,8 +519,16 @@ exit 2).
    tournament recently, and she beat a hundred opponents in a row by ring out!", clean. Not caught:
    `map-0x19D3-0x254` (the kitsune).
 
-   Next (in `en2`): the Slug Hermit's shrine to the north (`map-0x1A27`, "Slug Shrine", a ten-page scene
-   that sends Ziria to Tsunade at the Ashikaga School).
+   Slug Shrine (`map-0x1A27`), done (steps 1187-1221, session now in the shrine after the scene, 1602 Ryo
+   plus one Acolyte fight). Route: leave Hamlet 3 west between the two stone markers, go round the hamlet
+   and north; the cave sits on an island in a lake, reached by a bridge. Inside, the passage runs
+   north-west to a wooden floor with a hearth; the Slug Hermit sits left of it, talk from below. Clean: the
+   full-width scene, nine pages from "Well met, Ziria! / I'm the Slug Hermit. / I've been living here for
+   300 years!" to "I've already told Tsunade about you. / Now go, young Ziria!" (including "While she's not
+   the brightest girl, she's definitely one of the strongest! / And she's as cute as a button!" and "You'll
+   find her at Ashikaga School! / Go meet with her, and stand against the Cult of Daimon together!").
+
+   Next (in `en2`): Ashikaga School and Tsunade (`map-0x1A43` on).
 2. Money, done as ruled (`docs/decisions.md`): `restyle.py` `money()` turns upstream's "両20" into "20 Ryo" in
    every English line (176 lines, five script files); windows keep "18両". Seen in game: "2 Ryo, please.",
    "15 Ryo, please.", "It's 4 Ryo for the night.", "Ziria obtained 2 Ryo." The bank lines with "65,000 Ryo" were

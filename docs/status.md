@@ -689,7 +689,39 @@ exit 2).
    a funny foreigner in Utsunomiya." (`0x389`) and "I heard these hot springs are managed by a group of
    foreigners." (`map-0x1BAF-0xEC`): every villager in the square was talked to, none said it.
 
-   Next (in `en2`): Utsunomiya Town (`map-0x1C3B`) and its castle (`map-0x1CC7`).
+   Utsunomiya Town (`map-0x1C3B`) and Castle (`map-0x1CC7`), story done (steps 1851-1967, session now on
+   the castle's east walkway after the young lord's request, 1685 Ryo, Lord's Sword held by Ziria). The
+   location window reads "Utsunomiya Town". Clean: townspeople ("The brave, young lord of the castle is
+   waiting for the arrival of the Fire Heroes.", "Our brave, young lord hates the Cult of Daimon! You're
+   not a Daimonist, are you?!", "Are you Ziria? / I heard about you from Hoteimaru, that foreigner near the
+   castle!"), two houses ("The young lord of the castle claims to be brave, but I've never actually seen
+   him do anything heroic!"; the carpenters, with a portrait, five pages about Tobei, Tamamohime and
+   "Shirakawa Castle's trick system"), the warehouse's item side, first seen ("Want to leave something with
+   us? / You can store up to 32 items!", "Gotcha! / Will you store anything else?", the closing "Our
+   service is nationwide! ..."), the armory (Bandit's Axe 620, Plate Armor 150, Shuriken, Kunai; "Obtained
+   Plate Armor. / Who will hold it?", "150 Ryo, please."), the lord's messenger in the north part of town
+   (three pages, "You must be Lord Ziria. / I'm a messenger of the brave, young lord of Utsunomiya!" to
+   "Please, head to the castle at your earliest convenience!"), Hoteimaru on the terrace below the castle
+   (full-width, three pages: "Oh, friend! Ziria! / This is Hoteimaru! Missionary! / Cult of Daimon is cult
+   of demons!", "Thirteen demons! / They revive Masakado and end Jipang!", "You are hero! You defeat
+   Masakado! / I help! See you soon, byeee!"), two retainers ("Lord Ziria. The truth is...Shirakawa Castle
+   has already fallen into the hands of the Daimonists." / "I'm worried about the lord of Shirakawa... / I
+   hope he's safe."; "Tamamohime forced Tobei to create a giant trick system in the dungeons of Shirakawa
+   Castle." / "Rumor is, once you get lost in those dungeons, you'll never get out again!"), and the young
+   lord (full-width portrait: "I am the brave, young lord of Utsunomiya! Tamamohime is an evil Daimonist. /
+   Father is in danger!", "...I must ask you to save my father.", Yes / No; No: "I see. That's a shame. / I
+   suppose not all heroes are brave..." (rewound); Yes: "I see why they call you a hero! / You truly are
+   brave!", "This is the sword Father gave me for my birthday. You may have it!", "You have accepted the
+   young lord's request.", "Acquired 143 Virtue!", "Obtained Lord's Sword. / Who will hold it?", and after
+   the scene "My father's life is in your hands!"). His text prints slowly: allow 800 frames a page. Route:
+   from the town's south entrance the road runs west past a house and the warehouse; north of them the
+   armory and a house; the long road north (the messenger stands on it) ends at steps up to a terrace
+   (Hoteimaru), and more steps lead to the castle; its throne room is straight up, the lord inside the
+   inner dais, entered through the gap in its south side. Not seen: the town's Hoteimaru song, the Tobei
+   villager, `0x1E5`, `0x358`, `0x5C8`, `0x765`, and the castle's lines `0xD1`, `0x1B4`, `0x24B`, `0x29F`,
+   `0x5B9` (some only after Shirakawa).
+
+   Next (in `en2`): Shirakawa Castle (Tamamohime) and Tobei.
 2. Money, done as ruled (`docs/decisions.md`): `restyle.py` `money()` turns upstream's "両20" into "20 Ryo" in
    every English line (176 lines, five script files); windows keep "18両". Seen in game: "2 Ryo, please.",
    "15 Ryo, please.", "It's 4 Ryo for the night.", "Ziria obtained 2 Ryo." The bank lines with "65,000 Ryo" were

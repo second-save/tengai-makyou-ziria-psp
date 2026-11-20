@@ -623,8 +623,21 @@ exit 2).
    open ("There's nothing out of the ordinary."). The hero tile address reads other slots after Tsunade
    joined and right after a map change; it settles after a step or two.
 
-   Next (in `en2`): the inn (`0x1B3F`, fortune-teller), then back to Ota's sacred tree
-   (`map-0x1A43-0x1B4`).
+   Axe scene and the inn (`map-0x1B3F`), done (steps 1595-1625, session now in the inn's back room beside
+   the fortune-teller). Clean: "Acquired 62 Virtue!" after the gift; leaving the elder's house starts a
+   full-width scene with Tsunade ("Not even a sacred tree can withstand THIS axe! Hyah!", "(swish)
+   (swish)...(slash!) / Tsunade swings her axe and trims Ziria's hair by a few inches!", "Whoops! Sorry
+   'bout that, Ziria! / I'm such a klutz! At least I didn't chop your head off, right? Hahaha!"); in the
+   inn the record keeper (prompt, No, "Come back anytime!"), the guest in green ("Not even a professional
+   lumberjack can cut down a sacred tree with just any old hatchet! You need a special axe for that!") and
+   the fortune-teller, four pages from "I'm a fortune-teller! / Let me look into your future..." to
+   "...That doesn't sound good, huh?". Upstream's FIXME on that last page (an extra empty box that can
+   stick) did not show: one Circle closed it. Layout: the inn is south of the elder's house, door entered
+   from the path below; step onto the innkeeper's raised floor through the cushions, take the gap in its
+   back wall to the rear corridor, and the guests' room is the right-hand one (enter from its top-right
+   gap). Innkeeper's lines not taken (same 20 Ryo lines as Ota's).
+
+   Next (in `en2`): back to Ota's sacred tree (`map-0x1A43-0x1B4`).
 2. Money, done as ruled (`docs/decisions.md`): `restyle.py` `money()` turns upstream's "両20" into "20 Ryo" in
    every English line (176 lines, five script files); windows keep "18両". Seen in game: "2 Ryo, please.",
    "15 Ryo, please.", "It's 4 Ryo for the night.", "Ziria obtained 2 Ryo." The bank lines with "65,000 Ryo" were

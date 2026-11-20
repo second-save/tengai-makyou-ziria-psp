@@ -577,7 +577,23 @@ exit 2).
    Items lost to mashed presses at full-bag prompts: Map of Tsukuba (step 1241) and Giant Tweezers (step
    1334), both already used. Not seen: the priest's No answer (`0x2D2`).
 
-   Next (in `en2`): Ashikaga School (`map-0x1B07`) and Tsunade, west of Ota.
+   Ashikaga School (`map-0x1B07`), part done (steps 1392-1468, session now in the west classroom, 1658
+   Ryo). Route: leave Ota by its south road; on the overworld follow the dirt road west, then south through
+   the wood; the school is the blue-roofed hut among tree stumps (two battles on the way, Daimonist
+   Kitsune and Bishops). The menu's location window reads "Ashikaga School". Clean: the hall monitor
+   ("Please be quiet! / No running in the hallway!"), the janitor by the Tsunade-shaped hole at the
+   hallway's east end ("Just look at this... / Tsunade did it! / I TOLD her not to run in the hallway!"),
+   the Lumberjack Village student ("I'm from Lumberjack Village. / To be honest, I really hate
+   studying...", "But Mom told everyone I'm a great scholar, so now I'm stuck here!"), the boy standing in
+   the hall (four pages, "Made a hole in the floor," to "Why is it ME who has to stand in the hall when
+   the one who did all that was Tsunade?!"), and a seated student with a portrait window ("Tsunade ran
+   away because she hates studying! She said she wanted to become a lumberjack!"). Talk does not reach
+   across the teachers' counters (east room, red figure in an L-shaped counter; west room, the teacher
+   behind the lectern); not solved. Not seen: the library menu (`0x4EE` on), the hole's Check line, the
+   "Penis" and pants students.
+
+   Next (in `en2`): Lumberjack Village (`map-0x1B23`, inn `0x1B3F`, elder `0x1B77`): Tsunade joins and
+   the elder gives the Byakko Axe; then back to Ota's sacred tree (`map-0x1A43-0x1B4`).
 2. Money, done as ruled (`docs/decisions.md`): `restyle.py` `money()` turns upstream's "両20" into "20 Ryo" in
    every English line (176 lines, five script files); windows keep "18両". Seen in game: "2 Ryo, please.",
    "15 Ryo, please.", "It's 4 Ryo for the night.", "Ziria obtained 2 Ryo." The bank lines with "65,000 Ryo" were

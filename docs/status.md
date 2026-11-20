@@ -464,7 +464,26 @@ exit 2).
    over our country! How is everyone so oblivious?!"). All clean. The stairs down are near the cell's top
    left; step 909 stands in Innards Grotto.
 
-   Next (in `en2`): Innards Grotto and Gomon.
+   Innards Grotto and Gomon, done (steps 909-1048, session now at the grotto's east stairs after the
+   fight, level 8, 1598 Ryo). The location window reads "Innards Grotto". The grotto's floating souls talk
+   (`map-0x16AF`): "Urgh...I'm suffering... / Please, deliver me from this pain...", "Masakado consumes the
+   souls that end up here...It could be my turn next..."; the other three soul lines (`0x37D`, `0x3D3`,
+   `0x47F`) were not caught, the souls drift away. Route: north from the dungeon stairs, west and up the
+   winding passage, east along the top, north up the corridor between the two teal pools, then east in the
+   last chamber to the stairs; stepping toward them starts Gomon (`script_boss.csv` `boss_0xF005`). Clean:
+   the whole intro as scrolling text with his portrait ("Hmph! I see you've made it this far. / Ziria, was
+   it? I suppose congratulations are in order!", "I am the first of the Thirteen Daimon Cultists, the Hell
+   Magician Gomon! / You don't stand a chance against me!", "You deserve a little boon before your
+   death...I will show you my true form!"), "Gomon sprang forward!", "Gomon's attack!", "Multiple
+   strikes!", "Gomon took 53 damage!", the win ("Curses! I underestimated you! / But one of my fellow
+   cultists will kill you without fail! Just you wait!", "You have defeated Gomon, the first of the
+   Thirteen Daimon Cultists! / There are twelve cultists left!"), "Ziria obtained 6 Ryo.", "Acquired 89
+   Virtue!". Random battles come every few tiles in the grotto; with base Attack poked they end in one
+   round. Battle menu tip: the cursor starts on Attack each round and wraps, so plain Circle attacks; arrow
+   presses meant for the map end up moving it. Not seen: Gomon's lose line (`boss_0xF005_lose_1`).
+
+   Next (in `en2`): back to Mito Castle for Komon's return (`map-0x165B-0x378`), the freed townspeople, then
+   on toward Banmo.
 2. Money, done as ruled (`docs/decisions.md`): `restyle.py` `money()` turns upstream's "両20" into "20 Ryo" in
    every English line (176 lines, five script files); windows keep "18両". Seen in game: "2 Ryo, please.",
    "15 Ryo, please.", "It's 4 Ryo for the night.", "Ziria obtained 2 Ryo." The bank lines with "65,000 Ryo" were

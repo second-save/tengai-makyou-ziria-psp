@@ -8,8 +8,8 @@ notice, then **No** to "load this game's save data?", then Yes to "start as is?"
 At the title press Start, choose Start, then **TENGAI2 "Riku" Lv14** (TENGAI1 is an old Banmo save). You
 appear in Kumogiri Hamlet 5's inn in Riku: Ziria and Tsunade level 14-15, Akuro-Ou and Kogama along,
 4587 Ryo, Great Hammer and Map of Riku held. Kogama (field menu) warps between visited hamlets; Nekoma
-Village, the next goal, is in the south-west past Danjo's cursed bridges (see Next). The save's real
-HP/Attack are unpoked. The save is `work/saves/riku` (`SAVEDATA/NPJJ30029*`; the backup RAM is in
+Village, the next goal, is in the south-west past Danjo's cursed bridges (see Next). The save keeps the
+debug boosts (max HP 999, Ziria's Attack 200). The save is `work/saves/riku` (`SAVEDATA/NPJJ30029*`; the backup RAM is in
 `NPJJ30029/EXPORT.BIN`). Loading the GAME1 save at the prompt overwrites it with an empty one.
 
 

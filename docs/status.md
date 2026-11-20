@@ -607,8 +607,24 @@ exit 2).
    1,206 walkable tiles in a few minutes; a shortest path then became one play.sh call. Worth keeping as
    a tool if more mazes come; it is not in the repo.
 
-   Next (in `en2`): the elder (`map-0x1B77`, Byakko Axe), the inn (`0x1B3F`), then back to Ota's sacred
-   tree (`map-0x1A43-0x1B4`).
+   Elder and the Byakko Axe, done (steps 1540-1594, session now in the elder's house after the gift).
+   Clean: "Acquired 173 Virtue!" closing Tsunade's scene, the two-hero menu header (Ziria Lv 9, Tsunade
+   Lv 5) and the Jutsu picker "Ziria / Tsunade", villagers ("The elder is keeping an ancient axe said to
+   be able to cut down any tree in a single strike!", "But we can't lift the darn thing! / Not even ten of
+   us working together! / What's up with that?", "Tsunade is north of the village, chopping down
+   trees!"), the south-west house (`map-0x1B93`, with portrait: "The village elder once mentioned that the
+   Byakko Axe was created by someone from the Slug Clan."), and the elder (`map-0x1B77`, portrait: "The
+   Slug Hermit entrusted me with the Byakko Axe a long time ago.", "We can't lift it, but I'm sure a
+   descendant of the Slug Clan like Tsunade can wield it just fine!", "Take it with you. Go forth, young
+   heroes!", "Obtained Byakko Axe. / Who will hold it?" with the Ziria / Tsunade list, "Obtained Byakko
+   Axe."). Picking a hero with a full bag gives "Unable to hold any more items. / Drop something?" (seen,
+   then undone with `--back 1`; the axe went to Tsunade). Layout: the elder's house is the dark-door house
+   north of the inn, entered from tile (51,52); the wooden-door house beside the general store does not
+   open ("There's nothing out of the ordinary."). The hero tile address reads other slots after Tsunade
+   joined and right after a map change; it settles after a step or two.
+
+   Next (in `en2`): the inn (`0x1B3F`, fortune-teller), then back to Ota's sacred tree
+   (`map-0x1A43-0x1B4`).
 2. Money, done as ruled (`docs/decisions.md`): `restyle.py` `money()` turns upstream's "両20" into "20 Ryo" in
    every English line (176 lines, five script files); windows keep "18両". Seen in game: "2 Ryo, please.",
    "15 Ryo, please.", "It's 4 Ryo for the night.", "Ziria obtained 2 Ryo." The bank lines with "65,000 Ryo" were

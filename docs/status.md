@@ -490,7 +490,9 @@ picture. Upstream left it. Ruled: leave it (`docs/decisions.md`).
 
 Debug tool: `tools/poke.py dump STATE OUT.bin` and `poke.py set STATE_IN STATE_OUT ADDR=HEXBYTES..` work on
 `play.sh` savestates (PSP memory, little-endian). Hero block at `0x096667E0`: HP `+4` (2 bytes), TP `+6`,
-max HP `+8`, max TP `+A`, level `+C`, Virtue `+D`. Money at `0x09666838`. Level 2 needs 8 Virtue. To use it in a
+max HP `+8`, max TP `+A`, level `+C`, Virtue `+D` (3 bytes). Base Attack `+13`, base Defense `+15`, base
+Speed `+17` (one byte each); the shown Attack `+1A`, Defense `+1C`, Speed `+1E` are base plus equipment and
+get recomputed (on level-up and other events), so poke the base byte too or the boost wears off. Money at `0x09666838`. Level 2 needs 8 Virtue. To use it in a
 session, replace the newest `NNNN.ppst` with the poked state.
 3. Restyle read, done by pattern, not line by line: 1,063 changed lines, no honorific suffix left anywhere, no
    doubled title ("Lord Lord", "Master Lord"). Most of the 152 "Lord Ziria" lines are the innkeepers' "Take care

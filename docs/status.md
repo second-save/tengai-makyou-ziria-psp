@@ -887,18 +887,30 @@ exit 2).
    was taken but its screenshots were overwritten by the rewind (`play.py --back` reuses the step
    number); not read.
 
-   Route on from Taga (steps 3048-3434, session now on the Riku overworld at (67,54), just south of the
-   bridge at (67,53)). The land south of the Taga river (Hamlet 5, the Nakoso path) is closed in by rivers
-   and mountains; the way on is **through Taga Castle**: walk north past the throne, the castle's back exit
-   lands on the overworld at (67,60). Overworld destinations (`0x2434` warp table at `+0x525`): Hamlet 5
-   (73,68), Hamlet 6 (38,42), Nekoma Village (17,76), Hiraizumi (9,46), iron door `0x27EC` (10-11,37-38),
-   Hamlet 7 (34,21). Taga's general store sells no map (White Toad Oil, Mountain Sandals, White Snake
-   Stone, Antidote). Seen clean: Hamlet 5's greeting ("You must be Lord Ziria! / Welcome to Kumogiri
-   Hamlet 5 in Riku." / "I'm afraid we won't be able to help you much, but we'll be cheering you on!"),
-   the store's "Have a nice day.". Open: the party could not step onto the (67,53) bridge (pressing up
-   leaves the hero at (67,54) with a party member drawn on the bridge); likely followers in the way or one
-   of the bewitched "slip bridges" upstream mentions. Next: get across, then Hamlet 6, Nekoma's White Cat,
-   Danjo.
+   Route on from Taga (steps 3048-3704, session now in Kumogiri Hamlet 6 holding the Great Hammer, Ziria
+   and Tsunade level 14, 7063 Ryo). The land south of the Taga river (Hamlet 5, the Nakoso path) is closed
+   in by rivers; the way on is **through Taga Castle**: walk north past the throne, the back exit lands on
+   the overworld at (67,60). Overworld destinations (`0x2434` warp table at `+0x525`): Hamlet 5 (73,68),
+   Hamlet 6 (38,42), Nekoma Village (17,76), Hiraizumi (9,46), iron door `0x27EC` (10-11,37-38), Hamlet 7
+   (34,21). Many bridges are Danjo's cursed "slide" bridges: stepping on throws the party back (seen at
+   (67,53), (52,41), (38,46), (33,45)). Working route to Hamlet 6: from (67,56) west to the bridge at
+   (57,53), north to (57,51), (51,48), (45,44), east (52,45), the bridge at (57,46) east, north up the
+   east side to (63,39), (62,35), (59,35), down to (59,38), west along row 38 to (38,38), south to the
+   hamlet. Clean: Hamlet 5's greeting, "Kumogiri Hamlet 6", its villager ("Everyone from our hamlet fought
+   hard against the Cult of Daimon..." / "But in the end, we couldn't overcome the spells of Danjo, the
+   third of the Thirteen Daimon Cultists."), the Gambling Den ("It's a simple game! Just bet whether the
+   sum of the two dice will be even or odd!"), the general store (Toad Oil, White Crane Plume, Antidote,
+   Map of Riku 50; "Obtained Map of Riku. / Who will hold it?", the drop prompt, "50 Ryo, please."), the
+   Map of Riku picture (its red seal 陸羽 stays Japanese, as ruled for the Map of Tsukuba), the Items
+   Drop prompt ("Is it okay to throw away Toad Oil?"), "Kappa used a thievery technique." / "No effect on
+   Ziria.", and the Great Hammer seller with portrait south of the houses ("Hey, friend! / I have
+   something that might interest you!", "...the famous Great Hammer! This isn't a scam!", "...crush any
+   curse in a single swing! And it's yours for only 300,000 Ryo! / How about it?"; Yes: "Why, thank
+   you!", "Hang on, you don't have enough money!"; No: "No? Well, how about 200,000 Ryo?", "You drive a
+   hard bargain, friend! / 100,000 Ryo! Can't go lower than this!", then "Screw it! Just take it and
+   go!", "Obtained Great Hammer. / Who will hold it?", "Obtained Great Hammer!"). The hamlet's Hoteimaru
+   message (Nekoma) and the Danjo-bridge warning were not met. Next: Nekoma Village (17,76) for the White
+   Cat; the Shirakawa barrier script also gives the Great Hammer to Hoteimaru.
 
    Helpers for this kind of play (not committed, easy to redo): stitching each overworld screenshot at
    its tile (hero at screen tile 7,6 with 32-px tiles from (224,64) in `play.py` shots) builds a usable

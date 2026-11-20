@@ -453,7 +453,18 @@ exit 2).
    Gomon blocking the way!". The crowd moves; talking via the field menu (Circle, then Circle in a new
    step) works reliably. A staircase at the cell's top leads on (to Innards Grotto, by the script).
 
-   Next (in `en2`): more of the cell's lines, then Innards Grotto and Gomon.
+   More of the cell (steps 819-908): "Take the stairs down and you'll be inside Innards Grotto. Watch out
+   for your soul!", "Get out of the way! / This place is cramped enough as it is!", "Gomon will steal your
+   soul too... / Just give up and accept your fate!", "Is there no God to help us? / I don't want to lose my
+   soul!", "Gomon is down below, inside Innards Grotto. That's where he steals people's souls!", "Let's
+   see...Two twos are five! / Three twos are nine! Nine twos are twelve!" (box pause arrow shown), "Don't
+   worry about me! / Save the children, I beg you!", "Gomon swaps real people with shapeshifted tanuki to
+   take over towns!", and a child's two pages ("They say that you'll become immortal if you join the Cult
+   of Daimon, but it's not true!", "It's just a lie they spread to deceive the people of Jipang and take
+   over our country! How is everyone so oblivious?!"). All clean. The stairs down are near the cell's top
+   left; step 909 stands in Innards Grotto.
+
+   Next (in `en2`): Innards Grotto and Gomon.
 2. Money, done as ruled (`docs/decisions.md`): `restyle.py` `money()` turns upstream's "両20" into "20 Ryo" in
    every English line (176 lines, five script files); windows keep "18両". Seen in game: "2 Ryo, please.",
    "15 Ryo, please.", "It's 4 Ryo for the night.", "Ziria obtained 2 Ryo." The bank lines with "65,000 Ryo" were

@@ -482,8 +482,24 @@ exit 2).
    round. Battle menu tip: the cursor starts on Attack each round and wraps, so plain Circle attacks; arrow
    presses meant for the map end up moving it. Not seen: Gomon's lose line (`boss_0xF005_lose_1`).
 
-   Next (in `en2`): back to Mito Castle for Komon's return (`map-0x165B-0x378`), the freed townspeople, then
-   on toward Banmo.
+   Banmo, Kumogiri Hamlet 3 (`map-0x19D3`, inn `map-0x19EF`), part done (steps 1049-1101, session now at the
+   inn's bedside beside the innkeeper, 1616 Ryo). The grotto's east stairs come out on the overworld north
+   of the river (Mito Castle is across it to the south); the hamlet is the hut a few tiles north. First
+   battle there: Daimon Acolytes ("Defeated Daimon Acolyte!"). The location window reads "Kumogiri Hamlet
+   3". Clean: the greeter ("Lord Ziria! Welcome to the lands of Banmo! This is Kumogiri Hamlet 3!", "The
+   Daimonists already have great influence here! Do your best, Lord Ziria!"), and in the inn (the left of
+   the two houses north of the three statues): the record keeper's prompt, "Choose where to write the
+   file", three guests ("What a weird village that was! / There were only old people there!", "I think it
+   was called Ota Village. / You'll find it along the river.", "Maybe the Slug Hermit knows where you can
+   find the second Fire Hero!", "He's lived for a long time. I'm sure he knows a thing or two about the Fire
+   Clan!"), and the innkeeper by the beds ("Welcome to the inn!", "It's 10 Ryo for the night. / Will you
+   stay?", No: the choice echoes as "No", then "Please come again."). Note: presses meant for a talk ran
+   into the record keeper's prompt and saved to the session's memstick (`en2` only), with the poked stats.
+   Not seen: Komon back in Mito Castle (`map-0x165B-0x378`) and the freed townspeople; both are behind the
+   grotto, south of the river.
+
+   Next (in `en2`): the rest of Hamlet 3 (the shop, four villagers, `map-0x19EF-0x130`), then the Slug
+   Hermit's shrine to the north.
 2. Money, done as ruled (`docs/decisions.md`): `restyle.py` `money()` turns upstream's "両20" into "20 Ryo" in
    every English line (176 lines, five script files); windows keep "18両". Seen in game: "2 Ryo, please.",
    "15 Ryo, please.", "It's 4 Ryo for the night.", "Ziria obtained 2 Ryo." The bank lines with "65,000 Ryo" were

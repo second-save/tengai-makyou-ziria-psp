@@ -912,6 +912,21 @@ exit 2).
    message (Nekoma) and the Danjo-bridge warning were not met. Next: Nekoma Village (17,76) for the White
    Cat; the Shirakawa barrier script also gives the Great Hammer to Hoteimaru.
 
+   After the hammer (steps 3705-4076, session now on a small island at (51,63) on the Riku overworld, south
+   of the (54,63-65) bridge from the middle region north of Taga Castle; 3923 Ryo after a wipe-out). Learned:
+   **Kogama** (field menu) is fast travel: it shows the Jipang map, up/down moves an orange cursor between
+   visited Kumogiri Hamlets (the region highlight follows it), Circle warps. Hamlet 5 = Riku south-east
+   (73,68), Hamlet 4 = Banmo (62,24), Hamlet 3 = Banmo south. "You can't use that here." inside a hamlet.
+   A wipe-out (poisoned party, missed battle) respawned the party at Hamlet 3 with half the money ("In
+   preparation for a new battle, Ziria used half his money to..."), Akuro still along. The Great Hammer
+   does nothing on cursed bridges or on the Shirakawa barrier's boulder from the Banmo side ("Ziria used
+   the Great Hammer!" / "But nothing happened!"): per the barrier and Nekoma scripts the boulder is the
+   Sessho-seki, Hoteimaru must be there ("You give the Great Hammer to Hoteimaru."), and Nekoma's villagers
+   send you to "our side of the Shirakawa barrier, southeast from here", so Nekoma comes first. Cursed
+   bridges seen so far: (67,53), (52,41), (38,46), (33,45), (48-49,66). Open: the way into the south-west
+   (Nekoma (17,76), the barrier's Riku side (48,87)). A Shou-sama GameFAQs walkthrough for the PSP
+   collection exists but the mirror found did not serve it.
+
    Helpers for this kind of play (not committed, easy to redo): stitching each overworld screenshot at
    its tile (hero at screen tile 7,6 with 32-px tiles from (224,64) in `play.py` shots) builds a usable
    world map; random-battle screens have the colour (66,0,0) at (236,110), (730,110) and (236,410).

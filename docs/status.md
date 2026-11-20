@@ -861,7 +861,16 @@ exit 2).
    ahead!"). The barrier is the fenced gate north-west of the castle on the overworld; the town is left
    by the road south along column 21.
 
-   Next (in `en2`): the Nakoso barrier north of Inugami Village, then Riku.
+   Nakoso Barrier (`map-0x2047`), done (steps 2883-2969, session now on the Riku overworld, map
+   `0x2434`, tile (82,86), just north of the barrier). On the Banmo overworld (`0x19B7`) the barrier is
+   tile (50,10), east of Inugami (village tile (32,17)); the overworld warp table sits at
+   `0x19B7*2048+0x3A0` (`01 X Y 02 n 00 00 X' Y' 00 lo hi`). Clean: the location window "Nakoso
+   Barrier", the guard ("We've received word about the Shirakawa barrier being blocked by Tamamohime's
+   curse." / "Our lord has given you permission to go through this checkpoint!"), and the house past the
+   gate with a portrait ("The lands of Riku are just ahead! / Take care, Lord Ziria!"). The road north
+   past the house leads into Riku.
+
+   Next (in `en2`): Riku; Kumogiri Hamlet 5 (`map-0x2450`) and King Akuro.
 2. Money, done as ruled (`docs/decisions.md`): `restyle.py` `money()` turns upstream's "両20" into "20 Ryo" in
    every English line (176 lines, five script files); windows keep "18両". Seen in game: "2 Ryo, please.",
    "15 Ryo, please.", "It's 4 Ryo for the night.", "Ziria obtained 2 Ryo." The bank lines with "65,000 Ryo" were

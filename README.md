@@ -4,30 +4,35 @@ An English patch for the PSN "PC Engine Archives" release of *Tengai Makyou Ziri
 It is a port of the LIPEMCO! Translations patch for the PC Engine CD game, with names and terms restyled
 (`glossary.md`). The patch holds no game data: you need your own copy of the game.
 
-**Status: test build.** Checked in PPSSPP 1.20.4 only: title, save menu, intro, first cutscene, field menu,
-Status screen, a battle, villager dialogue and a shop. Not checked: anything after the first village, and real
-PSP hardware.
+**Status: test build.** Checked in PPSSPP 1.20.4 only: the emulator's first-run prompts, System Menu and all 18
+manual pages; in the game, a playtest up to the Riku region. Not checked: the rest of the game, real PSP hardware.
 
 ## What changes
 
 - The game itself is in English, with a variable-width font.
 - No honorifics: `-sama` becomes Lord or Lady, the other suffixes are dropped.
 - Shorter names (Koumon -> Komon). World = Jipang, experience = Virtue, money = Ryo.
-- Not translated: the emulator's own prompts (save, load, screen size) and the 18 manual pages.
+- The emulator's own prompts and menus (save, load, screen size, autosave, the L-button System Menu), the
+  18 manual pages and the XMB title and picture are in English too.
+- Not translated: pictures from the game inside the manual pages (old Japanese screenshots), and the logos.
 
 ## Apply the patch
 
-You need `NPJJ30029/CONTENT.DAT` in its decrypted form (the one PPSSPP reads):
+Two patches, for the two files of the release (an unmodified dump of each is needed):
 
-| File | SHA-1 |
-|---|---|
-| `CONTENT.DAT` (original) | `1a009332f54e283bfaedff5d073008a60b9b06c7` |
-| `CONTENT.DAT` (patched) | `3b8a8289f8cde653cf91a232eb2477149059bc8f` |
+| File | Original SHA-1 | Patched SHA-1 | Patch |
+|---|---|---|---|
+| `NPJJ30029/CONTENT.DAT` (the game, decrypted as PPSSPP reads it) | `1a009332f54e283bfaedff5d073008a60b9b06c7` | `5106f44801aed9578c90f3df4099cf22c7f8ef05` | `ziria-psn-en.xdelta` |
+| the ISO (`Tengai Makyou - Ziria (JPN) (PCE) (PSN) [NPJJ30029].iso`) | `a7ae6b1bb260264a03b7798ac4fad77fc51c778e` | `3c6fb39f1a50803d9bf14fcadafc9df952202490` | `ziria-psn-en-iso.xdelta` |
 
     xdelta3 -d -s CONTENT.DAT ziria-psn-en.xdelta CONTENT.en.DAT
+    xdelta3 -d -s "Tengai Makyou - Ziria (JPN) (PCE) (PSN) [NPJJ30029].iso" ziria-psn-en-iso.xdelta "Tengai Makyo Ziria (English).iso"
 
-Rename the result to `CONTENT.DAT` and put it in `PSP/GAME/NPJJ30029/` on the memory stick, in place of the
-original. Keep a copy of the original. In PPSSPP, start the game's ISO as usual.
+Rename `CONTENT.en.DAT` to `CONTENT.DAT` and put it in `PSP/GAME/NPJJ30029/` on the memory stick, in place of
+the original. Keep a copy of both originals. In PPSSPP, start the English ISO.
+
+The English ISO's program (EBOOT) is not signed yet: it runs in PPSSPP, not on a real PSP or Vita. The
+`CONTENT.DAT` patch alone works with the original ISO (game in English, emulator prompts in Japanese).
 
 ## Build from source
 
@@ -38,7 +43,7 @@ Needs python 3, g++, make, cmake, libpng, ImageMagick and xdelta3. See `AGENTS.m
 
 - Original English patch: LIPEMCO! Translations. Supper (hacking), TheMajinZenki (translation), cccmar and
   rg111 (testing). Source: `suppertails66/tenmatools`, vendored in `vendor/tenmatools`.
-- PSN port and restyle: second-save.
+- PSN port, restyle, prompts and manual: second-save. Manual font: M+ 1p (SIL OFL, `fonts/OFL.txt`).
 
 ## Licence
 

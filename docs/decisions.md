@@ -17,7 +17,7 @@
   recommendation: one font change, no longer lines); keeping 両 everywhere as LIPEMCO has it.
 - **Map seal: leave it.** The red kanji seal (筑波) drawn on the Map of Tsukuba stays Japanese, as upstream has
   it. Rejected: redrawing it in English.
-- **Scope: game only.** The patch replaces `CONTENT.DAT` alone. The Virtual PC Engine prompts (would need a
+- ~~**Scope: game only.**~~ Overruled on 2026-11-21 (below). Was: the patch replaces `CONTENT.DAT` alone. The Virtual PC Engine prompts (would need a
   patched, re-signed EBOOT) and the 18 manual pages stay Japanese.
 
 ## Ruled by the user (2026-11-20)
@@ -25,3 +25,10 @@
 - **King Akuro is "Akuro-Ou"** everywhere (upstream mixed both). `restyle.py` turns every "King Akuro" into
   "Akuro-Ou". The line wrapper no longer breaks at a hyphen followed by a capital, so the name stays on one
   line (local fix in `vendor/tenmatools/libpce/src/tenma/TenmaLineWrapper.cpp`).
+
+## Ruled by the user (2026-11-21)
+
+- **The emulator's prompts and the manual are translated** ("need to be translated please"). The release now
+  has a second patch, for the ISO (patched EBOOT strings, XMB title and picture); the manual pages are redrawn
+  inside `CONTENT.DAT`. My own choices, not ruled: "Tengai Makyo ZIRIA" (shorter-names ruling) as XMB and save
+  title; game screenshots in the manual left as they are.

@@ -1,9 +1,9 @@
-# Status (2026-11-20)
+# Status (2026-11-21)
 
-## Play from the Riku save (latest build, sha1 `0017549af385930628f73ee53ed2985a07a2388b`)
+## Play from the Riku save (latest build)
 
 `tools/venv/bin/python tools/pp.py start --save work/saves/riku` installs `build/NPJJ30029` and the save into
-the isolated emulator folder (`work/pphome`) and opens stock PPSSPP. At the emulator prompts: Cross on the
+the isolated emulator folder, boots `build/ziria_en.iso` (English prompts) (`work/pphome`) and opens stock PPSSPP. At the emulator prompts: Cross on the
 notice, then **No** to "load this game's save data?", then Yes to "start as is?", pick a screen size, OK.
 At the title press Start, choose Start, then **TENGAI2 "Riku" Lv14** (TENGAI1 is an old Banmo save). You
 appear in Kumogiri Hamlet 5's inn in Riku: Ziria and Tsunade level 14-15, Akuro-Ou and Kogama along,
@@ -13,10 +13,30 @@ debug boosts (max HP 999, Ziria's Attack 200). The save is `work/saves/riku` (`S
 `NPJJ30029/EXPORT.BIN`). Loading the GAME1 save at the prompt overwrites it with an empty one.
 
 
-An English build exists: `build/NPJJ30029/CONTENT.DAT`, sha1 `0017549af385930628f73ee53ed2985a07a2388b`
-(Akuro-Ou ruling applied; `dist/` still holds the patch of the previous build).
-Patch for testing: `dist/ziria-psn-en.xdelta` and `dist/ziria-psn-en.zip` (`tools/release.sh`: xdelta3 against
-the original `CONTENT.DAT`, re-applied and compared). Everything is committed. Nothing is published.
+An English build exists (`python tools/build.py`, after `tools/build_en.sh` made the English track once):
+`build/NPJJ30029/CONTENT.DAT` sha1 `5106f44801aed9578c90f3df4099cf22c7f8ef05` (game + English manual pages) and
+`build/ziria_en.iso` sha1 `3c6fb39f1a50803d9bf14fcadafc9df952202490` (English emulator prompts and menus, XMB
+title and picture). Patches: `tools/release.sh` -> `dist/ziria-psn-en.xdelta` (CONTENT.DAT, 55 MB),
+`dist/ziria-psn-en-iso.xdelta` (ISO, 384 KB), `dist/ziria-psn-en.zip`. Nothing is published.
+
+## Emulator prompts, manual, XMB (2026-11-21, ruled in scope)
+
+- `tools/frontend.py` (run by `build.py`): the decrypted EBOOT (PPSSPP's dump, see its docstring) gets
+  `script/eboot.csv` in place (71 UTF-8 strings: notices, save/load/autosave/import/export prompts, screen-size
+  menu, System Menu, manual viewer hints, save titles). BOOT.BIN and EBOOT.BIN in the ISO both become the patched
+  ELF. Also: PARAM.SFO title and the save title in `USRDIR/CONFIG.PSP` = "Tengai Makyo ZIRIA"; PIC0.PNG redrawn.
+  The fixed-line notices (3 + 2 lines) fit about 45 characters a line; dialog boxes wrap by themselves.
+- `tools/manual.py`: the 18 pages (`psp_001..018.png` in CONTENT.DAT) redrawn in English with M+ 1p
+  (`fonts/`, OFL). Terms from the game script: Talk/Items/Jutsu/Status/Kogama/Equip/Check/Mode,
+  Attack/Item/Defend/Jutsu/Steal/Cry/Flirt/Flee, the jutsu and item names, HP/TP, Toad Hermit, Daimon Church.
+  `manual.py work/content OUT` writes original-over-English review images.
+- Seen in PPSSPP on this build: every first-run prompt (autosave notice, Backup RAM creation, screen size, save
+  prompts, the save dialog's "Save Data" title), the System Menu (L), the manual viewer and all 18 pages.
+  Not seen: import/export, out-of-space and no-Memory-Stick prompts (same file, same method).
+- **EBOOT not signed:** the ISO carries the plain ELF, which only PPSSPP boots. Signing it (`sign_np -elf`) is
+  needed for a PSP or Vita; building sign_np here was blocked by the session's permission rules (2026-11-21).
+- Left in Japanese: the game screenshots inside manual pages 1, 9-13 and 17, the cover logo on page 1, CERO logo.
+- The game script once says "Tengai Makyou" (LIPEMCO); the manual and XMB use the shorter "Tengai Makyo".
 
 ## Checked in PPSSPP (stock 1.20.4, macOS)
 
@@ -995,4 +1015,4 @@ session, replace the newest `NNNN.ppst` with the poked state.
   unpacked track would be far smaller.
 - Real hardware: nobody has booted a modified `CONTENT.DAT` on a PSP. On a console the file is an NPDRM EDAT;
   this dump is its decrypted form, which needs custom firmware that loads decrypted content.
-- Emulator prompts and the 18 manual pages stay Japanese (ruled out of scope).
+- The English ISO's EBOOT must be signed before anyone tries it on a PSP/Vita (see above).

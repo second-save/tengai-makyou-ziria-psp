@@ -5,13 +5,13 @@
     build.py --poke       test build: one changed byte in the IPL title of track 02 (loader integrity test)
 
 Chain: CONTENT.DAT -xor-> archive -> HCD9005_02.bin -zlib chunks-> PC Engine CD data track (2048-byte sectors).
-The PSP ISO itself is not rebuilt: the game data lives in CONTENT.DAT on the memory stick."""
+Also redraws the manual pages (tools/manual.py). A plain build then writes build/ziria_en.iso (tools/frontend.py)."""
 import hashlib, os, shutil, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 sys.path.insert(0, HERE)
-import content_xor, hcd, vpce  # noqa: E402
+import content_xor, hcd, manual, vpce  # noqa: E402
 
 ORIG_DIR = os.path.join(ROOT, 'rom', 'NPJJ30029')
 OUT_DIR = os.path.join(ROOT, 'build', 'NPJJ30029')
@@ -58,6 +58,10 @@ def main():
             if bytes(data) != before:
                 assert len(data) == len(before), 'track size must not change (the .hcd sheet holds its length)'
                 repl[name] = hcd.pack(bytes(data), packed)
+        ents = {n: (o, sz) for n, o, sz in vpce.entries(plain)}
+        for p in sorted(manual.PAGES):   # the manual pages, redrawn in English (tools/manual.py)
+            name = 'psp_%03d.png' % p
+            repl[name] = manual.page(p, bytes(plain[ents[name][0]:ents[name][0] + ents[name][1]]))
     new_plain = vpce.pack(plain, repl)
     out = b''.join(content_xor.xor(new_plain[o:o + (1 << 22)], key) for o in range(0, len(new_plain), 1 << 22))
     if mode == '--identity':
@@ -67,7 +71,10 @@ def main():
     os.makedirs(OUT_DIR, exist_ok=True)
     open(os.path.join(OUT_DIR, 'CONTENT.DAT'), 'wb').write(out)
     shutil.copy(os.path.join(ORIG_DIR, 'psp-key.edat'), OUT_DIR)
-    print('built %s  sha1 %s  replaced %s' % (OUT_DIR, hashlib.sha1(out).hexdigest(), sorted(repl) or 'nothing'))
+    print('built %s  sha1 %s  replaced %d files' % (OUT_DIR, hashlib.sha1(out).hexdigest(), len(repl)))
+    if mode == '':
+        import frontend   # the emulator's prompts and menus: build/ziria_en.iso
+        frontend.main()
 
 
 if __name__ == '__main__':

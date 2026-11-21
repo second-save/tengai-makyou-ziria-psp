@@ -7,7 +7,7 @@ Read `docs/status.md` (state, next step) and `docs/decisions.md` (the user's rul
 
 - Check the dump: `shasum -c rom.sha1`
 - Identity test: `python tools/build.py --identity` (must print `identity OK`)
-- Build: `python tools/build.py` -> `build/NPJJ30029/CONTENT.DAT`
+- Build: `python tools/build.py` -> `build/NPJJ30029/CONTENT.DAT` (game + manual) and `build/ziria_en.iso` (prompts)
 - Boot the build: `python tools/pp.py start` (`start orig` for the original), `pp.py fb OUT.png`, `pp.py keys cross 8`,
   `pp.py stop`. Frame-exact play: `tools/play.sh` (see `docs/status.md`); there Circle confirms. Stock PPSSPP 1.20.4 in `tools/ppsspp/` (`fetch_emu.py ppsspp`, then
   `chmod +x` the binary); it runs with `HOME=work/pphome`, never the user's own PPSSPP folder.
@@ -20,6 +20,7 @@ Read `docs/status.md` (state, next step) and `docs/decisions.md` (the user's rul
 - `tools/content_xor.py`, `vpce.py`, `hcd.py`: the three container layers (`docs/re/container.md`).
 - `work/ziria_02.iso`: unpacked PC Engine CD data track (2048-byte sectors), the thing to hack.
 - `tools/fixtures/SAVEDATA`: emulator save made after the first-run prompts.
+- `script/eboot.csv` emulator prompts; `tools/manual.py` manual pages; `fonts/` M+ 1p (OFL).
 
 ## Rulings
 

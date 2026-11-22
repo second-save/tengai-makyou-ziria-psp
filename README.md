@@ -4,8 +4,8 @@ An English patch for the PSN "PC Engine Archives" release of *Tengai Makyou Ziri
 It is a port of the LIPEMCO! Translations patch for the PC Engine CD game, with names and terms restyled
 (`glossary.md`). The patch holds no game data: you need your own copy of the game.
 
-**Status: emulator beta (v0.1.0-beta).** For PPSSPP only; it does not run on a real PSP or Vita yet. Checked
-in PPSSPP 1.20.4: the emulator's first-run prompts, System Menu and all 18 manual pages, and the game up to
+**Status: emulator beta (v0.1.1-beta).** Made for PPSSPP. The ISO's program is signed like the original, so it
+may also run on a PSP or Vita with custom firmware, but nobody has tried that yet. Checked in PPSSPP 1.20.4: the emulator's first-run prompts, System Menu and all 18 manual pages, and the game up to
 the Riku region. The rest of the game has not been played through with this patch. Please report problems
 (with the place in the game and a screenshot) in this repository's issues.
 
@@ -25,7 +25,7 @@ Two patches, for the two files of the release (an unmodified dump of each is nee
 | File | Original SHA-1 | Patched SHA-1 | Patch |
 |---|---|---|---|
 | `NPJJ30029/CONTENT.DAT` (the game, decrypted as PPSSPP reads it) | `1a009332f54e283bfaedff5d073008a60b9b06c7` | `5106f44801aed9578c90f3df4099cf22c7f8ef05` | `ziria-psn-en.xdelta` |
-| the ISO (`Tengai Makyou - Ziria (JPN) (PCE) (PSN) [NPJJ30029].iso`) | `a7ae6b1bb260264a03b7798ac4fad77fc51c778e` | `3c6fb39f1a50803d9bf14fcadafc9df952202490` | `ziria-psn-en-iso.xdelta` |
+| the ISO (`Tengai Makyou - Ziria (JPN) (PCE) (PSN) [NPJJ30029].iso`) | `a7ae6b1bb260264a03b7798ac4fad77fc51c778e` | `d080fd6a5b133a0e48ee41459376c6fe5939887a` | `ziria-psn-en-iso.xdelta` |
 
     xdelta3 -d -s CONTENT.DAT ziria-psn-en.xdelta CONTENT.en.DAT
     xdelta3 -d -s "Tengai Makyou - Ziria (JPN) (PCE) (PSN) [NPJJ30029].iso" ziria-psn-en-iso.xdelta "Tengai Makyo Ziria (English).iso"
@@ -33,12 +33,13 @@ Two patches, for the two files of the release (an unmodified dump of each is nee
 Rename `CONTENT.en.DAT` to `CONTENT.DAT` and put it in `PSP/GAME/NPJJ30029/` on the memory stick, in place of
 the original. Keep a copy of both originals. In PPSSPP, start the English ISO.
 
-The English ISO's program (EBOOT) is not signed yet: it runs in PPSSPP, not on a real PSP or Vita. The
-`CONTENT.DAT` patch alone works with the original ISO (game in English, emulator prompts in Japanese).
+The English ISO's program (EBOOT) is signed again after patching (sign_np), as the original was. The
+`CONTENT.DAT` patch alone also works with the original ISO (game in English, emulator prompts in Japanese).
 
 ## Build from source
 
-Needs python 3, g++, make, cmake, libpng, ImageMagick and xdelta3. See `AGENTS.md` for the commands and
+Needs python 3 (with Pillow), g++, make, cmake, libpng, ImageMagick and xdelta3; `tools/build_sign_np.sh` builds the
+EBOOT signer. See `AGENTS.md` for the commands and
 `docs/status.md` for how the build works. `tools/build_en.sh` runs the whole build (about 12 minutes).
 
 ## Credits

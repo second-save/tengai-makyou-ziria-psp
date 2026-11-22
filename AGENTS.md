@@ -11,6 +11,8 @@ Read `docs/status.md` (state, next step) and `docs/decisions.md` (the user's rul
 - Boot the build: `python tools/pp.py start` (`start orig` for the original), `pp.py fb OUT.png`, `pp.py keys cross 8`,
   `pp.py stop`. Frame-exact play: `tools/play.sh` (see `docs/status.md`); there Circle confirms. Stock PPSSPP 1.20.4 in `tools/ppsspp/` (`fetch_emu.py ppsspp`, then
   `chmod +x` the binary); it runs with `HOME=work/pphome`, never the user's own PPSSPP folder.
+- EBOOT signer (needed by build.py): `bash tools/build_sign_np.sh` -> `work/src/sign_np/sign_np`;
+  decrypted original EBOOT in `work/eboot_jp.elf` (see `tools/frontend.py`).
 - Full English build: `PY=tools/venv/bin/python bash tools/build_en.sh` (12 minutes). Patch + zip: `tools/release.sh`
 - Skill path: `python tools/skill.py`
 

@@ -15,7 +15,7 @@ debug boosts (max HP 999, Ziria's Attack 200). The save is `work/saves/riku` (`S
 
 An English build exists (`python tools/build.py`, after `tools/build_en.sh` made the English track once):
 `build/NPJJ30029/CONTENT.DAT` sha1 `5106f44801aed9578c90f3df4099cf22c7f8ef05` (game + English manual pages) and
-`build/ziria_en.iso` sha1 `3c6fb39f1a50803d9bf14fcadafc9df952202490` (English emulator prompts and menus, XMB
+`build/ziria_en.iso` sha1 `d080fd6a5b133a0e48ee41459376c6fe5939887a` (signed EBOOT) (English emulator prompts and menus, XMB
 title and picture). Patches: `tools/release.sh` -> `dist/ziria-psn-en.xdelta` (CONTENT.DAT, 55 MB),
 `dist/ziria-psn-en-iso.xdelta` (ISO, 384 KB), `dist/ziria-psn-en.zip`. **Published 2026-11-22** (user's go): public repo
 `second-save/tengai-makyou-ziria-psp`, pre-release `v0.1.0-beta` (emulator beta) with the zip.
@@ -34,8 +34,11 @@ title and picture). Patches: `tools/release.sh` -> `dist/ziria-psn-en.xdelta` (C
 - Seen in PPSSPP on this build: every first-run prompt (autosave notice, Backup RAM creation, screen size, save
   prompts, the save dialog's "Save Data" title), the System Menu (L), the manual viewer and all 18 pages.
   Not seen: import/export, out-of-space and no-Memory-Stick prompts (same file, same method).
-- **EBOOT not signed:** the ISO carries the plain ELF, which only PPSSPP boots. Signing it (`sign_np -elf`) is
-  needed for a PSP or Vita; building sign_np here was blocked by the session's permission rules (2026-11-21).
+- **EBOOT signed (2026-11-22):** `frontend.py` signs the patched ELF with sign_np (`tools/build_sign_np.sh`,
+  Hykem's tool, macOS shims), tag 2 = 0xD9160BF0 as the original; the output is the same on every run. PPSSPP
+  boots the signed ISO; its dump of the decrypted EBOOT equals the patched ELF (plus the 336 bytes of padding that
+  signing adds). BOOT.BIN stays as shipped (zeros). Source ELF: `work/eboot_jp.elf` (copy of the original's dump; the
+  emulator's DUMP folder is overwritten by every boot). Real PSP/Vita: still untried.
 - Left in Japanese: the game screenshots inside manual pages 1, 9-13 and 17, the cover logo on page 1, CERO logo.
 - The game script once says "Tengai Makyou" (LIPEMCO); the manual and XMB use the shorter "Tengai Makyo".
 
@@ -1016,4 +1019,4 @@ session, replace the newest `NNNN.ppst` with the poked state.
   unpacked track would be far smaller.
 - Real hardware: nobody has booted a modified `CONTENT.DAT` on a PSP. On a console the file is an NPDRM EDAT;
   this dump is its decrypted form, which needs custom firmware that loads decrypted content.
-- The English ISO's EBOOT must be signed before anyone tries it on a PSP/Vita (see above).
+- Nobody has booted the signed ISO on a PSP/Vita (custom firmware needed for the decrypted CONTENT.DAT).

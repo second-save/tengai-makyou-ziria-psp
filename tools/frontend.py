@@ -3,10 +3,12 @@ save title.
 
     frontend.py      -> build/ziria_en.iso (the user's ISO with the patched files swapped in)
 
-The EBOOT is encrypted; the source is PPSSPP's decrypted dump (`DumpFileTypes = 7` in the emulator's ini, then
-boot the game once): work/pphome/.config/ppsspp/PSP/SYSTEM/DUMP/NPJJ30029_EBOOT.BIN, sha1 checked below.
-Strings are replaced in place from script/eboot.csv (offset, jp, en; "\\n" is the game's CR LF)."""
-import csv, glob, hashlib, os, sys
+The EBOOT is encrypted; the source is PPSSPP's decrypted dump of the original (`DumpFileTypes = 7` in the
+emulator's ini, boot the original ISO once, copy PSP/SYSTEM/DUMP/NPJJ30029_EBOOT.BIN to work/eboot_jp.elf; sha1
+checked below). Strings are replaced in place from script/eboot.csv (offset, jp, en; "\\n" is the game's CR LF),
+then the ELF is signed again with sign_np (tools/build_sign_np.sh), tag 2 as the original, so a PSP or Vita
+boots it. BOOT.BIN stays as shipped (zeros)."""
+import csv, glob, hashlib, os, subprocess, sys, tempfile
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
@@ -18,7 +20,8 @@ import io  # noqa: E402
 from PIL import Image  # noqa: E402
 from manual import C, T, V, render  # noqa: E402
 
-ELF = os.path.join(ROOT, 'work', 'pphome', '.config', 'ppsspp', 'PSP', 'SYSTEM', 'DUMP', 'NPJJ30029_EBOOT.BIN')
+ELF = os.path.join(ROOT, 'work', 'eboot_jp.elf')
+SIGN_NP = os.environ.get('SIGN_NP') or os.path.join(ROOT, 'work', 'src', 'sign_np', 'sign_np')
 ELF_SHA1 = 'bd7f46861b321f2f20f74a293076482268fea0e2'
 ISO_SHA1 = 'a7ae6b1bb260264a03b7798ac4fad77fc51c778e'
 TITLE = 'Tengai Makyo ZIRIA'
@@ -37,6 +40,17 @@ def patch_eboot(elf):
             assert en.count(b'%') == jp.count(b'%'), row['offset'] + ': format codes differ'
             b[off:off + slot] = en.ljust(slot, b'\0')
     return bytes(b)
+
+
+def sign(elf):
+    """Plain ELF -> signed ~PSP EBOOT.BIN (tag 2 = 0xD9160BF0, the original's)."""
+    with tempfile.TemporaryDirectory() as d:
+        src, out = os.path.join(d, 'in.elf'), os.path.join(d, 'EBOOT.BIN')
+        open(src, 'wb').write(elf)
+        subprocess.run([SIGN_NP, '-elf', src, out, '2'], check=True, stdout=subprocess.DEVNULL)
+        b = open(out, 'rb').read()
+    assert b[:4] == b'~PSP' and b[0xD0:0xD4] == bytes.fromhex('f00b16d9'), 'sign_np output is not a tag-2 ~PSP file'
+    return b
 
 
 def iso_file(f, want):
@@ -81,8 +95,7 @@ def main():
     old = 'SYS_TITLE_JP="天外魔境 ZIRIA"'.encode()   # the save data title
     assert config.count(old) == 1
     config = config.replace(old, ('SYS_TITLE_JP="%s"' % TITLE).encode())
-    # shortcut: EBOOT.BIN is the plain patched ELF (PPSSPP only); sign it (sign_np -elf) before a PSP/Vita release
-    repl = {'/PSP_GAME/SYSDIR/BOOT.BIN': boot, '/PSP_GAME/SYSDIR/EBOOT.BIN': boot, '/PSP_GAME/PARAM.SFO': param,
+    repl = {'/PSP_GAME/SYSDIR/EBOOT.BIN': sign(boot), '/PSP_GAME/PARAM.SFO': param,
             '/PSP_GAME/USRDIR/CONFIG.PSP': config, '/PSP_GAME/PIC0.PNG': pic}
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     iso9660.patch(src, OUT, repl)

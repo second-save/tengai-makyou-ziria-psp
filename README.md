@@ -4,8 +4,10 @@ An English patch for the PSN "PC Engine Archives" release of *Tengai Makyou Ziri
 It is a port of the LIPEMCO! Translations patch for the PC Engine CD game, with names and terms restyled
 (`glossary.md`). The patch holds no game data: you need your own copy of the game.
 
-**Status: test build.** Checked in PPSSPP 1.20.4 only: the emulator's first-run prompts, System Menu and all 18
-manual pages; in the game, a playtest up to the Riku region. Not checked: the rest of the game, real PSP hardware.
+**Status: emulator beta (v0.1.0-beta).** For PPSSPP only; it does not run on a real PSP or Vita yet. Checked
+in PPSSPP 1.20.4: the emulator's first-run prompts, System Menu and all 18 manual pages, and the game up to
+the Riku region. The rest of the game has not been played through with this patch. Please report problems
+(with the place in the game and a screenshot) in this repository's issues.
 
 ## What changes
 

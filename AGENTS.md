@@ -19,7 +19,7 @@ Read `docs/status.md` (state, next step) and `docs/decisions.md` (the user's rul
 - `rom/` the user's dump: PSP ISO (emulator only) + `NPJJ30029/CONTENT.DAT` (the game).
 - `tools/content_xor.py`, `vpce.py`, `hcd.py`: the three container layers (`docs/re/container.md`).
 - `work/ziria_02.iso`: unpacked PC Engine CD data track (2048-byte sectors), the thing to hack.
-- `tools/fixtures/SAVEDATA`: emulator save made after the first-run prompts.
+- `tools/fixtures/SAVEDATA`: emulator save made after the first-run prompts (the suspend file `NPJJ30029GAME1/PSNVPCE1.SAV` is a memory snapshot: kept local, not in git; boot once and save at the prompt to make one).
 - `script/eboot.csv` emulator prompts; `tools/manual.py` manual pages; `fonts/` M+ 1p (OFL).
 
 ## Rulings

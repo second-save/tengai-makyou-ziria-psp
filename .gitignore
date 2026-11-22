@@ -11,3 +11,4 @@ tools/*/
 __pycache__/
 *.ppst
 .DS_Store
+tools/fixtures/SAVEDATA/NPJJ30029GAME1/PSNVPCE1.SAV

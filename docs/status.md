@@ -17,7 +17,8 @@ An English build exists (`python tools/build.py`, after `tools/build_en.sh` made
 `build/NPJJ30029/CONTENT.DAT` sha1 `5106f44801aed9578c90f3df4099cf22c7f8ef05` (game + English manual pages) and
 `build/ziria_en.iso` sha1 `3c6fb39f1a50803d9bf14fcadafc9df952202490` (English emulator prompts and menus, XMB
 title and picture). Patches: `tools/release.sh` -> `dist/ziria-psn-en.xdelta` (CONTENT.DAT, 55 MB),
-`dist/ziria-psn-en-iso.xdelta` (ISO, 384 KB), `dist/ziria-psn-en.zip`. Nothing is published.
+`dist/ziria-psn-en-iso.xdelta` (ISO, 384 KB), `dist/ziria-psn-en.zip`. **Published 2026-11-22** (user's go): public repo
+`second-save/tengai-makyou-ziria-psp`, pre-release `v0.1.0-beta` (emulator beta) with the zip.
 
 ## Emulator prompts, manual, XMB (2026-11-21, ruled in scope)
 
